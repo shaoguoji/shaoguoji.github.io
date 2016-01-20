@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "欢迎来到国际哥的博客"
 date:   2016-01-20 11:52:40 +0800
 categories: jekyll update
 ---
