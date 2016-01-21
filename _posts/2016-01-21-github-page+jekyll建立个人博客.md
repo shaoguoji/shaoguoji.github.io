@@ -10,6 +10,7 @@ categories: jekyll update
 *本文只是记录实现“博客建立起来能正常访问”的程度，至于内容的细节优化，我也还不会~~~*
 
 首先你将需要准备点东西：
+
 * 一个github账号（可到[github](https://github.com/)官网注册）
 * github for windows客户端（用于同步代码）
 * ruby安装包（实现gem命令下载安装jekyll）
