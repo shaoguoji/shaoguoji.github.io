@@ -6,7 +6,8 @@ permalink: /about/
 
 <!-- This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/) -->
 
-![me](../img/me.png =100x100)
+<!-- ![me](../img/me.png =100x100) -->
+<img src="../img/me.png" alt="Drawing" width="200px" />
 
 计算机大学狗，没事爱写写代码、焊焊板子、猝猝死，爱生活，更爱体验生活。
 
