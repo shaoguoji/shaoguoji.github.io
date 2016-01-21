@@ -17,3 +17,5 @@ categories: jekyll update
 * jekyll
 
 OK废话不多说，开工！
+
+###注册github账号
