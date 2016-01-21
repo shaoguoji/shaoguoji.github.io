@@ -11,9 +11,9 @@ categories: jekyll update
 
 首先你将需要准备点东西：
 
-* 一个github账号（可到[github](https://github.com/)官网注册）
-* github for windows客户端（用于同步代码）
-* ruby安装包（实现gem命令下载安装jekyll）
-* jekyll
+> * 一个github账号（可到[github](https://github.com/)官网注册）
+> * github for windows客户端（用于同步代码）
+> * ruby安装包（实现gem命令下载安装jekyll）
+> * jekyll
 
 OK废话不多说，开工！
