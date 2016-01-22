@@ -7,10 +7,6 @@
 
 # Site settings
 
-#pygments: true
-#safe: true
-#auto: true
-
 title: 国际哥的独立博客
 email: 752147916@qq.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -20,4 +16,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  shaoguoji
 
 # Build settings
+
 markdown: kramdown
+highlighter: true
+#safe: true
