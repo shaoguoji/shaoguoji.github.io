@@ -18,4 +18,6 @@ categories: jekyll update
 
 OK废话不多说，开工！
 
-####一、注册github账号
+---
+
+####**一、注册github账号**
