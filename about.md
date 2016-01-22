@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-<img src="../img/me.png" alt="Drawing" width="200px" />
+<img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/22/11/37/r1453433860323951545944.png" alt="Drawing" width="200px" />
 
 <br/>
 
