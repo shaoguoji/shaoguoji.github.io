@@ -80,15 +80,13 @@ OK废话不多说，开工！
 
 >如果你想潇洒一点，打开github for windows自带的”Git Shell“(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。
 
-```
+{% highlight %}
 $ git add --all
-
 $ git commit -m "Summary"
-
 $ git push -u
-```
+{% endhighlight %}
 
-再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://Clone username.github.io",如果刚刚有放index.html的话就可以显示其内容了。
+再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://username.github.io",如果刚刚有放index.html的话就可以显示其内容了。
 
 ![github page](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/18/r1453533500966502326086.png)
 
@@ -146,6 +144,7 @@ $jekyll serve
 ![myblog](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/24/r1453537462187443227423.png)
 
 >参考文章： 
+
  * [用jekyll和github Pages写博客](http://my.oschina.net/laichendong/blog/499224)
  * [jekyll中文官网](http://jekyll.bootcss.com/)
 
