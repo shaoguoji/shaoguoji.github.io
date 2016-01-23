@@ -21,9 +21,9 @@ github不用多说，程序猿的Facebook，而博客实际上就是一个网站
 
 **整体思路如下：**
 
-1.注册github账号，准备好github page
-2.用jekyll生成一堆的网站代码
-3.把jekyll生成的代码搬到github上
+1. 注册github账号，准备好github page
+2. 用jekyll生成一堆的网站代码
+3. 把jekyll生成的代码搬到github上
 
 ---
 
@@ -50,7 +50,7 @@ OK废话不多说，开工！
 
 ![new](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/31/r1453512667237810367715.png)
 
-注意仓库命名格式是**用户名.github.io**,用户名是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的"Create repository"完成新建仓库。
+注意仓库命名格式是**username.github.io**,其中的username是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的"Create repository"完成新建仓库。
 
 ![new Create](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/33/r1453512804114599754817.png)
 
@@ -64,29 +64,31 @@ OK废话不多说，开工！
 
 ![configure git](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/57/r145353227826128946700.png)
 
-接着在左上角找到一个“+”，点clone，选择刚建好的“用户名.github.io”仓库，再点下面的“Clone 用户名.github.io”选择存放路径，把仓库同步到本地。
+接着在左上角找到一个“+”，点clone，选择刚建好的“username.github.io”仓库，再点下面的“Clone username.github.io”，选择存放路径，把仓库同步到本地。
 
 ![clone](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/33/r1453530825104362807973.png)
 
-本地打开刚刚设置的仓库保存路径（即“Clone 用户名.github.io”目录），往里面随便扔个html文件，并**命名为index.html**（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
+本地打开刚刚设置的仓库保存路径（即“Clone username.github.io”目录），往里面随便扔个html文件，并**命名为index.html**（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
 
 ![Uncommitted change](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/53/r1453531998703290822177.png)
 
-输入summary(摘要)后点“Commit to master”提交代码，最后##点右上角中间的“Push/Sync”##同步代码。
+输入summary(摘要)后点“Commit to master”提交代码，最后**点右上角中间的“Push/Sync”**同步代码。
 
 ![commit](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/1/r1453532462470787609678.png)
 
 ![push](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/9/r1453532971440809956140.png)
 
->如果你想潇洒一点，打开github for windows自带的”Git Shell“(其实就是powershell)，cd进入到仓库的”用户名.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。
+>如果你想潇洒一点，打开github for windows自带的”Git Shell“(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。
 
 ```
 $ git add --all
+
 $ git commit -m "Summary"
+
 $ git push -u
 ```
 
-再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://Clone 用户名.github.io",如果刚刚有放index.html的话就可以显示其内容了。
+再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://Clone username.github.io",如果刚刚有放index.html的话就可以显示其内容了。
 
 ![github page](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/18/r1453533500966502326086.png)
 
@@ -106,8 +108,11 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 ```
 $ gem sources --remove https://rubygems.org/
+
 $ gem sources -a https://ruby.taobao.org/
+
 $ gem sources -l
+
     *** CURRENT SOURCES ***
     https://ruby.taobao.org
 ```
@@ -128,6 +133,7 @@ $ jekyll new myblog“
 
 ```
 $cd myblog
+
 $jekyll serve
 ```
 
@@ -135,13 +141,13 @@ $jekyll serve
 
 打开浏览器，输入[http://localhost:4000](http://localhost:4000)就能看到博客主页了。
 
-再把”myblog“目录下所有文件搬到仓库的”用户名.github.io“文件夹下，同步到github，就可以通过“http://Clone 用户名.github.io"访问博客了！
+再把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过“http://username.github.io"访问博客了！
 
 ![myblog](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/24/r1453537462187443227423.png)
 
-> 参考文章： 
-> * [用jekyll和github Pages写博客](http://my.oschina.net/laichendong/blog/499224)
-> * [jekyll中文官网](http://jekyll.bootcss.com/)
+>参考文章： 
+ * [用jekyll和github Pages写博客](http://my.oschina.net/laichendong/blog/499224)
+ * [jekyll中文官网](http://jekyll.bootcss.com/)
 
 
 
