@@ -64,7 +64,7 @@ OK废话不多说，开工！
 
 ![configure git](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/57/r145353227826128946700.png)
 
-接着在左上角找到一个“+”，点clone，选择刚建好的“username.github.io”仓库，再点下面的“Clone username.github.io”，选择存放路径，把仓库同步到本地。
+接着在左上角找到一个“+”，点Clone，选择刚建好的“username.github.io”仓库，再点下面的“Clone username.github.io”，选择存放路径，把仓库同步到本地。
 
 ![clone](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/33/r1453530825104362807973.png)
 
