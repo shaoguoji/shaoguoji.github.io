@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "github page + jekyll建立个人博客"
-date:   2016-01-22
+date:   2016-01-23
 categories: jekyll update
 ---
 
@@ -58,7 +58,7 @@ OK废话不多说，开工！
 
 先下载安装[GitHub_2_11_0_5离线安装包以及文件下载链接](http://pan.baidu.com/s/1eQYZQQu)
 
-打开github for windows登陆github账号，在右上角的“设置”中找到“option”，**在“configure git”中输入github账号和邮箱配置一下git**（不然无法commit代码）
+打开github for windows登陆github账号，在右上角的“设置”中找到“option”，**在“configure git”中输入github账号和邮箱配置一下git**（不然无法commit代码），点下面“Udate”完成设置。
 
 ![option](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/25/r1453530346466632670866.png)
 
@@ -68,7 +68,7 @@ OK废话不多说，开工！
 
 ![clone](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/33/r1453530825104362807973.png)
 
-本地打开刚刚设置的仓库保存路径（即“Clone 用户名.github.io”目录），往里面随便扔个html文件，并##命名为index.html##（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
+本地打开刚刚设置的仓库保存路径（即“Clone 用户名.github.io”目录），往里面随便扔个html文件，并**命名为index.html**（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
 
 ![Uncommitted change](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/53/r1453531998703290822177.png)
 
