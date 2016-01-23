@@ -80,11 +80,10 @@ OK废话不多说，开工！
 
 >如果你想潇洒一点，打开github for windows自带的”Git Shell“(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。
 
-{% highlight %}
-$ git add --all
-$ git commit -m "Summary"
-$ git push -u
-{% endhighlight %}
+```~ $ git add --all```
+```~ $ git commit -m "Summary"```
+```~ $ git push -u```
+
 
 再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://username.github.io",如果刚刚有放index.html的话就可以显示其内容了。
 
@@ -102,18 +101,13 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 失败了？很正常，由于网络环境原因，访问国外服务器十分坑爹，不过我们可以使用某宝的ruby gems镜像http://ruby.taobao.org/（我也被吓到了，某宝居然还有这功能~）
 
-更改gems源：
+**更改gems源：**
 
-```
-$ gem sources --remove https://rubygems.org/
+```~ $ gem sources --remove https://rubygems.org/```
 
-$ gem sources -a https://ruby.taobao.org/
+```~ $ gem sources -a https://ruby.taobao.org/```
 
-$ gem sources -l
-
-    *** CURRENT SOURCES ***
-    https://ruby.taobao.org
-```
+```~ $ gem sources -l```
 
 再次运行”gem install jekyll“安装命令
 
@@ -123,17 +117,13 @@ $ gem sources -l
 
 然后就可以用以下命令新建博客”
 
-```
-$ jekyll new myblog“
-```
+```~ $ jekyll new myblog```
 
 进入博客目录，运行博客服务器（为了进行本地预览）
 
-```
-$cd myblog
+```~ $ cd myblog```
 
-$jekyll serve
-```
+```~ $ jekyll serve```
 
 ![jekyll](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/15/r1453536905531648574552.png)
 
