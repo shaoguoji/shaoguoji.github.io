@@ -99,7 +99,11 @@ OK废话不多说，开工！
 
 jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音节倒过来念)是基于ruby的一个博客系统，用户快速生成博客所需的静态页面。
 
-我是用Git Shell命令行下gem命令来安装，需先安装[ruby](http://rubyinstaller.org/downloads),安装完成后，重启Git Shell，输入`gem install jekyll`命令安装jekyll。
+我是用Git Shell命令行下gem命令来安装，需先安装[ruby](http://rubyinstaller.org/downloads)，注意安装时要选择**“Add Ruby executables to your PATH”**
+
+![ruby](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/22/50/r1453560632755056508260.png)
+
+安装完成后，重启Git Shell，输入`gem install jekyll`命令安装jekyll。
 
 失败了？很正常，由于网络环境原因，访问国外服务器十分坑爹，不过我们可以使用某宝的ruby gems镜像http://ruby.taobao.org/（我也被吓到了，某宝居然还有这功能~）
 
