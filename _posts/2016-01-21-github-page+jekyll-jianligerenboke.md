@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "github page + jekyll建立个人博客"
-date:   2016-01-21 14:17:36 +0800
+date:   2016-01-22 14:17:36 +0800
 categories: jekyll update
 ---
 
