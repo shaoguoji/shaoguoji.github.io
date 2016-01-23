@@ -36,7 +36,7 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="/about/">About me</a>
+          <a class="page-link" href="/aboutme/">About me</a>
           
         
           
@@ -71,21 +71,23 @@
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/29/r1453476588695770489227.png" alt="博客主页" title="我的独立博客" /></p>
 
-<p><em>本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，我也不太会~~~</em></p>
+<p>*本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~</p>
 
 <hr />
 
 <h3 id="github-page--jekyll">github page &amp; jekyll</h3>
 
-<p>github不用多说，程序猿的Facebook，而博客实际上就是一个网站，众所周知，建网站需要域名、空间的，而github page充当的就是空间的作用，而且重点是它<strong>完全免费！！！</strong></p>
+<p>github不用多说，程序猿的Facebook，博客实际上就是一个网站，众所周知，建网站需要域名、空间的，而github page充当的就是空间的作用，而且重点是它<strong>完全免费！！！</strong></p>
 
 <p>至于jekyll，是基于ruby的一个博客系统，可生成博客的静态网页，更是号称<strong>只需几秒钟就能让网站跑起来</strong>，不需要懂代码，一样能建站！（所以建博客没你想象的那么高大上不是么。。。）</p>
 
 <p><strong>整体思路如下：</strong></p>
 
-<p>1.注册github账号，准备好github page
-2.用jekyll生成一堆的网站代码
-3.把jekyll生成的代码搬到github上</p>
+<ol>
+  <li>注册github账号，准备好github page</li>
+  <li>用jekyll生成一堆的网站代码</li>
+  <li>把jekyll生成的代码搬到github上</li>
+</ol>
 
 <hr />
 
@@ -114,7 +116,7 @@
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/31/r1453512667237810367715.png" alt="new" /></p>
 
-<p>注意仓库命名格式是<strong>用户名.github.io</strong>,用户名是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的”Create repository”完成新建仓库。</p>
+<p>注意仓库命名格式是<strong>username.github.io</strong>，其中的username是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的”Create repository”完成新建仓库。</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/33/r1453512804114599754817.png" alt="new Create" /></p>
 
@@ -122,37 +124,37 @@
 
 <p>先下载安装<a href="http://pan.baidu.com/s/1eQYZQQu">GitHub_2_11_0_5离线安装包以及文件下载链接</a></p>
 
-<p>打开github for windows登陆github账号，在右上角的“设置”中找到“option”，<strong>在“configure git”中输入github账号和邮箱配置一下git</strong>（不然无法commit代码），点下面“Udate”完成设置。</p>
+<p>打开github for windows并登陆github账号，在右上角的设置图标中找到“option”，<strong>在“configure git”中输入github账号和邮箱配置一下git</strong>（不然无法commit代码），点下面“Udate”完成设置。</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/25/r1453530346466632670866.png" alt="option" /></p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/57/r145353227826128946700.png" alt="configure git" /></p>
 
-<p>接着在左上角找到一个“+”，点clone，选择刚建好的“用户名.github.io”仓库，再点下面的“Clone 用户名.github.io”选择存放路径，把仓库同步到本地。</p>
+<p>接着在左上角找到一个“+”，点Clone，选择刚建好的“username.github.io”仓库，再点下面的“Clone username.github.io”，选择存放路径，把仓库下载同步到本地。</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/33/r1453530825104362807973.png" alt="clone" /></p>
 
-<p>本地打开刚刚设置的仓库保存路径（即“Clone 用户名.github.io”目录），往里面随便扔个html文件，并<strong>命名为index.html</strong>（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节</p>
+<p>本地打开刚刚设置的保存仓库的文件夹（即“Clone username.github.io”目录），往里面随便扔个html文件，并<strong>命名为index.html</strong>（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/53/r1453531998703290822177.png" alt="Uncommitted change" /></p>
 
-<p>输入summary(摘要)后点“Commit to master”提交代码，最后##点右上角中间的“Push/Sync”##同步代码。</p>
+<p>输入summary(摘要)后点“Commit to master”提交代码，最后<strong>点右上角中间的“Push/Sync”</strong>同步代码。</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/1/r1453532462470787609678.png" alt="commit" /></p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/9/r1453532971440809956140.png" alt="push" /></p>
 
 <blockquote>
-  <p>如果你想潇洒一点，打开github for windows自带的”Git Shell“(其实就是powershell)，cd进入到仓库的”用户名.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。</p>
+  <p>如果你想潇洒一点，打开github for windows自带的Git Shell(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">
-$ git add --all
-$ git commit -m "Summary"
-$ git push -u
-</code></p>
+<p><code>~ $ git add --all</code></p>
 
-<p>再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://Clone 用户名.github.io”,如果刚刚有放index.html的话就可以显示其内容了。</p>
+<p><code>~ $ git commit -m "Summary"</code></p>
+
+<p><code>~ $ git push -u</code></p>
+
+<p>再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://username.github.io”,如果刚刚有放index.html的话就可以显示其内容了。</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/18/r1453533500966502326086.png" alt="github page" /></p>
 
@@ -164,52 +166,57 @@ $ git push -u
 
 <p>jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音节倒过来念)是基于ruby的一个博客系统，用户快速生成博客所需的静态页面。</p>
 
-<p>我是用Git Shell命令行下gem命令来安装，需先安装<a href="http://rubyinstaller.org/downloads">ruby</a>,安装完成后，重启Git Shell，输入<code class="highlighter-rouge">gem install jekyll</code>命令安装jekyll。</p>
+<p>我是用Git Shell命令行下gem命令来安装，需先安装<a href="http://rubyinstaller.org/downloads">ruby</a>，注意安装时要选择<strong>“Add Ruby executables to your PATH”</strong></p>
+
+<p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/22/50/r1453560632755056508260.png" alt="ruby" /></p>
+
+<p>安装完成后，重启Git Shell，输入<code>gem install jekyll</code>命令安装jekyll。</p>
 
 <p>失败了？很正常，由于网络环境原因，访问国外服务器十分坑爹，不过我们可以使用某宝的ruby gems镜像http://ruby.taobao.org/（我也被吓到了，某宝居然还有这功能~）</p>
 
-<p>更改gems源：</p>
+<p><strong>更改gems源：</strong></p>
 
-<p><code class="highlighter-rouge">
-$ gem sources --remove https://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
-$ gem sources -l
-    *** CURRENT SOURCES ***
-    https://ruby.taobao.org
-</code></p>
+<p><code>~ $ gem sources --remove https://rubygems.org/</code></p>
+
+<p><code>~ $ gem sources -a https://ruby.taobao.org/</code></p>
+
+<p><code>~ $ gem sources -l</code></p>
 
 <p>再次运行”gem install jekyll“安装命令</p>
 
-<p>安装好jekyll后，可以输入”jekyll -h“测试一下。</p>
+<p>安装好jekyll后，可以输入”jekyll -h“命令测试一下。</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/17/r1453537059517822656980.png" alt="test jekyll" /></p>
 
 <p>然后就可以用以下命令新建博客”</p>
 
-<p><code class="highlighter-rouge">
-$ jekyll new myblog“
-</code></p>
+<p><code>~ $ jekyll new myblog</code></p>
 
 <p>进入博客目录，运行博客服务器（为了进行本地预览）</p>
 
-<p><code class="highlighter-rouge">
-$cd myblog
-$jekyll serve
-</code></p>
+<p><code>~ $ cd myblog</code></p>
+
+<p><code>~ $ jekyll serve</code></p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/15/r1453536905531648574552.png" alt="jekyll" /></p>
 
 <p>打开浏览器，输入<a href="http://localhost:4000">http://localhost:4000</a>就能看到博客主页了。</p>
 
-<p>再把”myblog“目录下所有文件搬到仓库的”用户名.github.io“文件夹下，同步到github，就可以通过“http://Clone 用户名.github.io”访问博客了！</p>
+<h3 id="github-1">四、同步博客到github</h3>
+<p>最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过“http://username.github.io”访问博客了！</p>
+
+<p><strong>开始你的博客美（zhuang）妙（bi）之旅吧！！！</strong></p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/24/r1453537462187443227423.png" alt="myblog" /></p>
 
 <blockquote>
-  <p>参考文章： 
-* <a href="http://my.oschina.net/laichendong/blog/499224">用jekyll和github Pages写博客</a>
-* <a href="http://jekyll.bootcss.com/">jekyll中文官网</a></p>
+  <p>参考文章：</p>
 </blockquote>
+
+<ul>
+  <li><a href="http://my.oschina.net/laichendong/blog/499224">用jekyll和github Pages写博客</a></li>
+  <li><a href="http://jekyll.bootcss.com/">jekyll中文官网</a></li>
+</ul>
 
 
   </div>
