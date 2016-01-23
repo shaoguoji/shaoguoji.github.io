@@ -9,13 +9,13 @@ categories: jekyll update
 
 ![博客主页](http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/29/r1453476588695770489227.png "我的独立博客")
 
-*本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，我也不太会~~~*
+*本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~
 
 ---
 
 ###github page & jekyll
 
-github不用多说，程序猿的Facebook，而博客实际上就是一个网站，众所周知，建网站需要域名、空间的，而github page充当的就是空间的作用，而且重点是它**完全免费！！！**
+github不用多说，程序猿的Facebook，博客实际上就是一个网站，众所周知，建网站需要域名、空间的，而github page充当的就是空间的作用，而且重点是它**完全免费！！！**
 
 至于jekyll，是基于ruby的一个博客系统，可生成博客的静态网页，更是号称**只需几秒钟就能让网站跑起来**，不需要懂代码，一样能建站！（所以建博客没你想象的那么高大上不是么。。。）
 
@@ -58,17 +58,17 @@ OK废话不多说，开工！
 
 先下载安装[GitHub_2_11_0_5离线安装包以及文件下载链接](http://pan.baidu.com/s/1eQYZQQu)
 
-打开github for windows登陆github账号，在右上角的“设置”中找到“option”，**在“configure git”中输入github账号和邮箱配置一下git**（不然无法commit代码），点下面“Udate”完成设置。
+打开github for windows并登陆github账号，在右上角的设置图标中找到“option”，**在“configure git”中输入github账号和邮箱配置一下git**（不然无法commit代码），点下面“Udate”完成设置。
 
 ![option](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/25/r1453530346466632670866.png)
 
 ![configure git](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/57/r145353227826128946700.png)
 
-接着在左上角找到一个“+”，点Clone，选择刚建好的“username.github.io”仓库，再点下面的“Clone username.github.io”，选择存放路径，把仓库同步到本地。
+接着在左上角找到一个“+”，点Clone，选择刚建好的“username.github.io”仓库，再点下面的“Clone username.github.io”，选择存放路径，把仓库下载同步到本地。
 
 ![clone](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/33/r1453530825104362807973.png)
 
-本地打开刚刚设置的仓库保存路径（即“Clone username.github.io”目录），往里面随便扔个html文件，并**命名为index.html**（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
+本地打开刚刚设置的保存仓库的文件夹（即“Clone username.github.io”目录），往里面随便扔个html文件，并**命名为index.html**（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
 
 ![Uncommitted change](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/53/r1453531998703290822177.png)
 
@@ -131,7 +131,10 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 打开浏览器，输入[http://localhost:4000](http://localhost:4000)就能看到博客主页了。
 
-再把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过“http://username.github.io"访问博客了！
+###四、同步博客到github
+最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过“http://username.github.io"访问博客了！
+
+##开始你的博客美（zhuang）妙（bi）之旅吧！！！##
 
 ![myblog](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/24/r1453537462187443227423.png)
 
