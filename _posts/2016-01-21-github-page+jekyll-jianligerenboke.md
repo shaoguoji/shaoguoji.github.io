@@ -40,7 +40,7 @@ OK废话不多说，开工！
 
 ---
 
-###**一、注册github账号**
+###**一、注册github账号、新建仓库**
 
 登录[github](https://github.com/)官网，然后点击……额。。。这个你们会的，都不是小孩了，不废话了。。。
 
@@ -53,14 +53,12 @@ OK废话不多说，开工！
 点击“+New repository”新建一个仓库（所谓“仓库”就是放代码的地方啦）
 
 
-<!-- ![新建仓库](http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/47/r1453477668846317118714.png) -->
 ![new](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/31/r1453512667237810367715.png)
 
 
 注意仓库命名格式是**用户名.github.io**,用户名是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的"Create repository"完成新建仓库。
 
 
-<!-- ![Create repository](http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/52/r1453477971281478728916.png) -->
 ![new Create](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/33/r1453512804114599754817.png)
 
 
