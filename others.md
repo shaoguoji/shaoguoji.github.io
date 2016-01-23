@@ -4,5 +4,5 @@ title: others
 permalink: /others/
 ---
 
-<!-- [test 一下]({% post_url 2016-01-20-welcome-to-jekyll %}) -->
-[test 一99下](http://www.baidu.com)
+[test666 一下]({% post_url 2016-01-20-welcome-to-jekyll %})
+<!-- [test 一77下](http://www.baidu.com) -->
