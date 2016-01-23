@@ -50,7 +50,7 @@ OK废话不多说，开工！
 
 ![new](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/31/r1453512667237810367715.png)
 
-注意仓库命名格式是**username.github.io**,其中的username是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的"Create repository"完成新建仓库。
+注意仓库命名格式是**username.github.io**，其中的username是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的"Create repository"完成新建仓库。
 
 ![new Create](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/33/r1453512804114599754817.png)
 
@@ -78,10 +78,12 @@ OK废话不多说，开工！
 
 ![push](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/9/r1453532971440809956140.png)
 
->如果你想潇洒一点，打开github for windows自带的”Git Shell“(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。
+>如果你想潇洒一点，打开github for windows自带的Git Shell(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。
 
 ```~ $ git add --all```
+
 ```~ $ git commit -m "Summary"```
+
 ```~ $ git push -u```
 
 
