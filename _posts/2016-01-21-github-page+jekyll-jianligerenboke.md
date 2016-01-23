@@ -134,7 +134,7 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 ###四、同步博客到github
 最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过“http://username.github.io"访问博客了！
 
-##开始你的博客美（zhuang）妙（bi）之旅吧！！！##
+**开始你的博客美（zhuang）妙（bi）之旅吧！！！**
 
 ![myblog](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/24/r1453537462187443227423.png)
 
