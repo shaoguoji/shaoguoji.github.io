@@ -18,7 +18,7 @@ github_username: shaoguoji
 # Build settings
 
 markdown: kramdown
-#pygments: ture
+pygments: ture
 
-highlighter: true
+#highlighter: true
 #safe: true
