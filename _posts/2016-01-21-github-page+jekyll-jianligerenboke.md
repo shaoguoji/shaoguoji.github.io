@@ -121,13 +121,15 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 ![test jekyll](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/17/r1453537059517822656980.png)
 
-然后就可以用以下命令新建博客”
+然后就可以用以下命令新建博客：
 
 ```~ $ jekyll new myblog```
 
-进入博客目录，运行博客服务器（为了进行本地预览）
+进入博客目录：
 
 ```~ $ cd myblog```
+
+运行博客服务器（为了进行本地预览）：
 
 ```~ $ jekyll serve```
 
