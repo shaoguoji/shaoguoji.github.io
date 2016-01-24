@@ -9,7 +9,7 @@ categories: jekyll update
 
 ![博客主页](http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/29/r1453476588695770489227.png "我的独立博客")
 
-*本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~
+*本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~* 
 
 ---
 
@@ -72,7 +72,7 @@ OK废话不多说，开工！
 
 ![Uncommitted change](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/53/r1453531998703290822177.png)
 
-输入summary(摘要)后点“Commit to master”提交代码，最后**点右上角中间的“Push/Sync”**同步代码。
+输入summary(摘要)后点“Commit to master”提交代码，最后**点右上角中间的“Push/Sync”**同步代码到github。
 
 ![commit](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/1/r1453532462470787609678.png)
 
@@ -115,7 +115,7 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 ```~ $ gem sources -l```
 
-再次运行”gem install jekyll“安装命令
+再次运行”gem install jekyll“安装命令即可。
 
 安装好jekyll后，可以输入”jekyll -h“命令测试一下。
 
@@ -133,10 +133,10 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 ![jekyll](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/15/r1453536905531648574552.png)
 
-打开浏览器，输入[http://localhost:4000](http://localhost:4000)就能看到博客主页了。
+打开浏览器，输入[http://localhost:4000](http://localhost:4000)就能在本地预览博客主页了。
 
 ###四、同步博客到github
-最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过“http://username.github.io"访问博客了！
+最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过"http://username.github.io"访问博客了！
 
 **开始你的博客美（zhuang）妙（bi）之旅吧！！！**
 
