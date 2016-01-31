@@ -71,7 +71,7 @@
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/29/r1453476588695770489227.png" alt="博客主页" title="我的独立博客" /></p>
 
-<p>*本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~</p>
+<p><em>本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~</em></p>
 
 <hr />
 
@@ -138,7 +138,7 @@
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/53/r1453531998703290822177.png" alt="Uncommitted change" /></p>
 
-<p>输入summary(摘要)后点“Commit to master”提交代码，最后<strong>点右上角中间的“Push/Sync”</strong>同步代码。</p>
+<p>输入summary(摘要)后点“Commit to master”提交代码，最后<strong>点右上角中间的“Push/Sync”</strong>同步代码到github。</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/1/r1453532462470787609678.png" alt="commit" /></p>
 
@@ -148,11 +148,11 @@
   <p>如果你想潇洒一点，打开github for windows自带的Git Shell(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。</p>
 </blockquote>
 
-<p><code>~ $ git add --all</code></p>
+<p><code class="highlighter-rouge">~ $ git add --all</code></p>
 
-<p><code>~ $ git commit -m "Summary"</code></p>
+<p><code class="highlighter-rouge">~ $ git commit -m "Summary"</code></p>
 
-<p><code>~ $ git push -u</code></p>
+<p><code class="highlighter-rouge">~ $ git push -u</code></p>
 
 <p>再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://username.github.io”,如果刚刚有放index.html的话就可以显示其内容了。</p>
 
@@ -170,40 +170,42 @@
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/22/50/r1453560632755056508260.png" alt="ruby" /></p>
 
-<p>安装完成后，重启Git Shell，输入<code>gem install jekyll</code>命令安装jekyll。</p>
+<p>安装完成后，重启Git Shell，输入<code class="highlighter-rouge">gem install jekyll</code>命令安装jekyll。</p>
 
 <p>失败了？很正常，由于网络环境原因，访问国外服务器十分坑爹，不过我们可以使用某宝的ruby gems镜像http://ruby.taobao.org/（我也被吓到了，某宝居然还有这功能~）</p>
 
 <p><strong>更改gems源：</strong></p>
 
-<p><code>~ $ gem sources --remove https://rubygems.org/</code></p>
+<p><code class="highlighter-rouge">~ $ gem sources --remove https://rubygems.org/</code></p>
 
-<p><code>~ $ gem sources -a https://ruby.taobao.org/</code></p>
+<p><code class="highlighter-rouge">~ $ gem sources -a https://ruby.taobao.org/</code></p>
 
-<p><code>~ $ gem sources -l</code></p>
+<p><code class="highlighter-rouge">~ $ gem sources -l</code></p>
 
-<p>再次运行”gem install jekyll“安装命令</p>
+<p>再次运行”gem install jekyll“安装命令即可。</p>
 
 <p>安装好jekyll后，可以输入”jekyll -h“命令测试一下。</p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/17/r1453537059517822656980.png" alt="test jekyll" /></p>
 
-<p>然后就可以用以下命令新建博客”</p>
+<p>然后就可以用以下命令新建博客：</p>
 
-<p><code>~ $ jekyll new myblog</code></p>
+<p><code class="highlighter-rouge">~ $ jekyll new myblog</code></p>
 
-<p>进入博客目录，运行博客服务器（为了进行本地预览）</p>
+<p>进入博客目录：</p>
 
-<p><code>~ $ cd myblog</code></p>
+<p><code class="highlighter-rouge">~ $ cd myblog</code></p>
 
-<p><code>~ $ jekyll serve</code></p>
+<p>运行博客服务器（为了进行本地预览）：</p>
+
+<p><code class="highlighter-rouge">~ $ jekyll serve</code></p>
 
 <p><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/15/r1453536905531648574552.png" alt="jekyll" /></p>
 
-<p>打开浏览器，输入<a href="http://localhost:4000">http://localhost:4000</a>就能看到博客主页了。</p>
+<p>打开浏览器，输入<a href="http://localhost:4000">http://localhost:4000</a>就能在本地预览博客主页了。</p>
 
 <h3 id="github-1">四、同步博客到github</h3>
-<p>最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过“http://username.github.io”访问博客了！</p>
+<p>最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过”http://username.github.io”访问博客了！</p>
 
 <p><strong>开始你的博客美（zhuang）妙（bi）之旅吧！！！</strong></p>
 
@@ -220,9 +222,18 @@
 
 
   </div>
-
 </article>
 
+<!-- 回到顶部按钮 -->	
+<a name="top"></a>
+<a href="#top" style="display:block; width:37px; height:33px; border:1px solid #000; position:fixed; right:200px; bottom:200px;"><img src="http://img1.buy.ijinshan.com/weibo_img/2016/1/31/21/35/r1454247316246633804405.png" alt=""></a>
+<script type="text/javascript" src="/JavaScript/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/JavaScript/jquery.smooth-scroll.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("a").smoothScroll();
+})
+</script>
       </div>
     </div>
 

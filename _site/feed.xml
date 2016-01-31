@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 Jan 2016 23:23:56 +0800</pubDate>
-    <lastBuildDate>Sat, 23 Jan 2016 23:23:56 +0800</lastBuildDate>
+    <pubDate>Sun, 31 Jan 2016 21:40:30 +0800</pubDate>
+    <lastBuildDate>Sun, 31 Jan 2016 21:40:30 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -16,7 +16,7 @@
 
 &lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/29/r1453476588695770489227.png&quot; alt=&quot;博客主页&quot; title=&quot;我的独立博客&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;*本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~&lt;/em&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -83,7 +83,7 @@
 
 &lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/53/r1453531998703290822177.png&quot; alt=&quot;Uncommitted change&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;输入summary(摘要)后点“Commit to master”提交代码，最后&lt;strong&gt;点右上角中间的“Push/Sync”&lt;/strong&gt;同步代码。&lt;/p&gt;
+&lt;p&gt;输入summary(摘要)后点“Commit to master”提交代码，最后&lt;strong&gt;点右上角中间的“Push/Sync”&lt;/strong&gt;同步代码到github。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/1/r1453532462470787609678.png&quot; alt=&quot;commit&quot; /&gt;&lt;/p&gt;
 
@@ -93,11 +93,11 @@
   &lt;p&gt;如果你想潇洒一点，打开github for windows自带的Git Shell(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ git add --all&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ git add --all&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ git commit -m &quot;Summary&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ git commit -m &quot;Summary&quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ git push -u&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ git push -u&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://username.github.io”,如果刚刚有放index.html的话就可以显示其内容了。&lt;/p&gt;
 
@@ -115,40 +115,42 @@
 
 &lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/1/23/22/50/r1453560632755056508260.png&quot; alt=&quot;ruby&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;安装完成后，重启Git Shell，输入&lt;code&gt;gem install jekyll&lt;/code&gt;命令安装jekyll。&lt;/p&gt;
+&lt;p&gt;安装完成后，重启Git Shell，输入&lt;code class=&quot;highlighter-rouge&quot;&gt;gem install jekyll&lt;/code&gt;命令安装jekyll。&lt;/p&gt;
 
 &lt;p&gt;失败了？很正常，由于网络环境原因，访问国外服务器十分坑爹，不过我们可以使用某宝的ruby gems镜像http://ruby.taobao.org/（我也被吓到了，某宝居然还有这功能~）&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;更改gems源：&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ gem sources --remove https://rubygems.org/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ gem sources --remove https://rubygems.org/&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ gem sources -a https://ruby.taobao.org/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ gem sources -a https://ruby.taobao.org/&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ gem sources -l&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ gem sources -l&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;再次运行”gem install jekyll“安装命令&lt;/p&gt;
+&lt;p&gt;再次运行”gem install jekyll“安装命令即可。&lt;/p&gt;
 
 &lt;p&gt;安装好jekyll后，可以输入”jekyll -h“命令测试一下。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/17/r1453537059517822656980.png&quot; alt=&quot;test jekyll&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;然后就可以用以下命令新建博客”&lt;/p&gt;
+&lt;p&gt;然后就可以用以下命令新建博客：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ jekyll new myblog&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ jekyll new myblog&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;进入博客目录，运行博客服务器（为了进行本地预览）&lt;/p&gt;
+&lt;p&gt;进入博客目录：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ cd myblog&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ cd myblog&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;~ $ jekyll serve&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;运行博客服务器（为了进行本地预览）：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~ $ jekyll serve&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/15/r1453536905531648574552.png&quot; alt=&quot;jekyll&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;打开浏览器，输入&lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;就能看到博客主页了。&lt;/p&gt;
+&lt;p&gt;打开浏览器，输入&lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;就能在本地预览博客主页了。&lt;/p&gt;
 
 &lt;h3 id=&quot;github-1&quot;&gt;四、同步博客到github&lt;/h3&gt;
-&lt;p&gt;最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过“http://username.github.io”访问博客了！&lt;/p&gt;
+&lt;p&gt;最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过”http://username.github.io”访问博客了！&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;开始你的博客美（zhuang）妙（bi）之旅吧！！！&lt;/strong&gt;&lt;/p&gt;
 
@@ -177,17 +179,17 @@
     
       <item>
         <title>Welcom to jekyll</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;def print_hi(name)
-  puts &amp;quot;Hi, #{name}&amp;quot;
-end
-print_hi(&amp;#39;Tom&amp;#39;)
-#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
