@@ -27,7 +27,7 @@ categories: jekyll update
 ---
 <br/>
 
-###二、准备工作
+### 二、准备工作
 
 * 第三方recovery（TWRP Recovery）
 * Xposed安装器
@@ -40,12 +40,12 @@ categories: jekyll update
 
 ![手机系统版本](http://img1.buy.ijinshan.com/weibo_img/2016/2/4/20/1/r1454587278919633505712.png)
 
-####刷机有风险，请先备份手机重要数据（建议先用小米本地备份，再把MIUI\backup文件夹复制到电脑比较保险，配合小米账号云端的桌面布局及APP备份可完美还原）
+#### 刷机有风险，请先备份手机重要数据（建议先用小米本地备份，再把MIUI\backup文件夹复制到电脑比较保险，配合小米账号云端的桌面布局及APP备份可完美还原）
 
 ---
 <br/>
 
-###三、第三方recovery的刷入
+### 三、第三方recovery的刷入
 
 > Recovery模式指的是一种可以对安卓机内部的数据或系统进行修改的模式（类似于windows PE或DOS）。在这个模式下我们可以刷入新的安卓系统，或者对已有的系统进行备份或升级，也可以在此恢复出厂设置。          
 
@@ -68,15 +68,15 @@ categories: jekyll update
 ---
 <br/>
 
-###四、Xposed框架的安装与使用
+### 四、Xposed框架的安装与使用
 
-####1、安装Xposed Installer（Xposed安装器）
+#### 1、安装Xposed Installer（Xposed安装器）
 
 在手机安装**de.robv.android.xposed.installer_3.0_alpha4_37.apk**
 
 *其实Xposed直接从recovery刷入，安装器只是用来查看是否安装成功。。。*
 
-####2、安装Xposed框架zip包
+#### 2、安装Xposed框架zip包
 
 复制**xposed-v78-sdk21-arm-MIUI-edition-by-SolarWarez-20151124.zip**到内存卡根目录（**不要解压**），重启进入TWRP Recovery，在“安装”选项找到刚刚的zip文件，滑动刷入，便完成了Xposed框架的安装。
 
@@ -88,7 +88,7 @@ categories: jekyll update
 
 ![成功安装](http://img1.buy.ijinshan.com/weibo_img/2016/2/4/21/35/r1454592929738019232451.png)
 
-####3、安装Xposed应用模块
+#### 3、安装Xposed应用模块
 
 工具包中有一个**com.wuxianlin.luckymoney_1.3.3_9.apk**红包插件，直接安装，打开Xposed Installer，菜单中的Modules会显示已安装的所有基于Xposed框架的应用，**勾选红包插件，重启手机**，即可使用。
 
@@ -97,7 +97,7 @@ categories: jekyll update
 ---
 <br/>
 
-###五、心得体会
+### 五、心得体会
 
 从为了装SuperSu苦练刷recovery，到满大街找可用的Xposed框架zip包，手机一次次无法开机不得不线刷恢复，各种艰辛（都是我自找的，其实只要一开始多逛论坛就好），不过**折腾的越多，弯路走的越多，学到的也就越多**，对于我那台破小米，我也没什么好顾虑的，最多就弄坏手机没得用，又不是没体验过没有智能机的生活。
 
