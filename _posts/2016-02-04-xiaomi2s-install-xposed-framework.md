@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  小米2s安装Xposed框架
-date:   2016-02-04
+title: 小米2s安装Xposed框架
+date: 2016-02-04
 categories: jekyll update
 ---
 
