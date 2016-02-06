@@ -6,9 +6,143 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jan 2016 21:40:30 +0800</pubDate>
-    <lastBuildDate>Sun, 31 Jan 2016 21:40:30 +0800</lastBuildDate>
+    <pubDate>Sat, 06 Feb 2016 11:51:41 +0800</pubDate>
+    <lastBuildDate>Sat, 06 Feb 2016 11:51:41 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>小米2s安装Xposed框架</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Xposed框架是一款可以在不修改APK的情况下影响程序运行（修改系统）的框架服务，基于它可以制作出许多功能强大的模块，且在功能不冲突的情况下同时运作。（需root权限）&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;又是一篇教程？？？&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;写在前面的废话&lt;/li&gt;
+  &lt;li&gt;准备工作&lt;/li&gt;
+  &lt;li&gt;第三方recovery的刷入&lt;/li&gt;
+  &lt;li&gt;Xposed框架的安装与使用&lt;/li&gt;
+  &lt;li&gt;心得体会&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;一、写在前面的废话&lt;/h3&gt;
+
+&lt;p&gt;之前家城来探我时show了一下他手机的红包插件（基于Xposed框架），当时觉得挺有意思，自己也想搞一个。凭借着印象中他不太标准的发音，我还是百度到了“Xposed框架”，开始了苦逼的摸索之旅……&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;PS：人家魅族机在应用商店下个安装器就搞定，我却搞了几天，才发现MIUI也有MIUI的不足~~~&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;二、准备工作&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;第三方recovery（TWRP Recovery）&lt;/li&gt;
+  &lt;li&gt;Xposed安装器&lt;/li&gt;
+  &lt;li&gt;Xposed安装包&lt;/li&gt;
+  &lt;li&gt;Xposed应用模块&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;所用到的软件下载地址：&lt;a href=&quot;http://pan.baidu.com/s/1sk68nlr&quot;&gt;小米2s安装xposed工具包&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;我手机系统版本&lt;strong&gt;安卓5.0.2&lt;/strong&gt;，MIUI 7.0.4.0&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/2/4/20/1/r1454587278919633505712.png&quot; alt=&quot;手机系统版本&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;miuibackupapp&quot;&gt;刷机有风险，请先备份手机重要数据（建议先用小米本地备份，再把MIUI\backup文件夹复制到电脑比较保险，配合小米账号云端的桌面布局及APP备份可完美还原）&lt;/h4&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;recovery&quot;&gt;三、第三方recovery的刷入&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Recovery模式指的是一种可以对安卓机内部的数据或系统进行修改的模式（类似于windows PE或DOS）。在这个模式下我们可以刷入新的安卓系统，或者对已有的系统进行备份或升级，也可以在此恢复出厂设置。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;为什么需要第三方recovery？因为自带的不够强大，而一些&lt;strong&gt;底层应用&lt;/strong&gt;（如SuperSu和Xposed）的安装不能使用常规的APP安装方法，而是要从recovery直接刷入手机，自带的recovery不能胜任，所以刷入第三方recovery是基础。&lt;/p&gt;
+
+&lt;p&gt;经过各种尝试，刷了好多版本的recovery，都不能用，要么就是读不了内存卡文件，要么就是进入时无背光（用手电照还是有字的），直到今天早上才找到一个MIUI7能用的TWRP Recovery 2.8.7.0，才完美解决。&lt;/p&gt;
+
+&lt;p&gt;此外还需要一个很好用的“Mi2/2S_recovery一键刷入工具”来刷recovery。&lt;/p&gt;
+
+&lt;p&gt;下载好工具包的TWRP Recovery，文件夹中的&lt;strong&gt;recovery.img&lt;/strong&gt;便是我们要刷入的recovery，将它复制到Mi2/2S_recovery一键刷入工具”目录中替换原来自带的recovery.img。关机，按&lt;strong&gt;电源+音量下&lt;/strong&gt;键进入手机的fastboot模式，把手机用数据线连接电脑，在电脑打开recovery.bat批处理，按提示操作即可，刷入成功后会有提示。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/2/4/20/46/r1454590006627018960906.png&quot; alt=&quot;刷入工具&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;刷好后手机会自动重启，重启后再进入recovery就能看到美美的界面了~~~&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://static.oneplus.cn/data/attachment/forum/201501/18/152455zyx0675zv88k0il9.png&quot; alt=&quot;recovery&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PS：一定要等到重启进入桌面后再关机进新的recovery，否则有可能导致recovery刷入失败&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;xposed&quot;&gt;四、Xposed框架的安装与使用&lt;/h3&gt;
+
+&lt;h4 id=&quot;xposed-installerxposed&quot;&gt;1、安装Xposed Installer（Xposed安装器）&lt;/h4&gt;
+
+&lt;p&gt;在手机安装&lt;strong&gt;de.robv.android.xposed.installer_3.0_alpha4_37.apk&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;其实Xposed直接从recovery刷入，安装器只是用来查看是否安装成功。。。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;xposedzip&quot;&gt;2、安装Xposed框架zip包&lt;/h4&gt;
+
+&lt;p&gt;复制&lt;strong&gt;xposed-v78-sdk21-arm-MIUI-edition-by-SolarWarez-20151124.zip&lt;/strong&gt;到内存卡根目录（&lt;strong&gt;不要解压&lt;/strong&gt;），重启进入TWRP Recovery，在“安装”选项找到刚刚的zip文件，滑动刷入，便完成了Xposed框架的安装。&lt;/p&gt;
+
+&lt;p&gt;如果手机没有root，会提示刷入SuperSu软件（实际上许多教程都推荐使用SuperSu来管理root权限）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/2/4/21/38/r1454593115119003580897.png&quot; alt=&quot;SuperSu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;重启手机，打开Xposed Installer，如果显示“&lt;strong&gt;Xposed framework version 78 (MIUI edition by SolarWarez / 20151124) is active.&lt;/strong&gt;”的话，恭喜你成功安装了强大的Xposed框架！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://img1.buy.ijinshan.com/weibo_img/2016/2/4/21/35/r1454592929738019232451.png&quot; alt=&quot;成功安装&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;xposed-1&quot;&gt;3、安装Xposed应用模块&lt;/h4&gt;
+
+&lt;p&gt;工具包中有一个&lt;strong&gt;com.wuxianlin.luckymoney_1.3.3_9.apk&lt;/strong&gt;红包插件，直接安装，安装后打开Xposed Installer，菜单中的Modules会显示已安装的所有基于Xposed框架的应用，&lt;strong&gt;勾选红包插件，重启手机&lt;/strong&gt;，即可使用。&lt;/p&gt;
+
+&lt;p&gt;至于更多的Xposed应用，可看这篇帖子：&lt;a href=&quot;http://www.52pojie.cn/thread-446465-1-1.html&quot;&gt;Xposed框架下37款神级应用&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;五、心得体会&lt;/h3&gt;
+
+&lt;p&gt;从为了装SuperSu苦练刷recovery，到满大街找可用的Xposed框架zip包，手机一次次无法开机不得不线刷恢复，各种艰辛（都是我自找的，其实只要一开始多逛论坛就好），不过&lt;strong&gt;折腾的越多，弯路走的越多，学到的也就越多&lt;/strong&gt;，而且对于我那台破小米，我也没什么好顾虑的，最多就弄坏手机没得用，又不是没体验过没有智能机的生活。&lt;/p&gt;
+
+&lt;p&gt;翻了下日记，家城是1月31号晚来找的，今天是2月4号，四天，虽说断断续续，但最终还是把问题解决了，虽说不是什么大项目，但起码&lt;strong&gt;自己把一件事情做好了&lt;/strong&gt;。昨晚十点多上床十一点多睡觉，今早九点多起，回家以来第一次尝试早睡早起（平时睡到中午十二点多才吃早餐），上午把框架弄好（早起福利啊），吃个午饭，下午和老同学看看聚会场地聊聊天，晚上写写博客，多好的生活啊，&lt;strong&gt;比之前的各种糜烂，正常作息的一天竟是如此珍贵&lt;/strong&gt;，回想起假期以来做什么事都是半途而废，这样算来，今天无疑是最美好的一天……&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;参考文章&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;救命贴！：&lt;a href=&quot;http://www.miui.com/thread-3151737-1-1.html&quot;&gt;小米2/2s基于安卓5.02版本的MIUI 7 刷入xposed！！！&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://android.tgbus.com/Android/yizhi/201412/511888.shtml&quot;&gt;不会刷入Recovery不用愁 三种方法教会你&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.oneplusbbs.com/forum.php?mod=viewthread&amp;amp;tid=315970&quot;&gt;★写给小白看★教你如何使用ADB(刷ROOT刷recovery刷系统…&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://forum.xda-developers.com/showthread.php?t=3034811&quot;&gt;XDA论坛Xposed官方下载&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Thu, 04 Feb 2016 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/02/04/xiaomi2s-install-xposed-framework.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/02/04/xiaomi2s-install-xposed-framework.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>github page + jekyll建立个人博客</title>
