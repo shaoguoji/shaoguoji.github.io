@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  Sublime Text tmpl插件快速生成md文件YAML头
-date:   2016-02-20 11:32:22
+date:   2016-02-20 11:32:22 +0800
 categories: jekyll update
 ---
 
-![Sublime Text](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/11/44/r1455939883731912423078.png)
+![Sublime Text](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/13/47/r1455947241514077452107.png)
 
 <br/>
 
@@ -29,11 +29,12 @@ categories: jekyll update
 
 ---
 
-### 就简简单单的四步：
+### 就简简单单的五步：
 1. 安装Sublime Tmpl插件
 2. 增加模板文件
-3. 配置菜单选项及快捷键
-4. 使用tmpl新建md文件
+3. 修改日期变量格式
+4. 配置菜单选项及快捷键
+5. 使用tmpl新建md文件
 
 ---
 
@@ -61,13 +62,28 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 ![tempalate](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/12/19/r1455941986865157104710.png)
 
-应该都看出来了，“${date}”是日期变量，默认格式为"%Y-%m-%d %H:%M:%S"，恰好符合jekyll YAML头的要求，而“${1:输入文章标题}”是新建文件后输入光标的定位及提示信息，便于新建文件后标题的输入。
+应该都看出来了，“${date}”是日期变量，而“${1:输入文章标题}”是新建文件后输入光标的定位及提示信息，便于新建文件后标题的输入。
 
 <br/>
 
 ---
 
-### 第三步、配置菜单选项及快捷键
+### 第三步、修改日期变量格式
+
+模板中日期变量“${date}”的默认格式为"%Y-%m-%d %H:%M:%S"，**而jekyll YAML头信息要求时间后加上时区+0800（北京时间）**，所以我们还要修改一下${date}的配置文件。
+
+**tmpl配置文件路径："Data\Packages\SublimeTmpl\SublimeTmpl.sublime-settings"**
+
+![time setting](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/13/54/r1455947651976795872907.png)
+
+打开配置文件，找到"date_format"处，加上时区，改为"%Y-%m-%d %H:%M:%S +0800"，保存即可。
+
+**（或者只保留日期去掉时间，但有时间一定要加时区！！！否则文章识别不了，亲身踩坑。。。）**
+<br/>
+
+---
+
+### 第四步、配置菜单选项及快捷键
 
 #### 1、配置菜单选项
 
@@ -93,7 +109,7 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 ---
 
-### 第四步、使用tmpl新建md文件
+### 第五步、使用tmpl新建md文件
 
 **方法一（菜单）：File --> New File(Sumlime Tmpl) --> markdown**
 
