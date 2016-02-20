@@ -54,6 +54,8 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 ---
 
+<br/>
+
 ### 第二步、增加模板文件
 
 **默认模版路径: "Data\Packages\SublimeTmpl\templates" 目录.**
@@ -67,6 +69,8 @@ Ctrl+Shift+P 打开Sublime Text控制台
 <br/>
 
 ---
+
+<br/>
 
 ### 第三步、修改日期变量格式
 
@@ -83,6 +87,8 @@ Ctrl+Shift+P 打开Sublime Text控制台
 <br/>
 
 ---
+
+<br/>
 
 ### 第四步、配置菜单选项及快捷键
 
@@ -109,6 +115,8 @@ Ctrl+Shift+P 打开Sublime Text控制台
 <br/>
 
 ---
+
+<br/>
 
 ### 第五步、使用tmpl新建md文件
 
