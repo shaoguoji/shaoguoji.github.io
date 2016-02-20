@@ -145,9 +145,9 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 ![myblog](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/24/r1453537462187443227423.png)
 
 >参考文章： 
-
- * [用jekyll和github Pages写博客](http://my.oschina.net/laichendong/blog/499224)
- * [jekyll中文官网](http://jekyll.bootcss.com/)
+> 
+> * [用jekyll和github Pages写博客](http://my.oschina.net/laichendong/blog/499224)
+> * [jekyll中文官网](http://jekyll.bootcss.com/)
 
 
 
