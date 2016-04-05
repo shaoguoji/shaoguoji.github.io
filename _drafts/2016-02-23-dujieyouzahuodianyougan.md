@@ -7,7 +7,7 @@ author:     Shao Guoji
 header-img: img/post-bg-jieyou.jpg
 catalog:    true
 tag:
-    -阅读
+    - 阅读
 ---
 
 ![cover](http://s3.cn-north-1.amazonaws.com.cn/sitbweb-cn/content/B00NOQNHP2/images/cover.jpg)

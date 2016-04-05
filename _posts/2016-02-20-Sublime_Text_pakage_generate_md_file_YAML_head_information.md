@@ -7,7 +7,7 @@ author:     Shao Guoji
 header-img: img/post-bg-jekyll-head.jpg
 catalog:    true
 tag:
-    -博客
+    - 博客
 ---
 
 <br/>
