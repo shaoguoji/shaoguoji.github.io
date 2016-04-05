@@ -18,7 +18,7 @@ tag:
 
 ---
 
-###github page & jekyll
+### github page & jekyll
 
 github不用多说，程序猿的Facebook，博客实际上就是一个网站，众所周知，建网站需要域名、空间的，而github page充当的就是空间的作用，而且重点是它**完全免费！！！**
 
