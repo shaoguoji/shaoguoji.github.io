@@ -1,8 +1,13 @@
 ---
-layout: post
-title:  小米2s安装Xposed框架
-date:   2016-02-04
-categories: jekyll update
+layout:     post
+title:      小米2s安装Xposed框架
+subtitle:   折腾手机的神器
+date:       2016-02-04
+author:     Shao Guoji
+header-img: img/post-bg-xposed.jpg
+catalog:    true
+tag:
+    - 手机
 ---
 
 > Xposed框架是一款可以在不修改APK的情况下影响程序运行（修改系统）的框架服务，基于它可以制作出许多功能强大的模块，且在功能不冲突的情况下同时运作。（需root权限）
