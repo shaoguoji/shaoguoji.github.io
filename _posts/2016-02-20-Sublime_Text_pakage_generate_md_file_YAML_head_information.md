@@ -2,7 +2,7 @@
 layout:     post
 title:      Sublime Text tmpl插件快速生成md文件YAML头
 subtitle:   让写博客更简单
-date:       2016-02-20 11:32:22 +0800
+date:       2016-02-20 11:32:22 
 author:     Shao Guoji
 header-img: img/post-bg-jekyll-head.jpg
 catalog:    true
