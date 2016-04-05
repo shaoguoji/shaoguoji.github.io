@@ -1,8 +1,14 @@
 ---
-layout: post
-title:  github page + jekyll建立个人博客
-date:   2016-01-23
-categories: jekyll update
+layout:     post
+title:      github page + jekyll建立个人博客
+subtitle:   专注于博客本身
+date:       2016-01-23
+author:     "Shao Guoji"
+header-img: "img/pages-home-page.png"
+catalog: true
+tag:
+    - 博客
+    - 生活
 ---
 
 折腾了一两天，终于把自己的独立博客给建了起来，看了一下MarkDown的教程，尝试用Subline Text2写下这第一篇文章，记录一下建博的过程，给同样想建博的童鞋作为参考（虽然网上类似教程一抓一大把），也算给自己留个纪念。
