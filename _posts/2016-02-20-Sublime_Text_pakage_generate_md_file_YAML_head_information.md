@@ -4,22 +4,17 @@ title:      Sublime Text tmpl插件快速生成md文件YAML头
 subtitle:   让写博客更简单
 date:       2016-02-20 11:32:22 +0800
 author:     Shao Guoji
-header-img: img/post-bg-sublimetext.jpg
+header-img: img/post-bg-jekyll-head.jpg
 catalog:    true
 tag:
     - 博客
 ---
 
-![Sublime Text](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/13/47/r1455947241514077452107.png)
-
-<br/>
-
-
 不得不说Sublime Text果然是一款强大的文本编辑神器，拥有大量插件。正是因为如此，我坚信一定有这样一个插件，能帮我自动生成jekyll文章中YAML头的信息。昨晚百度搜狗了一下（果然不会下意识用谷歌），果然被我在互联网的大海中捞到了tmpl这根针。（当然大神都是自己写程序生成的，我这个渣渣嘛。。。）
 
 <br/>
 
-![YAML head](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/11/42/r1455939740658227282102.png)
+![Sublime Text](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/13/47/r1455947241514077452107.png)
 
 <br/>
 
