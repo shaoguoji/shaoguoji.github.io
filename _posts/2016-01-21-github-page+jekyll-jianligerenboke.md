@@ -18,7 +18,7 @@ tag:
 
 ---
 
-###github page & jekyll
+### github page & jekyll
 
 github不用多说，程序猿的Facebook，博客实际上就是一个网站，众所周知，建网站需要域名、空间的，而github page充当的就是空间的作用，而且重点是它**完全免费！！！**
 
@@ -43,7 +43,7 @@ OK废话不多说，开工！
 
 ---
 
-###**一、注册github账号、新建仓库**
+### **一、注册github账号、新建仓库**
 
 登录[github](https://github.com/)官网，然后点击……额。。。这个你们会的，都不是小孩了，不废话了。。。
 
@@ -59,7 +59,7 @@ OK废话不多说，开工！
 
 ![new Create](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/33/r1453512804114599754817.png)
 
-###二、使用github for windows同步代码
+### 二、使用github for windows同步代码
 
 先下载安装[GitHub_2_11_0_5离线安装包以及文件下载链接](http://pan.baidu.com/s/1eQYZQQu)
 
@@ -100,7 +100,7 @@ OK废话不多说，开工！
 
 这样你已经有了自己的网站了，如果仅仅是想把一个html网页发布的话，看到这里已经够了，但对于博客来说，好戏才刚刚开始。
 
-###三、jekyll的安装与使用
+### 三、jekyll的安装与使用
 
 jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音节倒过来念)是基于ruby的一个博客系统，用户快速生成博客所需的静态页面。
 
@@ -142,7 +142,7 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 打开浏览器，输入[http://localhost:4000](http://localhost:4000)就能在本地预览博客主页了。
 
-###四、同步博客到github
+### 四、同步博客到github
 最后一步，把”myblog“目录下所有文件搬到仓库的”username.github.io“文件夹下，同步到github，就可以通过"http://username.github.io"访问博客了！
 
 **开始你的博客美（zhuang）妙（bi）之旅吧！！！**
