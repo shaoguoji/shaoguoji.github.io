@@ -2,7 +2,7 @@
 layout:     post
 title:      重新设置Sublime Text
 subtitle:   文章测试
-date:       2016-04-05 20:48:56
+date:       2016-04-05 20:48:56 +0800
 author:     Shao Guoji
 header-img: img/post-bg-jekyll-head.jpg
 catalog:    true
