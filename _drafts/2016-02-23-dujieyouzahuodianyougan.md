@@ -1,8 +1,13 @@
 ---
-layout: post
-title:  读《解忧杂货店》有感
-date:   2016-02-23 22:42:40 +0800
-categories: jekyll update
+layout:     post
+title:      找回遗失的感动
+subtitle:   读《解忧杂货店》有感
+date:       2016-02-23 22:42:40 +0800
+author:     Shao Guoji
+header-img: img/post-bg-jieyou.jpg
+catalog:    true
+tag:
+    - 阅读
 ---
 
 ![cover](http://s3.cn-north-1.amazonaws.com.cn/sitbweb-cn/content/B00NOQNHP2/images/cover.jpg)
