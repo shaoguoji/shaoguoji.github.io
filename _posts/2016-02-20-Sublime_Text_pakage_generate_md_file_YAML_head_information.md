@@ -1,8 +1,13 @@
 ---
-layout: post
-title:  Sublime Text tmpl插件快速生成md文件YAML头
-date:   2016-02-20 11:32:22 +0800
-categories: jekyll update
+layout:     post
+title:      Sublime Text tmpl插件快速生成md文件YAML头
+subtitle:   让写博客更简单
+date:       2016-02-20 11:32:22 +0800
+author:     Shao Guoji
+header-img: img/post-bg-sublimetext.jpg
+catalog:    true
+tag:
+    - 博客
 ---
 
 ![Sublime Text](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/13/47/r1455947241514077452107.png)
