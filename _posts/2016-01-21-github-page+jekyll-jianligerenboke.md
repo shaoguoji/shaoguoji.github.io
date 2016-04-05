@@ -4,7 +4,7 @@ title:      github page + jekyll建立个人博客
 subtitle:   专注于博客本身
 date:       2016-01-23
 author:     "Shao Guoji"
-header-img: "img/pages-home-page.png"
+header-img: "img/pages-home-page.jpg"
 catalog: true
 tag:
     - 博客
