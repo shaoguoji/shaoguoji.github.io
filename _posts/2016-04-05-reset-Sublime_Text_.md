@@ -4,7 +4,6 @@ title:      重新设置Sublime Text
 subtitle:   文章测试
 date:       2016-04-05 20:48:56
 author:     Shao Guoji
-header-img: 
 catalog:    true
 tag:
     -测试
