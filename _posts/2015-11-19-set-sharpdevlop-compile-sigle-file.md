@@ -2,7 +2,7 @@
 layout:     post
 title:      配置SharpDevelop编译单个cs文件
 subtitle:   文章搬运
-date:       2015-11-19 23:08:41 +0800
+date:       2016-04-06
 author:     Shao Guoji
 header-img: img/post-bg-sharpdevelop.jpg
 catalog:    true
@@ -10,7 +10,7 @@ tag:
     - C#
 ---
 
-> 这是我之前初学学C#是在博客园的文章，保留写作日期搬到了自己博客
+> 这是我之前初学C#是在博客园2015-11-19的文章，现在搬到了自己博客
 
 <br/>
 
