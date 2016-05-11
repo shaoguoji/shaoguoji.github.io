@@ -2,7 +2,7 @@
 layout:     post
 title:      HC-05蓝牙模块的参数设置与使用
 subtitle:   蓝牙门锁开发笔记
-date:       2016-04-16 13:17:38 +0800
+date:       2016-05-11 13:17:38 +0800
 author:     Shao Guoji
 header-img: img/post-bg-bluetooth.jpg
 catalog:    true
