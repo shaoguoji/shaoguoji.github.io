@@ -2,7 +2,7 @@
 layout:     post
 title:      DIY宿舍蓝牙门锁
 subtitle:   从此告别出门带钥匙的繁琐
-date:       2016-05-12
+date:       2016-05-12 13:23:17 +0800
 author:     Shao Guoji
 header-img: 
 catalog:    true
