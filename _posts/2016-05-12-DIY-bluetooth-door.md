@@ -80,6 +80,7 @@ tag:
 
 * USB下载器及驱动程序（[下载地址](http://www.doyoung.net/DOC/CP210x_VCP_Win_XP_S2K3_Vista_7.zip)）
 * STC-ISP下载软件（[下载地址](http://www.doyoung.net/DOC/STC-ISP-V488.EXE)）
+* 门锁HEX文件([下载地址]({{site.baseurl}}/img/bluedoor/bluedoor.hex))
 
 把下载器先插上电脑，装好驱动后在系统的“设备管理器”中就能看到串口设备:
 
