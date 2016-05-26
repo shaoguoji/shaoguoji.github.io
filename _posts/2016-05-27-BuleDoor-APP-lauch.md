@@ -4,7 +4,7 @@ title:      “蓝牙门锁”APP正式发布
 subtitle:   “宿舍蓝牙门锁”配套安卓APP
 date:       2016-05-27 00:11:49 +0800
 author:     Shao Guoji
-header-img: img/post-bg-bluedoor-APP.JPG
+header-img: img/post-bg-bluedoor-APP.jpg
 catalog:    true
 tag:
     - 蓝牙门锁开发笔记
