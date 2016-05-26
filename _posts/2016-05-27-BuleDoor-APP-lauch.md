@@ -14,14 +14,17 @@ tag:
 
 晚上参加了“第七届IT文化节-互联网+校园APP创新大赛决赛”，也算是我们APP的“发布会”了。上台讲个PPT，装个逼。混了个一等奖。APP全部由舍友开发，不关我事，对安卓一窍不通，就这样……
 
+APK安装包下载地址：[蓝牙门锁.apk]()
+
 APP项目github地址：[https://github.com/shaoguoji/BlueDoorLock](https://github.com/shaoguoji/BlueDoorLock)
+
 *注：可修改APP及单片机程序的命令集，以提高门锁安全性*
 
 硬件制作详见文章：[DIY宿舍蓝牙门锁-蓝牙门锁开发笔记]({% post_url 2016-05-12-DIY-bluetooth-door %})
 
 额，直接来一波PPT截图睡觉去……
 
-![幻灯片1]({{site.baseurl}}/img/bluedoorPPT/幻灯片1.jpg)
+![幻灯片1]({{site.baseurl}}/img/bluedoorPPT/幻灯片1.JPG)
 
 ![幻灯片2]({{site.baseurl}}/img/bluedoorPPT/幻灯片2.jpg)
 
