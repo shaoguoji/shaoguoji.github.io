@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      “蓝牙门锁”APP正式发布
+title:      “蓝牙门锁”APP发布
 subtitle:   “宿舍蓝牙门锁”配套安卓APP
 date:       2016-05-27 00:11:49 +0800
 author:     Shao Guoji
@@ -14,7 +14,7 @@ tag:
 
 晚上参加了“第七届IT文化节-互联网+校园APP创新大赛决赛”，也算是我们APP的“发布会”了。上台讲个PPT，装个逼。混了个一等奖。APP全部由舍友开发，不关我事，对安卓一窍不通，就这样……
 
-APK安装包下载地址：[蓝牙门锁.apk]({{site.baseurl}}/res/BlueDoorLock.apk))
+APK安装包下载地址：[蓝牙门锁.apk]({{site.baseurl}}/res/BlueDoorLock.rar))
 
 APP项目github地址：[https://github.com/shaoguoji/BlueDoorLock](https://github.com/shaoguoji/BlueDoorLock)
 
