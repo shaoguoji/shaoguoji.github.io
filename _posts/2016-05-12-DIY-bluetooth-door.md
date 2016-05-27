@@ -92,7 +92,7 @@ tag:
 
 * USB下载器及驱动程序（[下载地址](http://www.doyoung.net/DOC/CP210x_VCP_Win_XP_S2K3_Vista_7.zip)）
 * STC-ISP下载软件（[下载地址](http://www.doyoung.net/DOC/STC-ISP-V488.EXE)）
-* 门锁HEX文件([下载地址]({{site.baseurl}}/res/bluedoor.hex))
+* 门锁HEX文件([下载地址]({{site.baseurl}}/res/bluedoor.rar))
 
 把下载器先插上电脑，装好驱动后在系统的“设备管理器”中就能看到串口设备，记住所用的COM口:
 
@@ -185,7 +185,7 @@ tag:
 
 ### 下载、安装、运行app
 
-配置好蓝牙模块之后，就可以和它开心的“聊天”（通讯）啦，和PC端的“串口助手”一样，这里我们使用的是舍友开发的安卓手机端的“蓝牙门锁”APP（APK安装包下载地址：[蓝牙门锁.apk]({{site.baseurl}}/res/BlueDoorLock.apk))）。即实现手机与蓝牙模块之间的通讯。
+配置好蓝牙模块之后，就可以和它开心的“聊天”（通讯）啦，和PC端的“串口助手”一样，这里我们使用的是舍友开发的安卓手机端的“蓝牙门锁”APP（APK安装包下载地址：[蓝牙门锁.apk]({{site.baseurl}}/res/BlueDoorLock.apk))）。即可实现手机与蓝牙模块之间的通讯。
 
 APP使用说明详见：[“蓝牙门锁”APP发布-- 蓝牙门锁开发笔记]({% post_url 2016-05-27-BuleDoor-APP-lauch %})
 
