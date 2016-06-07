@@ -95,13 +95,13 @@ tag:
 
 5、不保证所有电脑都能用，因为有的电脑无法安装蓝牙驱动，得不到串口，比如我舍友的电脑
 
+<br/>
+
+<br/>
+
 EXE下载地址：[BlueDoor-PC.rar]({{site.baseurl}}/res/BlueDoor-PC.rar)
 
 项目源码github地址：[https://github.com/shaoguoji/BlueDoor-PC-version](https://github.com/shaoguoji/BlueDoor-PC-version)
-
-<br/>
-
-<br/>
 
 > 参考文章
 > 
