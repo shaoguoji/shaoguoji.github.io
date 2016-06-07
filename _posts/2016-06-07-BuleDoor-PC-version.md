@@ -4,7 +4,7 @@ title:      蓝牙门锁PC端上位机
 subtitle:   键盘快捷键开门
 date:       2016-06-07 15:17:54 +0800
 author:     Shao Guoji
-header-img: img\post-bg-bluedoor-PC-version.jpg
+header-img: img/post-bg-bluedoor-PC-version.jpg
 catalog:    true
 tag:
     - 软件
