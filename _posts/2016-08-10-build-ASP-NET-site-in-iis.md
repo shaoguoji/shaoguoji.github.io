@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      【踩坑】发布asp.net网站 到本地IIS
+title:      【踩坑】发布ASP.NET网站 到本地IIS
 subtitle:	记录对动态网页摸索的一个下午
 date:       2016-08-10 16:21:43 +0800
 author:     Shao Guoji
@@ -213,6 +213,8 @@ IIS管理中有“默认文档”的设置，有什么用呢，简单来说就�
 ### 长篇大论然并卵？
 
 好像写了那么多，乱七八糟的，也没什么太大的价值，反正我觉得只要把[发布 asp.net网站 到本地IIS-ASP.NET-第七城市](http://www.th7.cn/Program/net/201311/161046.shtml)和[图文解说Win7系统机器上发布C#+ASP.NET网站 - gavin710的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/gavin710/article/details/8681204)这两篇文章结合看，问题应该不大。但我当时真的是太手忙脚乱了，像个无头苍蝇，导致我现在试图回想当时的思路、步骤都很困难、很混乱。总之只想着记下来，以后要找的话也有门啊……
+
+最重要的是，对网站有一定了解后我就可以大方去买服务器了哈哈哈哈……
 
 <br/>
 
