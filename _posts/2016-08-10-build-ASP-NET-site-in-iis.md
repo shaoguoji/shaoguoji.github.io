@@ -60,7 +60,7 @@ tag:
 
 IIS全称互联网信息服务（Internet Information Services），在控制面板安装好ISS后，兴奋copy了一段ASP代码做测试（显示系统当前时间和问候语）：
 
-```asp
+```html
 
 <%@ language="javascript" %>
 <!DOCTYPE html>
@@ -173,7 +173,7 @@ else
 
 ![错误图](http://img1.buy.ijinshan.com/weibo_img/2016/8/10/19/18/r1470827919158214502239.png)
 
-4.0框架尚未在IIS中注册的问题，解决方法：[asp.net发布到IIS中出现错误：处理程序“PageHandlerFactory-Integrated”在其模块列表中有一个错误模块“ManagedPipelineHandler” - 马兆娟  廊坊师范学院信息技术提高班第八期 - 博客频道 - CSDN.NET](http://blog.csdn.net/mazhaojuan/article/details/7660657)
+.Net Framework 4.0框架尚未在IIS中注册的问题，解决方法：[asp.net发布到IIS中出现错误：处理程序“PageHandlerFactory-Integrated”在其模块列表中有一个错误模块“ManagedPipelineHandler” - 马兆娟  廊坊师范学院信息技术提高班第八期 - 博客频道 - CSDN.NET](http://blog.csdn.net/mazhaojuan/article/details/7660657)
 
 <br/>
 
@@ -185,7 +185,7 @@ else
 
 ![二级目录报错](http://img1.buy.ijinshan.com/weibo_img/2016/8/10/20/48/r1470833290431279680840.png)
 
-怎么说，网站项目（单个页面文件不存在这样的问题）必须放在网站文件夹根目录，否则报错打不开，比如上面的默认目录wwwroot，把VS的项目（包括几个文件和几个文件夹）直接放在wwwroot，就可以通过“http://localhost/WebForm2.aspx”访问，而新建一个文件夹“abc”再放项目（二级目录下），就不能用“http://localhost/abc/WebForm2.aspx”访问。
+怎么说呢……就是网站项目（单个页面文件不存在这样的问题）必须放在网站文件夹根目录，否则报错打不开，比如上面的默认目录wwwroot，把VS的项目（包括几个文件和几个文件夹）直接放在wwwroot，就可以通过“http://localhost/WebForm2.aspx”访问，而新建一个文件夹“abc”再放项目（二级目录下），就不能用“http://localhost/abc/WebForm2.aspx”访问了，神奇。
 
 **又试了一下，发现只要把项目bin目录放到网站根目录即可，看来是bin目录的问题，这货一定要在根目录，原因不明，有待深究……**
 
@@ -205,11 +205,11 @@ else
 
 #### 默认文档设置
 
-IIS管理中有“默认文档”的设置，有什么用呢，简单来说就是将页面放置在网站根目录，并设置为默认文档后，就不同在url中指明文件名了（类似Github Page的index.html）。举个栗子，把上面的WebForm2.aspx添加为默认文档，就可以直接用“http://localhost”代替“http://localhost/WebForm2.aspx”访问网页了。
+IIS管理中有“默认文档”的设置，有什么用呢，简单来说就是将页面放在网站根目录、并设置为默认文档后，就不同在url中指明文件名了（类似Github Page的index.html）。举个栗子，把上面的WebForm2.aspx添加为默认文档，就可以直接用“http://localhost”代替“http://localhost/WebForm2.aspx”访问网页了。
 
 #### 端口号
 
-同一台机器上的不同网站目录是用端口号区分的，默认目录的端口号是80，刚好也是http协议的“御用端口”，所以可以省略不写（上面就是），但在IIS添加其他网站时会有端口号的选项，就不能再用80了（被占用），就要用其他未被占用的端口，这时url中端口号就不能省略了（如http://localhost:8081/WebForm1.aspx）。
+同一台机器上的不同网站目录是用端口号区分的，默认目录的端口号是80，刚好也是http协议的“御用端口”，所以可以省略不写（上面就是），但在IIS添加其他网站时会有端口号的选项，就不能再用80了（被占用），就要用其他未被占用的端口，这时url中端口号就不能省略了，如http://localhost:8081/WebForm1.aspx。
 
 ### 长篇大论然并卵？
 
