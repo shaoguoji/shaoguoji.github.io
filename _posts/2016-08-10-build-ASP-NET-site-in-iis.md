@@ -58,7 +58,7 @@ tag:
 
 ### 安装IIS
 
-IIS全称互联网信息服务（Internet Information Services），在控制面板安装好ISS后，兴奋copy了一段ASP代码做测试（显示系统当前时间和问候语）：
+IIS全称互联网信息服务（Internet Information Services），是一个处理动态网页的Web服务器（同类产品有Apache、Tomcat、Jboss、nginx等）。在控制面板安装好ISS后，兴奋copy了一段ASP代码做测试（显示系统当前时间和问候语）：
 
 ```html
 
