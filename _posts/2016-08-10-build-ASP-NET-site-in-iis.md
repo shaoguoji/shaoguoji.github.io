@@ -1,10 +1,10 @@
 ---
 layout:     post
 title:      【踩坑】发布asp.net网站 到本地IIS
-subtitle:	记录对动态网页的摸索的一个下午
+subtitle:	记录对动态网页摸索的一个下午
 date:       2016-08-10 16:21:43 +0800
 author:     Shao Guoji
-header-img: 
+header-img: img/post-bg-IIS.jpg
 catalog:    true
 tag:
     - C#
@@ -59,7 +59,7 @@ tag:
 
 IIS全称互联网信息服务（Internet Information Services），在控制面板安装好ISS后，兴奋copy了一段ASP代码做测试（显示系统当前时间和问候语）：
 
-```html
+```asp
 
 <%@ language="javascript" %>
 <!DOCTYPE html>
@@ -110,7 +110,7 @@ else
 
 ### ASP.Net网站的建立
 
-之前在实验室接触过不少aspx页面，自然想到用VS建一个项目什么的，但居然还有那么多建立方式，一时也搞不懂之间的区别。
+之前在实验室接触过不少aspx页面，自然想到用VS建一个项目什么的，但居然还有那么多建立选项，一时也搞不懂之间的区别。
 
 ![新建ASP.NET项目](http://img1.buy.ijinshan.com/weibo_img/2016/8/10/17/41/r1470822072981210460278.png)
 
@@ -128,11 +128,11 @@ else
 
 ### ASP.Net网站的发布
 
-废话也不多说，又找到了参考网站：
+废话也不多说，又找到了干货：
 
 [图文解说Win7系统机器上发布C#+ASP.NET网站 - gavin710的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/gavin710/article/details/8681204)
 
-用的是VS自带的“发布”功能，VS2015的发布又与教程老版本的VS又不同，反正意思就是选一个目录输出项目：
+用的是VS自带的“发布”功能，我电脑的VS2015的发布选项又与教程老版本的VS不同，反正总的意思就是选一个目录输出项目：
 
 ![VS2015发布菜单](http://img1.buy.ijinshan.com/weibo_img/2016/8/10/18/5/r1470823530363232127207.png)
 
@@ -184,16 +184,17 @@ else
 
 ![二级目录报错](http://img1.buy.ijinshan.com/weibo_img/2016/8/10/20/48/r1470833290431279680840.png)
 
-怎么说，网站项目（单个页面文件不存在这样的问题）必须放在网站文件夹根目录，否则报错打不开，比如上面的默认目录wwwroot，把VS的项目（包括几个文件和几个文件夹）直接放在wwwroot，就可以通过“http://localhost/WebForm2.aspx”访问，而新建一个文件夹“abc”再放项目，就不能用“http://localhost/abc/WebForm2.aspx”访问。
+怎么说，网站项目（单个页面文件不存在这样的问题）必须放在网站文件夹根目录，否则报错打不开，比如上面的默认目录wwwroot，把VS的项目（包括几个文件和几个文件夹）直接放在wwwroot，就可以通过“http://localhost/WebForm2.aspx”访问，而新建一个文件夹“abc”再放项目（二级目录下），就不能用“http://localhost/abc/WebForm2.aspx”访问。
 
 **又试了一下，发现只要把项目bin目录放到网站根目录即可，看来是bin目录的问题，这货一定要在根目录，原因不明，有待深究……**
 
 解决方法：
 
 1、在IIS中把abc目录右键“转换为应用程序”
+
 2、把abc目录添加虚拟目录，但仍必须将可执行文件（dll等)放置在父级站点的bin目录下（所以然并卵~~~）
 
-关于应用程序与虚拟目录详见（反正我没怎么看懂）：[iis中虚拟目录、应用程序的区别 - 学习也休闲](http://www.studyofnet.com/news/1265.html)和[IIS7中的站点，应用程序和虚拟目录详解 - 柯柏文 - 博客园](http://www.cnblogs.com/lwhkdash/archive/2013/01/12/2857650.html)还有[如何：在 IIS 中创建和配置 ASP.NET 虚拟目录](https://msdn.microsoft.com/zh-cn/library/zwk103ab(VS.80).aspx)这几篇文章。
+关于应用程序与虚拟目录详见：[iis中虚拟目录、应用程序的区别 - 学习也休闲](http://www.studyofnet.com/news/1265.html)和[IIS7中的站点，应用程序和虚拟目录详解 - 柯柏文 - 博客园](http://www.cnblogs.com/lwhkdash/archive/2013/01/12/2857650.html)还有[如何：在 IIS 中创建和配置 ASP.NET 虚拟目录](https://msdn.microsoft.com/zh-cn/library/zwk103ab(VS.80).aspx)这几篇文章（反正我没怎么看懂）。
 
 <br/>
 
@@ -203,15 +204,15 @@ else
 
 #### 默认文档设置
 
-IIS管理中有“默认文档”的设置，有什么用呢，简单来说就是将页面放置在网站根目录，并设置为默认文档，就不同在url中指明了（类似Github Page的index.html）。举个栗子，把上面的WebForm2.aspx添加为默认文档，就可以直接用“http://localhost”代替“http://localhost/WebForm2.aspx”访问网页了。
+IIS管理中有“默认文档”的设置，有什么用呢，简单来说就是将页面放置在网站根目录，并设置为默认文档后，就不同在url中指明文件名了（类似Github Page的index.html）。举个栗子，把上面的WebForm2.aspx添加为默认文档，就可以直接用“http://localhost”代替“http://localhost/WebForm2.aspx”访问网页了。
 
 #### 端口号
 
-同一台机器上的不同网站目录是用端口号区分的，默认目录的端口号是80，刚好也是http协议的“御用端口”，所以可以省略不写（上面就是），但在IIS添加网站时会有端口号的选项，就不能再用80了，就要用其他未被占用的端口，这时url中端口号就不能省略了（如：http://localhost:8081/WebForm1.aspx）。
+同一台机器上的不同网站目录是用端口号区分的，默认目录的端口号是80，刚好也是http协议的“御用端口”，所以可以省略不写（上面就是），但在IIS添加其他网站时会有端口号的选项，就不能再用80了（被占用），就要用其他未被占用的端口，这时url中端口号就不能省略了（如http://localhost:8081/WebForm1.aspx）。
 
 ### 长篇大论然并卵？
 
-好像写了那么多，乱七八糟的，也没什么太大的价值，反正我觉得按照[发布 asp.net网站 到本地IIS-ASP.NET-第七城市](http://www.th7.cn/Program/net/201311/161046.shtml)和[图文解说Win7系统机器上发布C#+ASP.NET网站 - gavin710的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/gavin710/article/details/8681204)这两篇文章结合看应该问题不大，我当时是太手忙脚乱了，像个无头苍蝇，导致我现在想回想当时的思路、步骤都很困难、很混乱。总之只想记下来，以后要找的话也有门啊……
+好像写了那么多，乱七八糟的，也没什么太大的价值，反正我觉得只要把[发布 asp.net网站 到本地IIS-ASP.NET-第七城市](http://www.th7.cn/Program/net/201311/161046.shtml)和[图文解说Win7系统机器上发布C#+ASP.NET网站 - gavin710的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/gavin710/article/details/8681204)这两篇文章结合看，问题应该不大。但我当时真的是太手忙脚乱了，像个无头苍蝇，导致我现在试图回想当时的思路、步骤都很困难、很混乱。总之只想着记下来，以后要找的话也有门啊……
 
 <br/>
 
@@ -224,9 +225,9 @@ IIS管理中有“默认文档”的设置，有什么用呢，简单来说就�
 > 
 > [图文解说Win7系统机器上发布C#+ASP.NET网站 - gavin710的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/gavin710/article/details/8681204)
 > 
-> [在自己的 PC 上运行 ASP | 菜鸟教程](http://www.runoob.com/asp/asp-install.html)
+> [在自己的 PC 上运行 ASP - 菜鸟教程](http://www.runoob.com/asp/asp-install.html)
 > 
-> [ASP 变量 | 菜鸟教程](http://www.runoob.com/asp/asp-variables.html)
+> [ASP 变量 - 菜鸟教程](http://www.runoob.com/asp/asp-variables.html)
 > 
 > [Win7下IIS由于扩展配置问题而无法提供请求的页_百度经验](http://jingyan.baidu.com/article/7c6fb4287ea53680652c9047.html)
 > 
