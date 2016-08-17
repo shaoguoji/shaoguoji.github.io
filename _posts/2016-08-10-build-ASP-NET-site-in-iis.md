@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      【踩坑】发布ASP.NET网站 到本地IIS
+title:      【踩坑】发布ASP.NET网站到本地IIS和云服务器
 subtitle:	记录对动态网页摸索的一个下午
 date:       2016-08-10 16:21:43 +0800
 author:     Shao Guoji
@@ -225,7 +225,7 @@ IIS管理中有“默认文档”的设置，有什么用呢，简单来说就�
 
 噔噔噔噔~~~服务器买到手，顺便贴一下服务器IIS的配置，纯搬运……
 
-[原文](https://www.qcloud.com/doc/product/213/2755)
+[原文：云服务器 - 安装配置IIS及PHP - 腾讯云产品文档](https://www.qcloud.com/doc/product/213/2755)
 
 #### 1. 安装配置IIS
 
