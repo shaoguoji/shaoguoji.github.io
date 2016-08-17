@@ -219,6 +219,57 @@ IIS管理中有“默认文档”的设置，有什么用呢，简单来说就�
 
 <br/>
 
+---
+
+### Windows Server 2012 R2服务器配置
+
+噔噔噔噔~~~服务器买到手，顺便贴一下服务器IIS的配置，纯搬运……
+
+[原文](https://www.qcloud.com/doc/product/213/2755)
+
+#### 1. 安装配置IIS
+
+##### 1.1. Windows2012R2版本示例
+
+1) 点击Windows云服务器左下角【开始(Start)】，选择【服务器管理器(Server Manager)】，打开服务器管理界面，如下图所示：
+
+![开始start](https://mccdn.qcloud.com/static/img/d27f493d5613aa2d87a9bbd9dba59387/image.png)
+
+2) 选择【添加角色和功能】，在弹出的添加角色和功能向导弹出框”开始之前“中点击【下一步】按钮，在”安装类型“中选择【基于角色或基于功能的安装】，点击【下一步】按钮。
+
+
+![添加角色和功能](https://mccdn.qcloud.com/static/img/36ab9d6b144c5eff7fe2b468268155f2/image.png)
+
+![开始之前](https://mccdn.qcloud.com/static/img/0375764474b419976b13b594ea328e88/image.png)
+
+![安装类型](https://mccdn.qcloud.com/static/img/b6341e1fff569f1d7fffb5b66bc14c98/image.png)
+
+3) 窗口左侧选择”服务器角色“选项卡，勾选【Web服务器（IIS）】，在弹出框中点击【添加功能】按钮后点击【下一步】按钮。
+
+![服务器角色](https://mccdn.qcloud.com/static/img/d516d053aca89ddc0a27ebe68a8f5882/image.png)
+
+![添加角色和功能向导](https://mccdn.qcloud.com/static/img/702065dfb3620e7aa7e81a94ff87a79b/image.png)
+
+4) 在”功能“选项卡中点击【下一步】按钮后，在”Web服务器角色（IIS）“选项卡也点击【下一步】。
+
+![功能](https://mccdn.qcloud.com/static/img/6e436524609ccd6e38b7440ebb881278/image.png)
+
+![Web服务器角色](https://mccdn.qcloud.com/static/img/b003e403fe4e8e86bb0655199bb75a19/image.png)
+
+5) 在”角色服务“选项卡中勾选【CGI】选项，点击下一步。
+
+![角色服务](https://mccdn.qcloud.com/static/img/d13a9e02730018041342ecafa1b471af/image.png)
+
+6) 确认安装并等待安装完成。
+
+![确认](https://mccdn.qcloud.com/static/img/7e295431db7ef4a43b4136c860b32b19/image.png)
+
+7) 安装完成后在云服务器的浏览器中访问localhost验证是否安装成功，出现以下界面即为成功安装。
+
+![验证安装](https://mccdn.qcloud.com/static/img/dfa6725c4358e1a4214dcceb03e87028/image.png)
+
+<br/>
+
 <br/>
 
 
@@ -247,3 +298,5 @@ IIS管理中有“默认文档”的设置，有什么用呢，简单来说就�
 > [IIS7中的站点，应用程序和虚拟目录详解 - 柯柏文 - 博客园](http://www.cnblogs.com/lwhkdash/archive/2013/01/12/2857650.html)
 > 
 > [如何：在 IIS 中创建和配置 ASP.NET 虚拟目录](https://msdn.microsoft.com/zh-cn/library/zwk103ab(VS.80).aspx)
+> 
+> [云服务器 - 安装配置IIS及PHP - 腾讯云产品文档](https://www.qcloud.com/doc/product/213/2755)
