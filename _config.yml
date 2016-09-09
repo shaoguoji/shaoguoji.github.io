@@ -70,7 +70,7 @@ ba_track_id: aa77dd1af62bf0b3cb69ac8ee616f047
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "弹弹吉他，写写代码，焊焊板子，猝猝死。爱生活，更爱体验生活。"
-sidebar-avatar: http://img1.buy.ijinshan.com/weibo_img/2016/1/22/11/37/r1453433860323951545944.png  # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: {{site.baseurl}}/img/博客头像.png  # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
