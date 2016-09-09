@@ -61,15 +61,15 @@ tag:
 
 ### 程序执行效果
 
-![程序主界面](http://img1.buy.ijinshan.com/weibo_img/2016/6/7/10/45/r1465267520362779472915.png)
+![程序主界面]({{site.baseurl}}/img/BuleDoor-PC-version/程序主界面.png)
 
-![任务栏图标1](http://img1.buy.ijinshan.com/weibo_img/2016/6/7/10/47/r1465267637663241176401.png)
+![任务栏图标1]({{site.baseurl}}/img/BuleDoor-PC-version/任务栏图标1.png)
 
-![任务栏图标2](http://img1.buy.ijinshan.com/weibo_img/2016/6/7/10/53/r1465267982205748690065.png)
+![任务栏图标2]({{site.baseurl}}/img/BuleDoor-PC-version/任务栏图标2.png)
 
-![任务栏图标3](http://img1.buy.ijinshan.com/weibo_img/2016/6/7/10/53/r1465268022998891125657.png)
+![任务栏图标3]({{site.baseurl}}/img/BuleDoor-PC-version/任务栏图标3.png)
 
-![任务栏图标4](http://img1.buy.ijinshan.com/weibo_img/2016/6/7/10/52/r1465267936697002577963.png)
+![任务栏图标4]({{site.baseurl}}/img/BuleDoor-PC-version/任务栏图标4.png)
 
 <br/>
 
