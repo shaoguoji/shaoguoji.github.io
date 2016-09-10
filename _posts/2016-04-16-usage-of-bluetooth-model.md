@@ -79,6 +79,8 @@ HC-05有两种工作模式，官方称为命令响应工作模式和自动连接
 
 ![模块连接电脑](http://odaps2f9v.bkt.clouddn.com/%E6%A8%A1%E5%9D%97%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91.jpg)
 
+![设备管理器](http://odaps2f9v.bkt.clouddn.com/%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E5%99%A8.png)
+
 #### 一、打开串口
 
 打开[蓝牙测试软件](http://pan.baidu.com/s/1o6BiNDS)，点击“搜索端口”按钮。串口打开成功后在旁边会有提示，多次点击按钮切换串口号：
@@ -133,11 +135,11 @@ HC-05有两种工作模式，官方称为命令响应工作模式和自动连接
 
 数据手册中有许多的AT命令例子，如"at+addr?\r\n",你以为直接复制到软件执行就行？呵呵，图样图森破……
 
-![直接复制命令](http://img1.buy.ijinshan.com/weibo_img/2016/4/17/15/35/r146087850364727158205.png)
+![直接复制命令](http://odaps2f9v.bkt.clouddn.com/%E7%9B%B4%E6%8E%A5%E5%A4%8D%E5%88%B6%E5%91%BD%E4%BB%A4.png)
 
 那么AT正确的打开方式是……**把"\r\n"去掉，用”按一下键盘回车“替代**，再执行就好了：
 
-![正确执行](http://img1.buy.ijinshan.com/weibo_img/2016/4/17/15/36/r1460878602869107396742.png)
+![正确执行](http://odaps2f9v.bkt.clouddn.com/%E6%AD%A3%E7%A1%AE%E6%89%A7%E8%A1%8C.png)
 
 ##### 经过测试，在”蓝牙测试软件“中直接使用AT命令都要加一个回车，否则得不到模块响应。但有些命令模块没有响应，比如"AT+NAME?"和"AT+ CLASS?",这不是你的问题。
 
@@ -149,7 +151,7 @@ HC-05有两种工作模式，官方称为命令响应工作模式和自动连接
 
 蓝牙模块、wifi模块等常用器件大多都是通过AT指令来配置的，那什么才是AT命令调试的正确姿势呢？其实只要下一个sscom,再勾选“发送新行”，发AT指令就可以了……
 
-![AT正确姿势](http://img1.buy.ijinshan.com/weibo_img/2016/4/17/15/36/r1460878602869107396742.png)
+![AT正确姿势](http://odaps2f9v.bkt.clouddn.com/AT%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF.png)
 
 ![怪我咯？](http://wduploads.gximg.cn/ueditor/php/upload/image/20151120/1447986720331435.jpg)
 
