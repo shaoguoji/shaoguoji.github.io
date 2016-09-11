@@ -66,7 +66,7 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 ![tempalate](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/12/19/r1455941986865157104710.png)
 
-应该都看出来了，“${date}”是日期变量，而“${1:输入文章标题}”是新建文件后输入光标的定位及提示信息，便于新建文件后标题的输入。
+应该都看出来了，“${date}”是日期变量，而“${1:输入文章标题}”是新建文件后输入光标的定位及提示信息，便于新建文件后标题的输入，其他文本内容原样显示。
 
 <br/>
 
@@ -100,7 +100,7 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 **菜单配置文件路径："Data\Packages\SublimeTmpl\Main.sublime-menu"**
 
-打开菜单配置文件，照葫芦画瓢地加入markdown格式的配置即可
+打开菜单配置文件，照葫芦画瓢地加入markdown格式的配置即可，注意逗号
 
 ![menu setting](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/12/38/r145594313719174293853.png)
 
