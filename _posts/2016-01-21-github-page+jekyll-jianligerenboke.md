@@ -12,11 +12,12 @@ tag:
 
 折腾了一两天，终于把自己的独立博客给建了起来，看了一下MarkDown的教程，尝试用Subline Text2写下这第一篇文章，记录一下建博的过程，给同样想建博的童鞋作为参考（虽然网上类似教程一抓一大把），也算给自己留个纪念。
 
+![博客主页](http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/29/r1453476588695770489227.png "我的独立博客")
+
 *本文只是实现“博客建立起来能正常访问”的程度，仅记录重点步骤，至于一些操作细节以及之后的博客内容美化，自己探索吧~~~* 
 
 ---
 
-<br/>
 
 ### github page & jekyll
 
@@ -44,7 +45,6 @@ OK废话不多说，开工！
 
 ---
 
-<br/>
 
 ### **一、注册github账号、新建仓库**
 
@@ -52,47 +52,40 @@ OK废话不多说，开工！
 
 创建好账号后先去验证一下邮箱，接着进到你的主页（如下图），
 
-![github主页](http://odaps2f9v.bkt.clouddn.com/16-9-16/17828822.jpg)
+![github主页](http://img1.buy.ijinshan.com/weibo_img/2016/1/22/23/42/r1453477330809917755772.png)
 
 点击“+New repository”新建一个仓库（所谓“仓库”就是放代码的地方啦）
 
-![new](http://odaps2f9v.bkt.clouddn.com/16-9-16/90566620.jpg)
+![new](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/31/r1453512667237810367715.png)
 
 注意仓库命名格式是**username.github.io**，其中的username是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的"Create repository"完成新建仓库。
 
-![new Create](http://odaps2f9v.bkt.clouddn.com/16-9-16/6631739.jpg)
+![new Create](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/9/33/r1453512804114599754817.png)
 
----
-
-<br/>
 
 ### 二、使用github for windows同步代码
 
 先下载安装[GitHub_2_11_0_5离线安装包以及文件下载链接](http://pan.baidu.com/s/1eQYZQQu)
 
-打开github for windows并登陆github账号，输入github账号和邮箱配置一下git**（不然无法commit代码），点下面“Udate”完成设置。
+打开github for windows并登陆github账号，在右上角的设置图标中找到“option”，**在“configure git”中输入github账号和邮箱配置一下git**（不然无法commit代码），点下面“Udate”完成设置。
 
-![Log in](http://odaps2f9v.bkt.clouddn.com/16-9-16/1671089.jpg)
+![option](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/25/r1453530346466632670866.png)
 
-![Configure](http://odaps2f9v.bkt.clouddn.com/16-9-16/38902830.jpg)
+![configure git](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/57/r145353227826128946700.png)
 
 接着在左上角找到一个“+”，点Clone，选择刚建好的“username.github.io”仓库，再点下面的“Clone username.github.io”，选择存放路径，把仓库下载同步到本地。
 
-![clone](http://odaps2f9v.bkt.clouddn.com/16-9-16/91916253.jpg)
+![clone](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/33/r1453530825104362807973.png)
 
-![save](http://odaps2f9v.bkt.clouddn.com/16-9-16/71798795.jpg)
+本地打开刚刚设置的保存仓库的文件夹（即“Clone username.github.io”目录），往里面随便扔个html文件，并**命名为index.html**（否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
 
-本地打开刚刚设置的保存仓库的文件夹（即“Clone username.github.io”目录），往里面随便扔个html文件，并**命名为index.html**（文件名要为index，否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
-
-![Open in Explorer](http://odaps2f9v.bkt.clouddn.com/16-9-16/65472962.jpg)
-
-![Uncommitted change](http://odaps2f9v.bkt.clouddn.com/16-9-16/23480271.jpg)
+![Uncommitted change](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/14/53/r1453531998703290822177.png)
 
 输入summary(摘要)后点“Commit to master”提交代码，最后**点右上角中间的“Push/Sync”**同步代码到github。
 
-![commit](http://odaps2f9v.bkt.clouddn.com/16-9-16/17199396.jpg)
+![commit](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/1/r1453532462470787609678.png)
 
-![push](http://odaps2f9v.bkt.clouddn.com/16-9-16/93743950.jpg)
+![push](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/9/r1453532971440809956140.png)
 
 >如果你想潇洒一点，打开github for windows自带的Git Shell(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。
 
@@ -105,17 +98,12 @@ OK废话不多说，开工！
 
 再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://username.github.io",如果刚刚有放index.html的话就可以显示其内容了。
 
-![github code](http://odaps2f9v.bkt.clouddn.com/16-9-16/14272084.jpg)
+![github page](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/18/r1453533500966502326086.png)
 
-![github setting](http://odaps2f9v.bkt.clouddn.com/16-9-16/38085155.jpg)
-
-![side](http://odaps2f9v.bkt.clouddn.com/16-9-16/16375060.jpg)
+![side](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/15/23/r1453533805662110534959.png)
 
 这样你已经有了自己的网站了，如果仅仅是想把一个html网页发布的话，看到这里已经够了，但对于博客来说，好戏才刚刚开始。
 
----
-
-<br/>
 
 ### 三、jekyll的安装与使用
 
@@ -123,11 +111,9 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 我是用Git Shell命令行下gem命令来安装，需先安装[ruby](http://rubyinstaller.org/downloads)，注意安装时要选择**“Add Ruby executables to your PATH”**
 
-![ruby](http://odaps2f9v.bkt.clouddn.com/16-9-16/88461043.jpg)
+![ruby](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/22/50/r1453560632755056508260.png)
 
-安装完成后，打开Git Shell，输入`gem install jekyll`命令安装jekyll。
-
-![install jekyll](http://odaps2f9v.bkt.clouddn.com/16-9-16/691858.jpg)
+安装完成后，重启Git Shell，输入`gem install jekyll`命令安装jekyll。
 
 失败了？很正常，由于网络环境原因，访问国外服务器十分坑爹，不过我们可以使用某宝的ruby gems镜像http://ruby.taobao.org/（我也被吓到了，某宝居然还有这功能~）
 
@@ -141,11 +127,9 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 再次运行”gem install jekyll“安装命令即可。
 
-![installed](http://odaps2f9v.bkt.clouddn.com/16-9-16/4316801.jpg)
-
 安装好jekyll后，可以输入”jekyll -h“命令测试一下。
 
-![test jekyll](http://odaps2f9v.bkt.clouddn.com/16-9-16/55707611.jpg)
+![test jekyll](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/17/r1453537059517822656980.png)
 
 然后就可以用以下命令新建博客：
 
@@ -159,13 +143,10 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 ```~ $ jekyll serve```
 
-![jekyll](http://odaps2f9v.bkt.clouddn.com/16-9-16/29373777.jpg)
+![jekyll](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/15/r1453536905531648574552.png)
 
 打开浏览器，输入[http://localhost:4000](http://localhost:4000)就能在本地预览博客主页了。
 
----
-
-<br/>
 
 ### 四、同步博客到github
 
@@ -173,31 +154,7 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 **开始你的博客美（zhuang）妙（bi）之旅吧！！！**
 
----
-
-<br/>
-
-### 五、问题及解决方法（20160919更新）
-
-图片挂了之后，想重新把流程过一遍截图，发现“再也回不到从前”：
-
-#### 问题1、改gems源时出现"SSL_connect returned=1 errno=0"
-
-![SSL connect erro](http://odaps2f9v.bkt.clouddn.com/16-9-19/41216050.jpg)
-
-#### 解决方法：下载”cacert.pem“文件，添加环境变量指向。  
-详细步骤参考文章[ruby  SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: - leorowe的专栏
-        - 博客频道 - CSDN.NET](http://blog.csdn.net/leorowe/article/details/41968349)
-
-#### 问题2、“jekyll new”新建的博客本地预览失败，github page样式乱七八糟
-
-![jekyll serve fail](http://odaps2f9v.bkt.clouddn.com/16-9-19/60313689.jpg)
-
-![github page fail](http://odaps2f9v.bkt.clouddn.com/16-9-20/29681347.jpg)
-
-#### 解决方法：换其他的jekyll模板
-
-用“jekyll new”生成博客文件似乎有问题，那么就从[Jekyll Themes](http://jekyllthemes.org/)选一个喜欢的主题使用吧。
+![myblog](http://img1.buy.ijinshan.com/weibo_img/2016/1/23/16/24/r1453537462187443227423.png)
 
 >参考文章： 
 > 
