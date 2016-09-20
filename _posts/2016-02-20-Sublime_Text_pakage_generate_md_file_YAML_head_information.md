@@ -14,7 +14,7 @@ tag:
 
 不得不说Sublime Text果然是一款强大的文本编辑神器，拥有大量插件。正是因为如此，我坚信一定有这样一个插件，能帮我自动生成jekyll文章中YAML头的信息。昨晚百度搜狗了一下（果然不会下意识用谷歌），果然被我在互联网的大海中捞到了tmpl这根针。（当然大神都是自己写程序生成的，我这个渣渣嘛。。。）
 
-![Sublime Text](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/13/47/r1455947241514077452107.png)
+![Sublime Text](http://odaps2f9v.bkt.clouddn.com/2016-02-20-Sublime_Text_pakage_generate_md_file_YAML_head_information/Sublime%20Text.png)
 
 <br/>
 
@@ -28,8 +28,6 @@ tag:
 **Sublime Tmpl是新建文件的模板插件，允许用户自定义新建文件的类型与对应模板。**安装tmpl插件后进行简单配置，就可实现快捷键新建一个带YAML头的新文件（自动生成时间），并定位输入光标，只需保存文件即可开始写作。
 
 <br/>
-
----
 
 ### 就简简单单的五步：
 1. 安装Sublime Tmpl插件
@@ -50,9 +48,7 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 安装完成后，会看到“File”菜单多出了Sublime Tmpl的新建文件选项
 
-![menu](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/12/12/r145594155688132286432.png)
-
-<br/>
+![menu](http://odaps2f9v.bkt.clouddn.com/2016-02-20-Sublime_Text_pakage_generate_md_file_YAML_head_information/menu.png)
 
 ---
 
@@ -64,11 +60,9 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 到模板目录随便找一个文件，弄一个副本，改名为md.tmpl，打开，清空原内容，写入以下内容并保存：
 
-![tempalate](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/12/19/r1455941986865157104710.png)
+![tempalate](http://odaps2f9v.bkt.clouddn.com/2016-02-20-Sublime_Text_pakage_generate_md_file_YAML_head_information/tempalate.png)
 
 应该都看出来了，“${date}”是日期变量，而“${1:输入文章标题}”是新建文件后输入光标的定位及提示信息，便于新建文件后标题的输入，其他文本内容原样显示。
-
-<br/>
 
 ---
 
@@ -80,13 +74,11 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 **tmpl配置文件路径："Data\Packages\SublimeTmpl\SublimeTmpl.sublime-settings"**
 
-![time setting](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/13/54/r1455947651976795872907.png)
+![time setting](http://odaps2f9v.bkt.clouddn.com/2016-02-20-Sublime_Text_pakage_generate_md_file_YAML_head_information/time%20setting.png)
 
 打开配置文件，找到"date_format"处，加上时区，改为"%Y-%m-%d %H:%M:%S +0800"，保存即可。
 
 **（或者只保留日期去掉时间，但有时间一定要加时区！！！否则文章识别不了，亲身踩坑。。。）**
-
-<br/>
 
 ---
 
@@ -102,7 +94,7 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 打开菜单配置文件，照葫芦画瓢地加入markdown格式的配置即可，注意逗号
 
-![menu setting](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/12/38/r145594313719174293853.png)
+![menu setting](http://odaps2f9v.bkt.clouddn.com/2016-02-20-Sublime_Text_pakage_generate_md_file_YAML_head_information/menu%20setting.png)
 
 #### 2、配置快捷键
 
@@ -112,9 +104,7 @@ Ctrl+Shift+P 打开Sublime Text控制台
 
 打开快捷键配置文件，抄！
 
-![keymap](http://img1.buy.ijinshan.com/weibo_img/2016/2/20/12/51/r1455943906376484887198.png)
-
-<br/>
+![keymap](http://odaps2f9v.bkt.clouddn.com/2016-02-20-Sublime_Text_pakage_generate_md_file_YAML_head_information/keymap.png)
 
 ---
 
