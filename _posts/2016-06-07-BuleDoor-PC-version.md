@@ -62,15 +62,15 @@ tag:
 
 ### 程序执行效果
 
-![程序主界面]({{site.baseurl}}/img/BuleDoor-PC-version/程序主界面.png)
+![程序主界面](http://odaps2f9v.bkt.clouddn.com/16-9-20/82245579.jpg)
 
-![任务栏图标1]({{site.baseurl}}/img/BuleDoor-PC-version/任务栏图标1.png)
+![任务栏图标1](http://odaps2f9v.bkt.clouddn.com/16-9-20/82245579.jpg)
 
-![任务栏图标2]({{site.baseurl}}/img/BuleDoor-PC-version/任务栏图标2.png)
+![任务栏图标2](http://odaps2f9v.bkt.clouddn.com/16-9-20/69872943.jpg)
 
-![任务栏图标3]({{site.baseurl}}/img/BuleDoor-PC-version/任务栏图标3.png)
+![任务栏图标3](http://odaps2f9v.bkt.clouddn.com/16-9-20/61906231.jpg)
 
-![任务栏图标4]({{site.baseurl}}/img/BuleDoor-PC-version/任务栏图标4.png)
+![任务栏图标4](http://odaps2f9v.bkt.clouddn.com/16-9-20/6353658.jpg)
 
 <br/>
 
