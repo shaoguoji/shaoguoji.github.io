@@ -74,7 +74,7 @@
 
                     <!-- 不蒜子两行计数代码 -->
                     <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>                   
-                    <span id="busuanzi_container_site_pv" style='display:none'>   | 本站总访问量 <span id="busuanzi_value_site_pv"></span>次</span>
+                    <span id="busuanzi_container_site_pv" style='display:none'>   | 您是本站第 <span id="busuanzi_value_site_uv"></span> 位访客</span>
                     
                     <br>
 					Theme by <a href="http://huangxuan.me">Hux</a> |
@@ -257,7 +257,7 @@
  */         
             if ($("#busuanzi_container_site_pv").css("display") != "none")
             {
-                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); // 加上初始数据 
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
                 clearInterval(int); // 停止检测
             }  
         }
