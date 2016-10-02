@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      小米2s安装Xposed框架
+title:      小米2s(MIUI7)安装Xposed框架
 subtitle:   折腾手机的神器
 date:       2016-02-04
 author:     Shao Guoji
@@ -27,7 +27,7 @@ tag:
 
 之前家城来探我时show了一下他手机的红包插件（基于Xposed框架），当时觉得挺有意思，自己也想搞一个。凭借着印象中他不太标准的发音，我还是百度到了“Xposed框架”，开始了苦逼的摸索之旅……
 
-*PS：人家魅族的系统在应用商店下个安装器就搞定，我的MIUI 7却搞了几天，才发现MIUI也有MIUI的不足~~~*
+*PS：人家魅族的系统在应用商店下个[安装器](http://www.coolapk.com/apk/com.wuxianlin.xposedinstaller)就搞定，我的MIUI 7却搞了几天，才发现MIUI也有MIUI的不足~~~*
 
 ---
 <br/>
@@ -41,9 +41,9 @@ tag:
 
 所用到的软件下载地址：[小米2s安装xposed工具包](http://pan.baidu.com/s/1sk68nlr)
 
-我手机系统版本**安卓5.0.2**，MIUI 7.0.4.0
+我手机系统版本**安卓5.0.2**，MIUI 7.0.4.0稳定版
 
-![手机系统版本](http://img1.buy.ijinshan.com/weibo_img/2016/2/4/20/1/r1454587278919633505712.png)
+![手机系统版本](http://odaps2f9v.bkt.clouddn.com/16-10-2/26480955.jpg)
 
 #### 刷机有风险，请先备份手机重要数据（建议先用小米本地备份，再把MIUI\backup文件夹复制到电脑比较保险，配合小米账号云端的桌面布局及APP备份可完美还原）
 
@@ -62,11 +62,15 @@ tag:
 
 下载好工具包的TWRP Recovery，文件夹中的**recovery.img**便是我们要刷入的recovery，将它复制到Mi2/2S_recovery一键刷入工具”目录中替换原来自带的recovery.img。关机，按**电源+音量下**键进入手机的fastboot模式，把手机用数据线连接电脑，在电脑打开recovery.bat批处理，按提示操作即可，刷入成功后会有提示。
 
-![刷入工具](http://img1.buy.ijinshan.com/weibo_img/2016/2/4/20/46/r1454590006627018960906.png)
+![刷入工具](http://odaps2f9v.bkt.clouddn.com/16-10-2/81368165.jpg)
+
+![进入fastboot](http://odaps2f9v.bkt.clouddn.com/16-10-2/85720759.jpg)
+
+![刷入成功](http://odaps2f9v.bkt.clouddn.com/16-10-2/45948015.jpg)
 
 刷好后手机会自动重启，重启后再进入recovery就能看到美美的界面了~~~
 
-![recovery](http://static.oneplus.cn/data/attachment/forum/201501/18/152455zyx0675zv88k0il9.png)
+![recovery](http://odaps2f9v.bkt.clouddn.com/16-10-2/14281528.jpg)
 
 **PS：一定要等到重启进入桌面后再关机进新的recovery，否则有可能导致recovery刷入失败**
 
@@ -79,7 +83,7 @@ tag:
 
 在手机安装**de.robv.android.xposed.installer_3.0_alpha4_37.apk**
 
-*其实Xposed直接从recovery刷入，安装器只是用来查看是否安装成功。。。*
+*Xposed框架是直接从recovery刷入，安装器只是用来查看是否安装成功和管理模块。*
 
 #### 2、安装Xposed框架zip包
 
@@ -87,11 +91,11 @@ tag:
 
 如果手机没有root，会提示刷入SuperSu软件（实际上许多教程都推荐使用SuperSu来管理root权限）
 
-![SuperSu](http://img1.buy.ijinshan.com/weibo_img/2016/2/4/21/38/r1454593115119003580897.png)
+![SuperSu](http://odaps2f9v.bkt.clouddn.com/16-10-3/83851245.jpg)
 
 重启手机，打开Xposed Installer，如果显示“**Xposed framework version 78 (MIUI edition by SolarWarez / 20151124) is active.**”的话，恭喜你成功安装了强大的Xposed框架！
 
-![成功安装](http://img1.buy.ijinshan.com/weibo_img/2016/2/4/21/35/r1454592929738019232451.png)
+![成功安装](http://odaps2f9v.bkt.clouddn.com/16-10-3/92889572.jpg)
 
 #### 3、安装Xposed应用模块
 
