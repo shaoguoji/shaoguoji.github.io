@@ -11,11 +11,11 @@ tag:
     - 前端
 ---
 
-哈！我的博客多了访客计数功能，就像这样：
+#### 哈！我的博客多了访客计数功能，就像这样：
 
 ![主页计数](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/46031795.jpg)
 
-或者这样：
+#### 或者这样：
 
 ![文章页计数](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/48140665.jpg)
 
@@ -37,7 +37,7 @@ tag:
 
 ### 实现原理
 
-“不蒜子”的实现原理也很简单，经初步分析，在引入的JS(JavaScript)脚本中，会把当前页面url注册到其第三方服务器，服务器上保存着url与对应的计数值，点击页面后通过JS更新服务器上的计数值，并在页面初始化时在本地标签加载、显示计数值。 
+“不蒜子”的实现原理也很简单，经初步分析，在引入的JS(JavaScript)脚本中，会把当前页面url（或某种唯一标识）注册到其第三方服务器，服务器上保存着url与对应的计数值，点击页面后通过JS更新服务器上的计数值，并在页面初始化时在本地标签加载、显示计数值。 
  
  所以**虽然静态页面弱爆了，但JS很强大啊！**
 
@@ -48,9 +48,9 @@ tag:
 
 太好了，于是兴奋地点击主页右上角的“登录”按钮……
 
-![未开发注册](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/61584067.jpg)
+![未开发注册](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/97073688.jpg)
 
-![坑爹呢](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/20926972.jpg)
+![坑爹呢](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/9566094.jpg)
 
 纳尼，暂不开放注册？？？好吧，看看文档下面的评论，应该有网友遇到同样问题，果不出我所料……
 
@@ -75,10 +75,10 @@ tag:
 
 *插入以下两行代码*
 
- ```html
+```html
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
- ```
+```
  
 
 
@@ -111,21 +111,21 @@ tag:
 
 *注意：1、记得引入JQuery文件 2、注意区分标签id中的pv和uv*
 
-```javascirpt
+```javascript
 <!-- 不蒜子计数初始值纠正 -->
-<script >
-    $(document).ready(function() {
-        var int = setInterval(fixCount, 50);  // 50ms周期检测函数
-        var countOffset = 20000;  // 初始化首次数据
-        function fixCount() {                   
-            if ($("#busuanzi_container_site_pv").css("display") != "none")
-            {
-                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); // 加上初始数据 
-                clearInterval(int); // 停止检测
-            }  
-        }           
-    });
-</script> 
+    <script >
+        $(document).ready(function() {
+            var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+            var countOffset = 20000;  // 初始化首次数据
+           function fixCount() {                   
+             if ($("#busuanzi_container_site_pv").css("display") != "none")
+               {
+                  $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); // 加上初始数据 
+                  clearInterval(int); // 停止检测
+             }  
+         }           
+        });
+    </script> 
 ```
 
 ![加入JS代码](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/70053675.jpg)
@@ -146,7 +146,7 @@ $(document).ready方法在文档加载后执行，即让网页加载完毕后执
 
 之前学的JS/JQuery都给回视频了，写的时候被各种语法细节搞得头晕转向，现在已经有“前端恐惧症”了。
  
-** 只想说：让男(zha)生(zha)写前端真是要命啊 >\_<~~~**
+**只想说：让男(zha)生(zha)写前端真是要命啊 >\_<~~~**
 
 <br/>
 <br/>
@@ -154,4 +154,4 @@ $(document).ready方法在文档加载后执行，即让网页加载完毕后执
 >参考文章： 
 > 
 > * [不蒜子 - 极简网页计数器](http://service.ibruce.info/)
-> * [不蒜子| 不如](http://ibruce.info/2015/04/04/busuanzi/)
+> * [不蒜子 - 不如](http://ibruce.info/2015/04/04/busuanzi/)
