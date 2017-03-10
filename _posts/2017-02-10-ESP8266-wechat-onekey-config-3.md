@@ -4,7 +4,7 @@ title:      ESP8266 + Airkiss从零开始实现微信配网（三）
 subtitle:   编写单片机程序响应按键、与WiFi模块通讯
 date:       2017-02-10 14:50:37 +0800
 author:     Shao Guoji
-header-img: img/post-bg-wechat-airkiss.jpg
+header-img: img/post-bg-wechat-airkiss3.jpg
 catalog:    true
 tag:
     - ESP8266
@@ -18,11 +18,13 @@ tag:
 
 [ESP8266 + Airkiss从零开始实现微信配网（二） - 微信公众号开发、JSSDK、JSAPI的使用]({% post_url 2017-01-28-ESP8266-wechat-onekey-config-2 %})
 
-[ESP8266 + Airkiss从零开始实现微信配网（三） - 编写单片机程序与WiFi模块通讯]()
+[ESP8266 + Airkiss从零开始实现微信配网（三） - 编写单片机程序与WiFi模块通讯]({% post_url 2017-02-10-ESP8266-wechat-onekey-config-3 %})
 
 ---
 
 <br/>
+
+![一键配网电路](http://odaps2f9v.bkt.clouddn.com/17-3-11/10934514-file_1489166914623_2969.jpg)
 
 ### 预备知识
 

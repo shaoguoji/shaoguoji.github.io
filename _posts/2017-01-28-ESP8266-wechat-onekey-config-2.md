@@ -4,7 +4,7 @@ title:      ESP8266 + Airkiss从零开始实现微信配网（二）
 subtitle:   微信公众号开发、JSSDK、JSAPI的使用
 date:       2017-01-28 10:12:50 +0800
 author:     Shao Guoji
-header-img: img/post-bg-wechat-airkiss.jpg
+header-img: img/post-bg-wechat-airkiss2.jpg
 catalog:    true
 tag:
     - ESP8266
@@ -19,7 +19,7 @@ tag:
 
 [ESP8266 + Airkiss从零开始实现微信配网（二） - 微信公众号开发、JSSDK、JSAPI的使用]({% post_url 2017-01-28-ESP8266-wechat-onekey-config-2 %})
 
-[ESP8266 + Airkiss从零开始实现微信配网（三） - 编写单片机程序与WiFi模块通讯]()
+[ESP8266 + Airkiss从零开始实现微信配网（三） - 编写单片机程序与WiFi模块通讯]({% post_url 2017-02-10-ESP8266-wechat-onekey-config-3 %})
 
 ---
 
