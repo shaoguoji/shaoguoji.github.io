@@ -53,7 +53,7 @@ tag:
 
 #### 接口的提供方式
 
-我所了解到的接口有HTTP和SDK两种，HTTP接口基于POST和GET请求，常用Json格式字符串进行交互，使用简单但功能有限。而通过导入外部SDK的方式可以更直接使用更强大的接口。例如这次要用的Airkiss接口，就包括运行在ESP8266模块的**AirKiss2.0库**，以及运行在手机微信的**JS-SDK**——通过微信APP去操控无线网卡（在微信内置浏览器运行的JS代码自然就能直接调用微信APP的功能）。
+我所了解到的接口有HTTP和SDK两种，HTTP接口基于POST和GET请求，常用Json格式字符串进行交互，使用简单但功能有限。而通过导入外部SDK的方式可以更直接使用更强大的接口。例如这次要用的Airkiss接口——包括运行在ESP8266模块的**AirKiss2.0库**，以及运行在手机微信的**JS-SDK**，通过微信APP去操控手机无线网卡（在微信内置浏览器运行的JS代码自然就能直接调用微信APP的功能）。
 
 这次一键配网使用到微信提供的接口主要有**微信公众平台接口、微信JS-SDK、JS-API**。
 
@@ -131,7 +131,7 @@ tunnels:
 
 ### 微信公众平台开发——自定义菜单
 
-有点标题党了，其实微信公众号并不是主角，只是在后台验证一下JS安全域名、在公众号界面提供一个菜单作为网页入口仅此而已（“微信内网页”要求运行在微信APP内置浏览器中）。直接在微信中点url打开页面也是可以的，只不过公众号提供了一个固定可发布的、更易用的入口。我们只用到了公众号的菜单功能，**但这并不意味着公众号开发的全部，基于消息、素材和用户管理的接口开发才是公众号开发的精髓**。本文重点是**微信内网页开发**所涉及到的JS-SDK和与硬件相关的JSAPI的使用。
+有点标题党了，其实微信公众号并不是主角，只是在后台验证一下JS安全域名、在公众号界面提供一个菜单作为网页入口仅此而已（“微信内网页”要求运行在微信APP内置浏览器中）。直接在微信中点url打开页面也是可以的，只不过公众号提供了一个固定可发布的、更易用的入口。我们只用到了公众号的菜单功能，**但并不意味着这就是公众号开发的全部，基于消息、素材和用户管理的接口开发才是公众号开发的精髓**，本文重点是**微信内网页开发**所涉及到的JS-SDK和与硬件相关的JSAPI的使用。
 
 #### 利用“接口在线调试工具”自定义菜单
 
@@ -227,7 +227,7 @@ ngrok映射到的IP是 ```127.0.0.1:44073``` ，而启动后地址栏上的是 `
 
 #### 添加IP绑定，让IIS Express也支持“127.0.0.1”
 
-其实解决办法也很简单，在“127.0.0.1:44073”下也部署一下就好了，也就是让IIS Express再绑定到这个IP和端口上，操作如下：
+解决办法也很简单，在“127.0.0.1:44073”下也部署一下就好了，也就是让IIS Express再绑定到这个IP和端口上，操作如下：
 
 在系统托盘处找到IIS Express图标，右键选择“显示所有应用程序”，选中我们的网站，再点下面的“配置”的路径，就会打开一个配置文件。
 
@@ -265,7 +265,7 @@ ngrok映射到的IP是 ```127.0.0.1:44073``` ，而启动后地址栏上的是 `
 
 ##### 步骤一：绑定域名
 
-确保ngrok域名可用后，去到公众号后台的“JS接口安全域名”选项处点击“修改”，填入ngrok域名后点“提交”就行了。
+确保ngrok域名可用后，去到公众号后台的“JS接口安全域名”选项处点击“修改”，填入ngrok域名 ```shaoguoji.proxy.qqbrowser.cc``` 后点“提交”就行了。
 
 ![公号后台绑定域名](http://odaps2f9v.bkt.clouddn.com/17-2-1/13845651-file_1485955903736_712f.png)
 
@@ -295,7 +295,7 @@ wx.config({
 
 可以看到config()方法需要六个参数，其中的 ```debug``` 、 ```appId``` 、 ```jsApiList``` 是已知的，而 ```timestamp``` 、 ```nonceStr``` 和 ```signature``` 是后台要提供的，也正是要用C#后台代码实现的。来分别看看这三个参数如何用代码生成。
 
-展开“解决方案管理器”下项目中的 ```Index.aspx``` 文件，打开 ```Index.aspx.cs``` 文件编写后台代码,不断添砖加瓦，实现每个方法。
+展开“解决方案管理器”下项目中的 ```Index.aspx``` 文件，打开 ```Index.aspx.cs``` 文件编写后台代码，不断添砖加瓦，实现每个方法。
 
 **1、引入所需的命名空间：**
 
@@ -341,7 +341,7 @@ public partial class Index : System.Web.UI.Page
 }
 ```
 
-这里的 ```timestamp``` 、 ```nonceStr``` 和 ```signature``` 是要给前台提供的数据，没什么好说的。而两个内部类 ```TokenResultMessage``` 和 ```JsapiResultMessage``` 是对接口返回结果的封装，成员字段是和接口的返回参数（见文档）一一对应的。两个内部类用的很巧妙，可大大简化我们的工作，后面会再分析。
+```appID``` 和 ```appsecret``` 填入测试号后台的“appID”和“appsecret”。 ```timestamp``` 、 ```nonceStr``` 和 ```signature``` 是要给前台提供的数据，没什么好说的。而两个内部类 ```TokenResultMessage``` 和 ```JsapiResultMessage``` 是对接口返回结果的封装，成员字段是和接口的返回参数（见文档）一一对应的。两个内部类用的很巧妙，可大大简化我们的工作，后面会再分析。
 
 **3、增加两个工具方法：**
 
@@ -471,7 +471,7 @@ public partial class Index : System.Web.UI.Page
     }
 ```
 
-签名算法看似复杂，其实只是把几个变量名和值按顺序拼接成字符串再进行sh1签名而已。注意到通过接口获取 ```access_token``` 和 ```jsapi_ticket``` 处的两行代码：
+签名算法看似复杂，其实只是**把几个变量名和值按顺序拼接成字符串再进行sh1签名**而已。注意到通过接口获取 ```access_token``` 和 ```jsapi_ticket``` 处的两行代码：
 
 ```C#
 var tokenInfo = new JavaScriptSerializer().Deserialize<TokenResultMessage>(GetWebUrl(tokenUrl));
@@ -479,7 +479,7 @@ var tokenInfo = new JavaScriptSerializer().Deserialize<TokenResultMessage>(GetWe
 var jsapiInfo = new JavaScriptSerializer().Deserialize<JsapiResultMessage>(GetWebUrl(jsapiUrl));
 ```
 
-我们知道，调用这两个HTTP接口会返回结果Json字符串，包含许多的结果信息。而怎样拿到所需要的那一个值呢？还记得当初声明的两个内部类 ```TokenResultMessage``` 和 ```JsapiResultMessage``` 么，而这里就是通过调用 ```JavaScriptSerializer```类的 ```Deserialize<T>(String)``` 方法对Json字符串进行序列化，并转换为指定类型的对象（强大的泛型）。这样就把Json字符串转换为类的对象了，直接用 ```tokenInfo.access_token``` 和 ```jsapiInfo.ticket``` 的写法就能方便地使用所需的接口结果值。
+我们知道，调用这两个HTTP接口会返回结果Json字符串，包含许多的结果信息。而怎样拿到所需要的那一个值呢？还记得当初声明的两个内部类 ```TokenResultMessage``` 和 ```JsapiResultMessage``` 么，而这里就是通过调用 ```JavaScriptSerializer```类的 ```Deserialize<T>(String)``` 方法对Json字符串进行序列化，并转换为内部类对象（强大的泛型）。这样就把Json字符串转换为对象了，直接用 ```tokenInfo.access_token``` 和 ```jsapiInfo.ticket``` 的写法就能方便地使用所需的接口结果值。
 
 **此外还有一点要特别注意：页面的url应该动态获取。文档中的[附录5-常见错误及解决方法](https://mp.weixin.qq.com/wiki/11/74ad127cc054f6b80759c40f77ec03db.html#.E9.99.84.E5.BD.955-.E5.B8.B8.E8.A7.81.E9.94.99.E8.AF.AF.E5.8F.8A.E8.A7.A3.E5.86.B3.E6.96.B9.E6.B3.95)也写得非常清楚：**
 
@@ -605,7 +605,7 @@ window.onload = function () {
 
 用户一脸懵逼的看着弹出的配网界面可不是什么好事，我们还应该加上操作提示，更何况这是要和硬件配合使用的功能。
 
-去掉原来的**Hello World**，在页面中加入引导页html代码，包括图标、提示信息及配置按钮（*可根据个人喜好调整图标及样式，但要注意屏幕适配*），并把在页面加载就调用的 ```wx.invoke('configWXDeviceWiFi');``` 放到按钮的 ```onclick``` 事件内，实现先显示引导页，再点按钮再弹出配网界面。：
+去掉原来的**Hello World**，在页面中加入引导页html代码，包括图标、提示信息及配置按钮（*可根据个人喜好调整图标及样式，但要注意屏幕适配*），并把在页面加载就调用的 ```wx.invoke('configWXDeviceWiFi');``` 放到按钮的 ```onclick``` 事件内，实现**先显示引导页，用户点击按钮后再弹出配网界面**的效果。：
 
 ```html
 <body>
@@ -634,7 +634,7 @@ window.onload = function () {
 
 ### 成果检验——用sscom测试WiFi模块Airkiss功能
 
-如何用写好的页面来配置WiFi模块上网呢？首先要知道，WiFi模块并不是随时都能进行智能配置，而是要通过 ```AT+CWSTARTSMART``` 指令开启“SmartConfig”后才能接收来自手机的无线ssid和密码，完成配置后还必须退出“SmartConfig”，所以这是个临时的过程。
+如何用写好的页面来配置WiFi模块上网呢？首先要知道，**WiFi模块并不是随时都能进行智能配置，而是要通过 ```AT+CWSTARTSMART``` 指令开启“SmartConfig”后才能接收来自手机的无线ssid和密码，完成配置后还必须退出“SmartConfig”**，应该说智能配置是个临时的操作。
 
 按照以下步骤测试WiFi模块的智能配置功能：
 
@@ -654,11 +654,11 @@ window.onload = function () {
 
 ![SmartConfig手机端](http://odaps2f9v.bkt.clouddn.com/17-3-5/41475700-file_1488687044519_aea.png)
 
-如果看到串口打印出 ```Smartconfig connected WiFi``` 那就证明WiFi模块成功通过微信Airkiss连接到了我们制定的WiFi（手机连接的WiFi）。
+如果看到串口打印出 ```Smartconfig connected WiFi``` 那就证明WiFi模块成功通过微信Airkiss连接到了我们指定的WiFi（手机连接的WiFi）。
 
 注意：
 
-1. 用户可向 Espressif 申请 martConfig 的详细介绍文档。
+1. 用户可向 Espressif 申请 SmartConfig 的详细介绍文档。
 
 2. 仅支持在 ESP8266 单 station 模式下调用。
 
