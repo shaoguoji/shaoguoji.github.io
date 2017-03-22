@@ -57,8 +57,13 @@ kramdown:
 # Youyan settings
 #youyan_username: shaoguoji
 # Share component is depend on Comment so we can NOT use share only.
-youyan_share: true                     # set to false if you want to use Comment without Sharing
+#youyan_share: true                     # set to false if you want to use Comment without Sharing
 
+
+# gentie settings
+gentie_product_key: ddd77801009a444baeb7c5eac630b9e8
+# Share component is depend on Comment so we can NOT use share only.
+gentie_share: true  
 
 # Analytics settings
 # Baidu Analytics
