@@ -71,7 +71,12 @@ header-img: "img/about-bg.jpg"
     _render();
 </script>
 
-
+{% if site.youyan_share %}
+<!-- 友言UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2128031"></script>
+<!-- 友言UY END -->
+{% endif %}
 
 {% if site.duoshuo_username %}
 <!-- 多说评论框 start -->
