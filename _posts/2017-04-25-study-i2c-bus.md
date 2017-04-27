@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      I2C 总线协议初探
-subtitle:	STM32 I2C 外设学习笔记
+subtitle:	STM32 I2C 接口外设学习笔记
 date:       2017-04-25 10:09:43 +0800
 author:     Shao Guoji
 header-img: img/post-bg-i2c-bus.jpg
