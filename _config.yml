@@ -78,7 +78,8 @@ ba_track_id: aa77dd1af62bf0b3cb69ac8ee616f047
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "弹弹吉他，写写代码，焊焊板子，猝猝死。爱生活，更爱体验生活。"
-sidebar-avatar: http://odaps2f9v.bkt.clouddn.com/17-2-18/70710645-file_1487416001693_3e6.png  # use absolute URL, seeing it's used in both `/` and `/about/`
+#sidebar-avatar: http://odaps2f9v.bkt.clouddn.com/17-2-18/70710645-file_1487416001693_3e6.png  # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: http://odaps2f9v.bkt.clouddn.com/17-5-3/12821055-file_1493778388447_fcab.jpg  # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
