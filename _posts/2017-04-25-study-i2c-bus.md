@@ -209,10 +209,6 @@ I2C 协议规定了 SDA 线上的数据只在 SCL 为高电平时有效，在 SC
 
 ---
 
-<br/>
-
-<br/>
-
 > 参考文章
 > 
 > * [I2C 总线协议（中文版）](http://files.chinaaet.com/files/group/2011/07/24/9007438299002.pdf)
