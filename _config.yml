@@ -50,9 +50,9 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: shaoguoji
+#duoshuo_username: shaoguoji
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 # Youyan settings
 #youyan_username: shaoguoji
@@ -61,9 +61,9 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 
 # gentie settings
-#gentie_product_key: ddd77801009a444baeb7c5eac630b9e8
+gentie_product_key: ddd77801009a444baeb7c5eac630b9e8
 # Share component is depend on Comment so we can NOT use share only.
-#gentie_share: true  
+gentie_share: true  
 
 # Analytics settings
 # Baidu Analytics
