@@ -58,19 +58,21 @@ layout: default
 				{{ content }}
 
                 <hr>
-
+                
+                {% if site.gentie_share && site.gentie_product_key %}
                 <!-- 网易云跟帖 BEGIN  -->
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <script>
                 var cloudTieConfig = {
                     url: document.location.href, 
                     sourceId: "",
-                    productKey: "265c82c8980f42c18a066337c8ab26bc",
+                    productKey: "{{site.gentie_product_key}}",
                     target: "cloud-tie-wrapper"
                 };
                 </script>
                 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
                 <!-- 网易云跟帖 BEGIN -->
+                {% endif %}
 
                 {% if site.youyan_share %}
                 <!-- 友言UY BEGIN -->
