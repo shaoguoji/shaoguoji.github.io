@@ -63,7 +63,7 @@ kramdown:
 # gentie settings
 gentie_product_key: 265c82c8980f42c18a066337c8ab26bc
 # Share component is depend on Comment so we can NOT use share only.
-gentie_share: false  
+gentie_share: true  
 
 # Analytics settings
 # Baidu Analytics
