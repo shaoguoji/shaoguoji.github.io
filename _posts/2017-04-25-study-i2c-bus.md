@@ -9,7 +9,6 @@ catalog:    true
 tag:
     - 单片机
     - STM32
-    - 硬件
     - 嵌入式
 ---
 
