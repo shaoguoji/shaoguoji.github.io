@@ -409,7 +409,7 @@ keil 工程源码下载：[测心率_脉搏传感器 密码 8ut8][25]
   [7]: http://odaps2f9v.bkt.clouddn.com/17-7-1/71887395.jpg
   [8]: http://odaps2f9v.bkt.clouddn.com/17-7-1/96596151.jpg
   [9]: http://odaps2f9v.bkt.clouddn.com/17-7-1/21470548.jpg
-  [10]: http://odaps2f9v.bkt.clouddn.com/17-7-1/54759128.jpg
+  [10]: http://odaps2f9v.bkt.clouddn.com/17-7-1/77092253.jpg
   [11]: https://pulsesensor.com/pages/pulse-sensor-amped-arduino-v1dot1
   [12]: http://odaps2f9v.bkt.clouddn.com/17-7-1/43185876.jpg
   [13]: http://odaps2f9v.bkt.clouddn.com/17-7-1/41986651.jpg
