@@ -61,9 +61,17 @@ kramdown:
 
 
 # gentie settings
-gentie_product_key: 265c82c8980f42c18a066337c8ab26bc
+# gentie_product_key: 265c82c8980f42c18a066337c8ab26bc
 # Share component is depend on Comment so we can NOT use share only.
-gentie_share: true  
+# gentie_share: false  
+
+# gitment settings
+gitment_share: true  
+gitment_username: shaoguoji
+gitment_repo: shaoguoji.github.io
+gitment_client_id: 1e061ab34f1c10c458a5
+gitment_client_secret: b629572131c7e0890d75c4a291013c4e5396a8b9
+
 
 # Analytics settings
 # Baidu Analytics

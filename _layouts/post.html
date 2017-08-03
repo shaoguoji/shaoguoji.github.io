@@ -62,6 +62,23 @@ layout: default
 
                 <hr>
 
+                {% if site.gitment_share && site.gitment_username %}
+                <!-- gitment评论 BEGIN  -->
+                <script> 
+                var gitment = new Gitment({
+                     owner: "{{site.gitment_username}}",
+                     repo: "{{site.gitment_repo}}",
+                     oauth: {
+                         client_id: "{{site.gitment_client_id}}",
+                         client_secret: "{{site.gitment_client_secret}}",
+                     },
+                })
+                gitment.render('container')
+                </script>
+                <!-- gitment评论 BEGIN -->
+                {% endif %}
+
+
                 {% if site.gentie_share && site.gentie_product_key %}
                 <!-- 网易云跟帖 BEGIN  -->
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
