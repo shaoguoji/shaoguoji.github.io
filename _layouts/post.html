@@ -62,6 +62,9 @@ layout: default
 
                 <hr>
 
+                <div id="gitment"></div>
+                <link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
+                <script src="{{ "/js/gitment.browser.js " | prepend: site.baseurl }}"></script>
                 {% if site.gitment_share && site.gitment_username %}
                 <!-- gitment评论 BEGIN  -->
                 <script> 
@@ -73,7 +76,7 @@ layout: default
                          client_secret: "{{site.gitment_client_secret}}",
                      },
                 })
-                gitment.render('container')
+                gitment.render('gitment')
                 </script>
                 <!-- gitment评论 BEGIN -->
                 {% endif %}
