@@ -22,7 +22,7 @@ tag:
 
 ### 材料准备
 
- - Cortex-M4 标准库文件：[STM32F4xx_DSP_StdPeriph_Lib_V1.4.0.rar](http://pan.baidu.com/s/1i4LQmg9) 
+ - STM32F4xx 固件库：[STM32F4xx_DSP_StdPeriph_Lib_V1.4.0.rar](http://pan.baidu.com/s/1i4LQmg9) 
  - Keil-MDK
  - 一点耐心
 
