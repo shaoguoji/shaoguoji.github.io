@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      STM32F4 新建标准库函数工程
-subtitle:	  建好工程，项目撸起！！！
+subtitle:	  建好工程，代码撸起！！！
 date:       2017-8-3
 author:     Shao Guoji
 header-img: img/post-bg-new-FWLib-project.jpg
@@ -14,7 +14,7 @@ tag:
 
 ### 前言
 
-使用库函数相比寄存器的开发方式具有开发周期短、代码可读性好、便于移植等优点，而用 Keil 开发的第一步就是新建工程。本文以 STM32F401CE 芯片为例，介绍使用标准库函数新建工程的步骤。
+在 STM32 开发中，库函数开发相比寄存器方式具有开发周期短、代码可读性好、便于移植等优点，而使用 Keil 环境的第一步就是新建工程。本文以 STM32F401CE 芯片为例，介绍使用标准库函数新建工程的步骤。
 
 ---
 
@@ -32,16 +32,16 @@ tag:
 
 ### 新建库函数工程注意事项
 
-不同的芯片在新建工程时的配置略有区别，主要体现在下面几点：
+不同芯片在新建工程时的配置略有区别，主要体现在以下几点：
 
  1. 工程目标 Device 选择的芯片型号不同。
  2. 添加的启动文件不同。要根据芯片型号在 `arm` 目录下选择相应的 `.s` 文件。
  3. C/C++ 选项卡的芯片型号宏定义不同。具体有哪些选择可在 `stm32f4xx.h` 头文件中的条件编译指令中找到。不确定选哪个的话可以根据芯片主频从 `system_stm32f4xx.c` 文件的 PLL 分频参数反推宏定义（要求对时钟树比较熟）。
- 4. 所具备的片上外设不同。工程会在编译时根据芯片型号宏定义进行寄存器映射，**对芯片所没有的外设库文件要排除编译（如文中的 fmc 和 fsmc），否则会报标识符未定义错误**。
+ 4. 工程所包含的外设库函数不同。MDK 会在编译时根据芯片型号宏定义进行寄存器映射，所以要**对芯片所没有的外设库文件要排除编译（如文中的 fmc 和 fsmc），否则会报标识符未定义错误**。
 
-#### 补充：如何确定某芯片有无某个外设？
+#### 补充：如何确定芯片有无某个外设？
 
-芯片数据手册中描述了芯片的所有资源，**当想了解具体某一款芯片的外设时，应该查阅数据手册而不是参考手册**（参考手册针对的是整个系列芯片的全面说明）。
+芯片数据手册中描述了芯片的所有资源，**当想要了解具体某一型号芯片的外设时，应该查阅数据手册而不是参考手册**（参考手册针对的是整个系列芯片的通用说明）。
 
 ---
 
@@ -90,7 +90,7 @@ tag:
 int main(void)
 {
 	
-	while (1);
+    while (1);
 }
 ```
 
@@ -136,7 +136,7 @@ int main(void)
 
 依然是在工程管理界面下，这一步要做的事情是把准备好的库文件添加到 Keil 工程中，具体操作如下：
 
- - 往分组 CMSIS 中添加 `system_stm32f4xx.c` 系统配置文件和 `startup_stm32f40_41xxx.s` 启动文件。
+ - 往分组 CMSIS 中添加 `system_stm32f4xx.c` 系统配置文件和 `startup_stm32f401xx.s` 启动文件。
 
 ![图7 添加 CMSIS 分组的文件][7]
 
@@ -164,14 +164,14 @@ int main(void)
 
 ####  2. Output 选项卡配置
 
- - 如需生成 `.hex` 文件，则要勾选 Create HEX File 选项。
+ - 如需生成 `.hex` 文件，则需勾选 Create HEX File 选项。
 
 ![图11 Output 选项卡配置][11]
 
 ####  3. C/C++ 选项卡配置
 
  - 在「预处理符号」Preprocessor Symbols 下的 Define 一栏中添加 `STM32F401xx` 和 `USE_STDPERIPH_DRIVER` 两个宏定义（用逗号分隔）。
- - 在中添加以下头文件路径，**注意要具体到头文件上一层目录**。
+ - 在 Include Paths 中添加以下头文件路径，**注意要具体到头文件上一层目录**。
 	 1. `.\Libraries\CMSIS\Device\ST\STM32F4xx\Include`
 	 2. `.\Libraries\CMSIS\Include`
 	 3. `.\Libraries\STM32F4xx_StdPeriph_Driver\inc`
@@ -185,11 +185,11 @@ int main(void)
 
 ### 五、下载器配置
 
-依然是在工程选项界面下，进行下载器配置，根据自己使用的器件选择，这里我用的是 ST-Link。
+依然是在工程选项界面下，进行下载器配置
 
 ####  Debug 选项卡配置
 
-在右上角选择所使用的调试器，如 ST-Link Debugger。
+在右上角选择所使用的调试器，根据实际情况选择。这里我用的是 ST-Link，选 ST-Link Debugger。
 
 ![图13 Debug 选项卡配置][13]
 
@@ -242,7 +242,7 @@ int main(void)
   [4]: http://odaps2f9v.bkt.clouddn.com/17-8-3/53271432.jpg
   [5]: http://odaps2f9v.bkt.clouddn.com/17-8-3/99203621.jpg
   [6]: http://odaps2f9v.bkt.clouddn.com/17-8-3/39960355.jpg
-  [7]: http://odaps2f9v.bkt.clouddn.com/17-8-3/657363.jpg
+  [7]: http://odaps2f9v.bkt.clouddn.com/17-8-7/15510918.jpg
   [8]: http://odaps2f9v.bkt.clouddn.com/17-8-3/72873096.jpg
   [9]: http://odaps2f9v.bkt.clouddn.com/17-8-3/72998181.jpg
   [10]: http://odaps2f9v.bkt.clouddn.com/17-8-3/83732194.jpg
