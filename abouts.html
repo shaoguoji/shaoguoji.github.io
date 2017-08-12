@@ -71,6 +71,25 @@ header-img: "img/about-bg.jpg"
     _render();
 </script>
 
+<!-- gitment评论 BEGIN  -->
+<div id="gitment"></div>
+<link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
+<script src="{{ "/js/gitment.browser.js " | prepend: site.baseurl }}"></script>
+{% if site.gitment_share && site.gitment_username %}
+<script> 
+var gitment = new Gitment({
+     owner: "{{site.gitment_username}}",
+     repo: "{{site.gitment_repo}}",
+     oauth: {
+         client_id: "{{site.gitment_client_id}}",
+         client_secret: "{{site.gitment_client_secret}}",
+     },
+})
+gitment.render('gitment')
+</script>
+<!-- gitment评论 END -->
+{% endif %}
+
 {% if site.gentie_share && site.gentie_product_key %}
 <!-- 网易云跟帖 BEGIN  -->
 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>

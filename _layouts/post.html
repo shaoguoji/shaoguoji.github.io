@@ -62,11 +62,11 @@ layout: default
 
                 <hr>
 
+                <!-- gitment评论 BEGIN  -->
                 <div id="gitment"></div>
                 <link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
                 <script src="{{ "/js/gitment.browser.js " | prepend: site.baseurl }}"></script>
                 {% if site.gitment_share && site.gitment_username %}
-                <!-- gitment评论 BEGIN  -->
                 <script> 
                 var gitment = new Gitment({
                      owner: "{{site.gitment_username}}",
@@ -78,7 +78,7 @@ layout: default
                 })
                 gitment.render('gitment')
                 </script>
-                <!-- gitment评论 BEGIN -->
+                <!-- gitment评论 END -->
                 {% endif %}
 
 
@@ -94,7 +94,7 @@ layout: default
                 };
                 </script>
                 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-                <!-- 网易云跟帖 BEGIN -->
+                <!-- 网易云跟帖 END -->
                 {% endif %}
 
                 {% if site.youyan_share %}
