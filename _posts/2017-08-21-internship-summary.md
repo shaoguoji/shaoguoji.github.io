@@ -87,6 +87,8 @@ tag:
 
 ### 为什么是嵌入式？
 
+![Alan Kay](https://assets.fastcompany.com/image/upload/w_596,c_limit,q_auto:best,f_auto,fl_lossy/wp-cms/uploads/2017/07/5151743358_1fda3efc97_b.jpg)
+
 为什么选择嵌入式行业作为自己的职业方向，我想原因有几个：
 
 1. **要吃饭**
