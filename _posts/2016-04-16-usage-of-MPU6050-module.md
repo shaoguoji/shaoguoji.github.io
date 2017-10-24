@@ -12,6 +12,8 @@ tag:
     - 嵌入式
 ---
 
+![重力感应流水灯](http://odaps2f9v.bkt.clouddn.com/video2gif_20171023_210654.gif)
+
 ### 前言
 
 MPU6050 是一个很好玩传感器，在四轴、体感、计步等应用领域都能看到这小芯片的影子，其内部的结构、功能十分丰富，可玩度非常高。同时，对传感器采集到的数据进行分析还能得到许多信息，但此时的一些「数学小技巧」或许会让你抓狂，所以你会在网上疯狂查找资料，最终发现了本文。
@@ -98,13 +100,13 @@ MPU6050 与 MCU 通过 I2C 总线进行通讯。用软件模拟的方式实现 I
 ```c
 // 【基础】基本数据读取\USER\src\i2c.h
 
-void I2C_Init(void); // I2C 初始化
-void I2C_Start(void); // 产生 I2C 协议起始信号
-void I2C_Stop(void); //  产生 I2C 协议结束信号
-void I2C_Write_Byte(uint8_t byte); // 发送八位数据（不包含应答）
-uint8_t I2C_Read_Byte(void); // 读取八位数据（不包含应答）
-uint8_t I2C_Read_ACK(void); // 接收应答信号
-void I2C_Write_ACK(uint8_t ack); // 发送应答信号
+void I2C_Init(void); // I2C 初始化 
+void I2C_Start(void); // 产生 I2C 协议起始信号 
+void I2C_Stop(void); //  产生 I2C 协议结束信号 
+void I2C_Write_Byte(uint8_t byte); // 发送八位数据（不包含应答）  
+uint8_t I2C_Read_Byte(void); // 读取八位数据（不包含应答） 
+uint8_t I2C_Read_ACK(void); // 接收应答信号  
+void I2C_Write_ACK(uint8_t ack); // 发送应答信号  
 ```
 
 #### 传感器 I2C 设备地址
@@ -631,7 +633,7 @@ int main()
     {
         MPU6050_Get_Angle(&data);  // 计算三轴倾角
         
-        Run_Speed = 0x2ffffff - ((0x1F00000 * (data.Z_Angle / 90.0)) + 0x1ffffff);  // 计算流水灯延时速度（参数自调）
+        Run_Speed = 0x1000000 - 0x582D8 * data.Z_Angle;  // 计算流水灯延时速度（参数自调）
         
         if (data.Z_Angle > 10)  // 当 Z 轴倾斜大于 10° 时开启流水灯
         {
@@ -653,7 +655,7 @@ int main()
 
 经历了三个实验之后，文章也接近尾声，但强大的 MPU6050 绝不仅仅能用来控制流水灯、四轴、体感手柄……**由于 MPU6050 高精度的特性，在「云 + 端」的大数据物联网时代，利用边缘的传感器采集海量数据，配合红到发紫的人工智能对数据进行分析、学习，更是具有无限可能。**
 
-工程源码下载：[回宿舍再传！！！]()
+工程示例代码下载：[链接：http://pan.baidu.com/s/1boZEjJD 密码：i5us](http://pan.baidu.com/s/1boZEjJD)
 
 <br/>
 <br/>
