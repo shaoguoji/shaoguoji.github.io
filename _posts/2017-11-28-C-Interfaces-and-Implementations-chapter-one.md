@@ -4,7 +4,7 @@ title:      《C 语言接口与实现》读书笔记 —— 前言、第一章
 subtitle:	基于接口与实现、文学程序、风格、效率
 date:       2017-11-18
 author:     Shao Guoji
-header-img: img/post-bg-C-interface-implementatios.jpg
+header-img: img/post-bg-c-interface-implementatios.jpg
 catalog:    true
 tag:
     - C语言
