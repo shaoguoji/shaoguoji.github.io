@@ -8,6 +8,7 @@ header-img: img/post-bg-oo-command-parser.jpg
 catalog:    true
 tag:
     - C语言
+    - 读书笔记
 ---
 
 ### 我又开始写读书笔记了
