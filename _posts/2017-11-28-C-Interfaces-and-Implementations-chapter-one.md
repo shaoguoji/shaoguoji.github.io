@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      《C 语言接口与实现》读书笔记 —— 前言、第一章
-subtitle:	基于接口与实现、文学程序、风格、效率
+title:      基于接口的设计、文学程序、风格、效率
+subtitle:	 《C 语言接口与实现》读书笔记 —— 前言、第一章
 date:       2017-11-18
 author:     Shao Guoji
 header-img: img/post-bg-c-interface-implementatios.jpg
@@ -127,7 +127,7 @@ C 语言中程序都是从主函数 `mail()` 开始执行的，在书本第 5 �
 
 ```c
 <functions 3> +≡ 
-  void hello_print()
+  void hello_print(void)
   {
       <print string in console 5>
   }
@@ -151,7 +151,7 @@ C 语言中程序都是从主函数 `mail()` 开始执行的，在书本第 5 �
 
 ```c
 <protorypes 5> ≡ 
-  char str[] = "Hello World!";
+  void hello_print(void);
 ```
 
 对了我们还要包含相应的头文件：
