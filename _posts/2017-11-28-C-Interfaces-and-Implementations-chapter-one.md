@@ -2,7 +2,7 @@
 layout:     post
 title:      基于接口的设计、文学程序、风格、效率
 subtitle:	 《C 语言接口与实现》读书笔记 —— 前言、第一章
-date:       2017-11-18
+date:       2017-11-28
 author:     Shao Guoji
 header-img: img/post-bg-c-interface-implementatios.jpg
 catalog:    true

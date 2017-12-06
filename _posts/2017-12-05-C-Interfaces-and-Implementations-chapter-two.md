@@ -136,8 +136,8 @@ int b = 5;
 #include "stack.h"
 
 #define T Stack_T
-#define 0x66 LEGAL
-#defien STACK_T_IS_LEGAL (((stk) != NULL) && ((stk->check) == LEGAL)
+#define LEGAL 0x66
+#define STACK_T_IS_LEGAL (((stk) != NULL)&&((stk->check) == LEGAL))
 
 struct T {
     int count;
@@ -198,11 +198,12 @@ T Stack_new(int max) {
     return stk;
 }
 
-void Stack_oush(T stk, void *x) {
+void Stack_push(T stk, void *x) {
     struct elem *t;
 
-    assert(stk);
+    assert(STACK_T_IS_LEGAL);
     assert(stk->count < stk->max_size)
+    
     NEW(t);
     t->x = x;
     t->link = stk->head;
