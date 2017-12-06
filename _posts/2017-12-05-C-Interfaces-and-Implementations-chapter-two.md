@@ -4,7 +4,7 @@ title:      除法二义性、抽象数据类型、不透明指针
 subtitle:   《C 语言接口与实现》读书笔记 —— 第二章
 date:       2017-12-05
 author:     Shao Guoji
-header-img: img/
+header-img: img/post-bg-c-interface-implementatios.jpg
 catalog:    true
 tag:
     - C语言
