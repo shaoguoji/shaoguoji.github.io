@@ -106,7 +106,7 @@ else
 
 ---
 
-### 习题
+### 习题（完整代码见[Github](https://github.com/shaoguoji/cii-exercises-solutions)）
 
 **2.1 原本可使用预处理器宏和条件编译指令如 `#if`，来指定 `Arith_div` 和 `Arith_mod` 中如何处理除法的舍入操作。解释为什么对 `-13/5 == -2` 的显示测试是实现上述判断的更好的方法。**
 

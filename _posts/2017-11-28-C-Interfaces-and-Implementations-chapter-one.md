@@ -165,7 +165,7 @@ C 语言中程序都是从主函数 `mail()` 开始执行的，在书本第 5 �
 
 ---
 
-### 习题
+### 习题（完整代码见[Github](https://github.com/shaoguoji/cii-exercises-solutions)）
 
 **1.1 在一个单词结束于换行符时，getword 在 <scan forward to a nonspace or EOF 5\> 代码块中将 linenum 加 1，而不是在 <copy the word into buf[0..size-1] 5\> 代码块之后。解释这样做的原因。如果在本例中，linenum 的加 1 操作是在 <copy the word into buf[0..size-1] 5\> 代码块之后进行，会发生什么情况？**
 
