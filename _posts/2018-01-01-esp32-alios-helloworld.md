@@ -21,7 +21,7 @@ tag:
 
 项目地址：[alibaba/AliOS-Things: AliOS Things released by Alibaba is an open-source implementation of operating system (OS) for Internet of Things (IoT).](https://github.com/alibaba/AliOS-Things/)
 
-在嵌入式实时操作系统大家族中，**常见的 µC/OS-III、FreeRTOS 等 RTOS 严格意义上只能算一个 kernel（只包含 OS 基本服务）**，随着物联网时代到来，出现了像 AliOS Things、RT-Thread 这些「时髦」的操作系统，**大佬们在实时内核的基础上增加了大量组件，囊括通信协议栈、低功耗管理、安全加密算法、FOTA（远程固件升级）等功能，可以说目的十分明确 —— 直奔物联网**。
+在嵌入式实时操作系统大家族中，**常见的 µC/OS-III、FreeRTOS 等 RTOS 严格意义上只能算一个 kernel（仅包含 OS 基本服务）**，随着物联网时代到来，出现了像 AliOS Things、RT-Thread 这些「时髦」的操作系统，**大佬们在实时内核的基础上增加了大量组件，囊括通信协议栈、低功耗管理、安全加密算法、FOTA（远程固件升级）等功能，可以说目的十分明确 —— 直奔物联网**。
 
 *更多关于物联网操作系统的知识，可以参考何小庆老师的 PPT [物联网操作系统研究与思考.pdf](http://allanhe.xtreemhost.com/wp-content/uploads/2016/05/%E7%89%A9%E8%81%94%E7%BD%91%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%A0%94%E7%A9%B6%E4%B8%8E%E6%80%9D%E8%80%83-201706.pdf)*
 
@@ -35,7 +35,7 @@ tag:
 
 > ESP32 SoC 为双核 32 位 MCU，主频高达 240 MHz，计算性能可达 600 DMIPS，采用 40 nm 工艺，集成 520 KB SRAM，16 MByte flash。工作电压 2.2 V to 3.6 V。ESP32 专为移动设备、可穿戴电子产品和 IoT 应用而设计，拥有业内最高水平的低功耗芯片的所有特征，例如精细分辨时钟门控、省电模式和动态电压调整等。ESP32 SoC工作温度范围从-40°C 到 +125°C。此外，ESP32 还集成了先进的自校准电路，实现了动态自动调整，可以消除外部电路的缺陷以及适应外部条件的变化。
 
-早在 2016 年乐鑫 ESP32 和阿里云物联网系统 YoC 已经有了合作。去年 10 月份的云栖大会上阿里提出了 AliOS Things，不久之后项目开源并支持了 ESP32，同时为开发者提供了许多开发工具。
+早在 2016 年乐鑫 ESP32 和阿里云物联网系统 YoC 已经有了合作。去年 10 月份的云栖大会上阿里提出了 AliOS Things，不久之后项目开源便支持了 ESP32，同时为开发者提供了许多开发工具。
 
 #### ESP32 DevKitC 开发板
 
@@ -89,7 +89,7 @@ ESP32-DevKitC 是搭载了乐鑫最新的 ESP-WROOM-32 模组的 MINI 开发板�
 
 #### 下载 ESP32 工具链
 
-乐鑫 ESP-IDF 文档中详细描述了如何搭建 ESP32 开发环境，我们需要其中的工具链 Windows all-in-one toolchain 用于编译源代码。
+乐鑫 ESP-IDF 文档中详细描述了如何搭建 ESP32 开发环境，我们需要工具链 Windows all-in-one toolchain 用于编译源代码。
 
 直接下载官方提供的 zip 包即可：[https://dl.espressif.com/dl/esp32_win32_msys2_environment_and_toolchain-20171123.zip](https://dl.espressif.com/dl/esp32_win32_msys2_environment_and_toolchain-20171123.zip)
 
@@ -127,7 +127,7 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 
 ![图7 新建工程](http://odaps2f9v.bkt.clouddn.com/18-1-2/27413940.jpg)
 
-新建工程需要把 sdk 赋值到工程文件夹，比较耗时，请耐心等待。完成后 VS Code 会新打开一个文件夹视图窗口，表示一个 alios-studio 工程，在左侧的目录中打开 `helloword.c` 文件，其 `application_start` 函数是应用程序的入口。**helloworld 程序的运行现象是在串口以 5 s 的间隔打印调试字符串。**
+新建工程需要把 sdk 赋值到工程文件夹，比较耗时，请耐心等待。完成后 VS Code 会新打开一个文件夹视图窗口，表示一个 alios-studio 工程。在左侧的目录中打开 `helloword.c` 文件，其中 `application_start` 函数是应用程序的入口。**helloworld 程序的运行现象是在串口以 5 s 的间隔打印调试字符串。**
 
 ![图8 工程代码](http://odaps2f9v.bkt.clouddn.com/18-1-2/7029919.jpg)
 
@@ -147,11 +147,11 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 
 ### Step 6：烧写 bin 固件
 
-固件烧录是相对独立的过程，原理适用于所有 bin 文件。下载 ESP32 固件可以通过图形界面的 ESPFlashDownloadTool 软件或者 Python 命令行工具 esptool，两者都十分好上手，下面分别说明烧录方法。
+固件烧录是相对独立的过程，原理适用于所有 bin 文件。烧写 ESP32 固件可以通过图形界面的 ESPFlashDownloadTool 软件或者 Python 命令行工具 esptool，两者都十分好上手，下面分别说明烧录方法。
 
 #### bin 文件烧录地址
 
-在烧写之前需要准备 3 个 bin 文件，分别是引导程序（bootloader.bin）、分区表（custom_partitions.bin）和用户程序（helloworld@esp32devkitc.bin）。
+在烧写前需要准备 3 个 bin 文件，分别是引导程序（bootloader.bin）、分区表（custom_partitions.bin）和用户程序（helloworld@esp32devkitc.bin）。
 
 引导程序和分区表的 bin 文件在 SDK 目录 `D:\AliOS-Things-master\platform\mcu\esp32\bsp` 下，用户程序 bin 由 alios-studio 编译得到。3 个 bin 文件烧录地址如下：
 
@@ -161,7 +161,7 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 | custom_partitions.bin       | 0x8000   |
 | helloworld@esp32devkitc.bin | 0x10000  |
 
-系统启动时会从 0x1000 地址处开始执行，引导程序会读取分区表确定内存分布，然后执行用户程序代码。**因此全部 bin 都要烧到正确的地址才能正常执行程序，这一点需要特别注意。**
+系统启动时会从 0x1000 地址处开始执行，引导程序读取分区表确定内存分布及启动规则，然后执行用户程序代码。**因此全部 bin 都要烧到正确的地址程序才能正常执行**，这一点需要特别注意。
 
 *PS：bootloader.bin 和 custom_partitions.bin 首次必须烧写，之后仅烧用户 bin 即可。*
 
@@ -195,9 +195,9 @@ esptool 是采用 Python 语言编写的开源工具（源代码：[espressif/es
 示例：esptool.py --port COM4 write_flash 0x00000 my_app.elf-0x00000.bin 0x40000 my_app.elf-0x40000.bin
 ```
 
-esptool.py 在 `D:\AliOS-Things-master\platform\mcu\esp32\esptool_py\esptool` 目录下，可通过「计算机 - 属性 - 高级系统设置 - 环境变量」添加到系统环境变量 Path（分号隔开后粘贴路径），以便在命令行中直接使用。
+esptool.py 在 `D:\AliOS-Things-master\platform\mcu\esp32\esptool_py\esptool` 目录下，可通过「计算机 - 属性 - 高级系统设置 - 环境变量」添加到系统环境变量 Path 中（分号隔开后粘贴路径），以便在命令行中直接使用。
 
-在 CMD 中敲入以下命令，将 bootloader.bin、custom_partitions.bin 和 helloworld@esp32devkitc.bin 三个文件下载到 Flash。
+在 CMD 中敲入以下命令，将 bootloader.bin、custom_partitions.bin 和 helloworld@esp32devkitc.bin 三个文件下载到 Flash 对应地址。
 
 ```
 esptool.py --port COM30 --baud 921600 write_flash 0x1000 D:\AliOS-Things-master\platform\mcu\esp32\bsp\bootloader.bin 0x8000 D:\AliOS-Things-master\platform\mcu\esp32\bsp\custom_partitions.bin 0x10000 E:\CodeBase\ESP32\AliOS-Things\hello\out\helloworld@esp32devkitc\binary\helloworld@esp32devkitc.bin
@@ -217,13 +217,13 @@ esptool.py --port COM30 --baud 921600 write_flash 0x1000 D:\AliOS-Things-master\
 
 ![图12 VS Code 脚本下载](http://odaps2f9v.bkt.clouddn.com/18-1-2/19319700.jpg)
 
-*其中 `bootloader.bin` 和 `custom_partitions.bin` 从 SDK 目录获取，用户 bin 通过子目录下搜索 "@esp32devkitc.bin" 文件后缀得到。*
+*固件 `bootloader.bin` 和 `custom_partitions.bin` 从 SDK 目录获取，用户 bin 通过子目录下搜索 "@esp32devkitc.bin" 文件后缀得到。*
 
 ---
 
 ### 运行结果
 
-点击 VS Code 下方的 Connect Device 按钮（选好 COM 号，波特率 115200），通过 alios-studio 自带串口工具连接开发板（或使用其他串口工具），如果收到 ESP32 每隔 5 s 发过来的调试信息，说明 helloworld 运行成功！
+点击 VS Code 下方的 Connect Device 按钮（选好 COM 号，波特率 115200），通过 alios-studio 自带串口工具连接开发板（或使用其他串口工具），**如果收到 ESP32 每隔 5 s 发过来的调试信息，说明 helloworld 运行成功！**
 
 ![图13 运行效果](http://odaps2f9v.bkt.clouddn.com/18-1-2/45756837.jpg)
 
