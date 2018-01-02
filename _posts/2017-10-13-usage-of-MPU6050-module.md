@@ -665,4 +665,3 @@ int main()
 > * Mini AHRS 姿态解算说明 - 第七实验室
 > * [MPU-6000 and MPU-6050 Register Map and Descriptions Revision 4.2](https://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf)
 > * [MPU6050 数据轻松分析](https://wenku.baidu.com/view/14ca01925fbfc77da269b17f.html)
-> * 

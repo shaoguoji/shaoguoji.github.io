@@ -474,5 +474,5 @@ extern const char *Atom_add(const char *str, int len);
 
 > 参考文章
 > 
-> [各种字符串Hash函数比较 - BYVoid](https://www.byvoid.com/zhs/blog/string-hash-compare)
+> * [各种字符串Hash函数比较 - BYVoid](https://www.byvoid.com/zhs/blog/string-hash-compare)
 > Mark Allen Weiss -《数据结构与算法分析 —— C 语言描述》（5.2 散列函数）
