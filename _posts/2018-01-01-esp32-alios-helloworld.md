@@ -13,6 +13,8 @@ tag:
     - 嵌入式
 ---
 
+本文介绍 Windows 下基于 AliOS Things 的 ESP32 应用开发流程，包括环境搭建、程序编译、固件烧写。
+
 ### AliOS Things
 
 ![图1 AliOS Things](http://odaps2f9v.bkt.clouddn.com/18-1-1/40637909.jpg)
@@ -146,6 +148,8 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 ---
 
 ### Step 6：烧写 bin 固件
+
+*说明：由于官方 IDE 暂不支持 Upload 按钮烧录 ESP32，只能手动烧录。*
 
 固件烧录是相对独立的过程，原理适用于所有 bin 文件。烧写 ESP32 固件可以通过图形界面的 ESPFlashDownloadTool 软件或者 Python 命令行工具 esptool，两者都十分好上手，下面分别说明烧录方法。
 
