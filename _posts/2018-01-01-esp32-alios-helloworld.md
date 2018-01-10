@@ -105,7 +105,20 @@ ESP32-DevKitC 是搭载了乐鑫最新的 ESP-WROOM-32 模组的 MINI 开发板�
 
 ![图5 添加 SDK path 与 Toolchain path](http://odaps2f9v.bkt.clouddn.com/18-1-2/83573576.jpg)
 
-#### 修改 alios-studio Toolchain 判断规则（项目完善后可跳过此步）
+#### 20180110 更新：V1.2.0 版本 SDK 设置工具链方式
+
+由于新版本发布后增加了多编译器支持，在 SDK 设置界面去掉了 Toolchain 的选择，而是通过工程配置文件指定工具链目录。在左侧项目管理处找到 `.vscode` 下的 `setting.json` 文件，打开后在第一项 `aliosStudio.build.toolchain` 中填入目录 `D:\msys32\opt\xtensa-esp32-elf\bin` 即可**（注意反斜杠需要转义）**。
+
+```json
+{
+    "aliosStudio.build.toolchain": "D:\\msys32\\opt\\xtensa-esp32-elf\\bin",
+    "aliosStudio.build.output": "${workspaceRoot}/out",
+    "aliosStudio.inner.yosBin": "aos",
+    ...
+}
+```
+
+#### （已过时）修改 alios-studio Toolchain 判断规则（项目完善后可跳过此步）
 
 **此步骤非必须，由于我目前使用的 v1.1.2 版本的 SDK 尚未完善，多少会存在一些小 bug。**比如对所添加 Toolchain path 的合法性判断，目前只校验了 arm Toolchain，所以对 ESP32 的 xtensa 工具链会误报非法路径。
 
@@ -149,7 +162,7 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 
 ### Step 6：烧写 bin 固件
 
-*说明：由于官方 IDE 暂不支持 Upload 按钮烧录 ESP32，只能手动烧录。*
+*说明：由于官方 IDE 暂不支持 Upload 按钮烧录 ESP32，目前只能手动烧录。*
 
 固件烧录是相对独立的过程，原理适用于所有 bin 文件。烧写 ESP32 固件可以通过图形界面的 ESPFlashDownloadTool 软件或者 Python 命令行工具 esptool，两者都十分好上手，下面分别说明烧录方法。
 
@@ -169,13 +182,17 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 
 *PS：bootloader.bin 和 custom_partitions.bin 首次必须烧写，之后仅烧用户 bin 即可。*
 
+#### 20180110 更新：使用 IDE 烧录
+
+好消息！好消息！在更新后的 alios-studio 中支持通过下方 Upload 按钮一键烧录（然后选择对应 COM 号，波特率默认），你不点一下试试么？
+
 #### 使用 ESPFlashDownloadTool 工具烧录
 
 ESPFlashDownloadTool 工具可在 [Tools - 乐鑫 Flash 下载工具](http://espressif.com/zh-hans/support/download/other-tools)下载，打开软件后选择 ESP32 DownloadTool，设置不同固件及对应地址、晶振频率、SPI 模式、Flash大小，波特率（决定烧写速度），如下图所示：
 
 ![图10 使用 ESPFlashDownloadTool 工具烧录](http://odaps2f9v.bkt.clouddn.com/18-1-2/13291389.jpg)
 
-将 ESP32 DevKitC 开发板用 Micro-USB 线与电脑连接，安装串口驱动，在烧写软件中选择对应 COM 号，点击 Start 按钮开始下载。
+将 ESP32 DevKitC 开发板用 Micro-USB 线与电脑连接，安装[串口驱动](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)，在烧写软件中选择对应 COM 号，点击 Start 按钮开始下载。
 
 **提示：大部分电脑在点击 Start 后会自动复位 ESP32 DevKitC 进入下载模式，如果出现一直等待的情况，请尝试按住 Boot 键不放再下载，或者按住 BooT 键的的同时按一下 EN 键再松开。**
 
