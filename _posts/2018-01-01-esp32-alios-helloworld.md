@@ -118,6 +118,8 @@ ESP32-DevKitC 是搭载了乐鑫最新的 ESP-WROOM-32 模组的 MINI 开发板�
 }
 ```
 
+嫌麻烦的话还可以在系统高级设置中将 ToolChain 路径添加到 TOOLCHAIN_PATH 环境变量中。
+
 #### （已过时）修改 alios-studio Toolchain 判断规则（项目完善后可跳过此步）
 
 **此步骤非必须，由于我目前使用的 v1.1.2 版本的 SDK 尚未完善，多少会存在一些小 bug。**比如对所添加 Toolchain path 的合法性判断，目前只校验了 arm Toolchain，所以对 ESP32 的 xtensa 工具链会误报非法路径。
