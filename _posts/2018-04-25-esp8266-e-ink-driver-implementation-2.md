@@ -21,6 +21,7 @@ tag:
 在开始程序移植工作之前先准备要用到的目录和文件：
 
 1、把  `IoT_Demo` 文件夹拷贝一份到 VirtualBox 虚拟机共享文件夹编译目录下，命名为 `e-paper`。
+
 2、将 `stm32` 目录实例代码中的 `BSP` 和 `Fonts` 文件夹复制到 `e-paper` 下，并添加到总 `Makefile` 文件 `SUBDIRS` 变量中：
 
 ```makefile
@@ -32,9 +33,13 @@ SUBDIRS=    \
 ```
 
 3、删除 `driver` 目录下所有.c 文件（保留 `Makefile`）。
+
 4、删除 `include` 目录下除 `user_config.h` 外全部文件和目录。
+
 5、删除 `user` 目录下除 `Makefile` 和 `user_main.c` 外的所有文件。
+
 6、将原 `BSP` 和 `Fonts` 下的头文件剪切到 `include` 目录。
+
 7、从 'driver' 中拷贝 `Makefile` 文件到  `BSP`、 `Fonts` 目录，分别修改其 `GEN_LIBS` （输出文件变量）为 `libbsp.a` 和 `libfonts.a`，
 
 ```makefile
