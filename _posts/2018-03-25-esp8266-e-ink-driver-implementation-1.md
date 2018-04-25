@@ -1,7 +1,7 @@
 ---
 layout:           post
 title:             ESP8266(Non-OS SDK) 驱动 waveshare 2.9 寸墨水屏（一）
-subtitle:      源码分析及准备工作
+subtitle:      显示原理、源码分析及准备工作
 date:               2018-03-25 15:52:09 +0800
 author:           Shao Guoji
 header-img:  img/post-bg-esp8266-e-paper.jpg
@@ -25,7 +25,7 @@ tag:
 1. SDK：[ESP8266_NONOS_SDK-2.1.0](https://www.espressif.com/zh-hans/support/download/sdks-demos)
 Toolchain：乐鑫标配 [ VirtualBox](https://www.virtualbox.org/wiki/Downloads) + [lubuntu](http://downloads.espressif.com/FB/ESP8266_GCC.zip) 编译环境
 2. Editor：VS Code / Nodepad++ / 随便你啦
-3. board: NodeMcu
+3. board: NodeMCU
 
 *友情提示：没有接触过 8266 SDK 开发？没事，在正式开始之前，请按照文档[《ESP8266 SDK 入门指南》](https://www.espressif.com/sites/default/files/documentation/2a-esp8266-sdk_getting_started_guide_cn.pdf)把编译、下载的流程玩一遍即可。*
 
@@ -286,7 +286,7 @@ endif
 
 其中和硬件相关、最底层的是 `epdif.c`，包含 SPI 数据发送、GPIO 电平控制、毫秒延时等基本操作函数，以适配不同硬件并向上提供接口。在此基础上根据不同型号屏幕特性进行封装，形成 `epd2in9.c` （2.9 寸屏）文件，完成基本的初始化、数据命令交互功能。最上层的 `epdpaint.c` 与画图相关，只是对图像缓存数据进行处理，跟硬件无关。
 
-显然，移植工作的重点是修改 `epdif.c` 文件，重写底层硬件相关功能函数，这时需要了解两者硬件上的一些差异，像 SPI 接口、定时器等。
+显然，移植工作的重点是修改 `epdif.c` 文件，重写底层硬件相关功能函数，这时需要了解两者软硬件上的一些差异，像 SPI 接口、定时器等。
 
 #### SPI 字节发送函数
 
@@ -315,9 +315,9 @@ void EpdSpiTransferCallback(unsigned char data) {
 
 #### C 标准与 GCC 编译选项
 
+STM32 程序中使用了 C99 标准的循环写法 `for (int i = 0; ; i++){...}`，官方例程在 MDK 配置附上了 C99 编译选项，而 ESP8266 所用的 `xtensa-lx106-elf-gcc` 编译器默认使用 C89 标准，因此也需要增加额外编译参数才能正常编译示例源码。
 
-
-下一篇我们正式开始程序的移植工作。
+更多具体细节将在[下一篇]({% post_url 2018-04-25-esp8266-e-ink-driver-implementation-2 %})继续探讨，并正式开始程序的移植工作。
 
 > 参考资料
 > 
