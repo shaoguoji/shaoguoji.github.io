@@ -16,6 +16,8 @@ tag:
 
 [上一篇文章]({% post_url 2018-03-25-esp8266-e-ink-driver-implementation-1 %})简单介绍了了墨水屏原理、例程代码以及移植工作的可行性。这一步的目的是把前面在 STM32 跑的程序，完整地搬到 esp8266 上，达到相同的运行显示效果，Let's get started!
 
+移植好的程序源代码：[esp8266-E-ink-network-subscriber/device/example/e-paper at master · shaoguoji/esp8266-E-ink-network-subscriber](https://github.com/shaoguoji/esp8266-E-ink-network-subscriber/tree/master/device/example/e-paper)
+
 #### STEP1: 文件目录修改
 
 在开始程序移植工作之前先准备要用到的目录和文件：
@@ -40,7 +42,7 @@ SUBDIRS=    \
 
 6、将原 `BSP` 和 `Fonts` 下的头文件剪切到 `include` 目录。
 
-7、从 'driver' 中拷贝 `Makefile` 文件到  `BSP`、 `Fonts` 目录，分别修改其 `GEN_LIBS` （输出文件变量）为 `libbsp.a` 和 `libfonts.a`，
+7、从 'driver' 中拷贝 `Makefile` 文件到  `BSP`、 `Fonts` 目录，分别修改其 `GEN_LIBS` （输出文件变量）为 `libbsp.a` 和 `libfonts.a`：
 
 ```makefile
 # BSP/Makefile
@@ -474,7 +476,7 @@ os_timer_setfn(&count_timer, (os_timer_func_t *)time_tick, NULL);
 os_timer_arm(&count_timer, 500, 1);
 ```
 
-`os_timer_setfn()` 设置回调函数为 `time_tick()`，无参无返回值类型，到时间后自动被调用。`os_timer_arm()` 接口使能定时器，500 ms 周期重复定时。最后定义回调函数 `time_tick()`，移植原来 `while (1)` 中的代码，程序移植大功告成：
+`os_timer_setfn()` 设置回调函数为 `time_tick()`，无参无返回值类型，到时间后自动被调用。`os_timer_arm()` 接口使能定时器，500 ms 周期重复定时。最后定义回调函数 `time_tick()`，移植原来 `while (1)` 中的代码：
 
 ```c
 void ICACHE_FLASH_ATTR time_tick(void)
@@ -496,7 +498,7 @@ void ICACHE_FLASH_ATTR time_tick(void)
 }
 ```
 
-重新编译程序排除一些小问题，生成待下载的 `eagle.flash.bin` 和 `eagle.irom0text.bin` 文件。
+走时功能改好后程序移植便大功告成，重新编译程序排除一些小问题，生成待下载的 `eagle.flash.bin` 和 `eagle.irom0text.bin` 文件。
 
 ---
 
