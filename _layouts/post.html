@@ -65,11 +65,33 @@ layout: default
 
                 <hr>
 
+				
+				<!-- 来必力City版安装代码 -->
+				{% if site.livere_show && site.livere_uid %}
+				<div id="lv-container" data-id="city" data-uid="{{site.livere_uid}}">
+					<script type="text/javascript">
+				   (function(d, s) {
+					   var j, e = d.getElementsByTagName(s)[0];
+
+					   if (typeof LivereTower === 'function') { return; }
+
+					   j = d.createElement(s);
+					   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+					   j.async = true;
+
+					   e.parentNode.insertBefore(j, e);
+				   })(document, 'script');
+					</script>
+				<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+				</div>
+				<!-- City版安装代码已完成 -->
+				{% endif %}
+				
                 <!-- gitment评论 BEGIN  -->
+				{% if site.gitment_show && site.gitment_username %}
                 <div id="gitment"></div>
                 <link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
                 <script src="{{ "/js/gitment.browser.js " | prepend: site.baseurl }}"></script>
-                {% if site.gitment_share && site.gitment_username %}
                 <script> 
                 var gitment = new Gitment({
                      owner: "{{site.gitment_username}}",
@@ -85,7 +107,7 @@ layout: default
                 {% endif %}
 
 
-                {% if site.gentie_share && site.gentie_product_key %}
+                {% if site.gentie_show && site.gentie_product_key %}
                 <!-- 网易云跟帖 BEGIN  -->
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <script>
@@ -100,7 +122,7 @@ layout: default
                 <!-- 网易云跟帖 END -->
                 {% endif %}
 
-                {% if site.youyan_share %}
+                {% if site.youyan_show %}
                 <!-- 友言UY BEGIN -->
                 <div id="uyan_frame"></div>
                 <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2128031"></script>
