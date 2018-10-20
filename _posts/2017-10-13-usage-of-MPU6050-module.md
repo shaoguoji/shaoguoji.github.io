@@ -47,7 +47,7 @@ MPU6050 是一个很好玩传感器，在四轴、体感、计步等应用领域
 
 在平面中，物体总是围绕着一个「旋转中心」进行旋转（如表盘的圆心），而在三维空间中，物体是围绕着一根「旋转轴」进行旋转（比如，烤羊肉串？），并且**绕任何「旋转轴」的旋转都可以分解为空间直角坐标系中 X、Y、Z 三个轴上旋转的合成**，这也是 MPU6050 所测量的三个角速度值，同理，得到三轴角速度分量就可以确定任一旋转状态。
 
-![图1 绕三轴旋转示意图](http://odaps2f9v.bkt.clouddn.com/17-10-19/70275127.jpg)
+![图1 绕三轴旋转示意图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/70275127.jpg)
 
 #### 加速度
 
@@ -59,9 +59,9 @@ MPU6050 是一个很好玩传感器，在四轴、体感、计步等应用领域
 
 **传感器在静止状态受到向下的重力，测量到的加速度向上（了解这点很重要）。**同理，如果给一个水平向左的力，测量到的加速度向右。这也是一些资料中「箱子和球」模型所表达的原理。
 
-![图2 失重状态](http://odaps2f9v.bkt.clouddn.com/17-10-19/61409401.jpg)
+![图2 失重状态](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/61409401.jpg)
 
-![图3 受力与加速度方向相反](http://odaps2f9v.bkt.clouddn.com/17-10-21/13079086.jpg)
+![图3 受力与加速度方向相反](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/13079086.jpg)
 
 ### MPU6050 介绍
 
@@ -79,7 +79,7 @@ MPU6050 是一个很好玩传感器，在四轴、体感、计步等应用领域
 
 作为测量值的方向参考，传感器坐标方向定义如下图，属于右手坐标系（右手拇指指向 x 轴的正方向，食指指向 y 轴的正方向，中指能指向 z 轴的正方向）：
 
-![图4 传感器坐标方向](http://odaps2f9v.bkt.clouddn.com/17-10-22/76531996.jpg)
+![图4 传感器坐标方向](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/76531996.jpg)
 
 ---
 
@@ -87,7 +87,7 @@ MPU6050 是一个很好玩传感器，在四轴、体感、计步等应用领域
 
 我是使用公司 STM32F407ZGT6 开发板上集成的 MP6050 芯片，可免去接线的麻烦，如果开发板上没有相应芯片就只能使用模块了，接线如下图：
 
-![图5 MPU6050 模块接线](http://odaps2f9v.bkt.clouddn.com/17-10-19/13400884.jpg)
+![图5 MPU6050 模块接线](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/13400884.jpg)
 
 *注：使用模拟 I2C 时 GPIO 不固定，图中的 PB8 和 PB9 可以根据实际情况进行更改，与代码对应即可。*
 
@@ -113,7 +113,7 @@ void I2C_Write_ACK(uint8_t ack); // 发送应答信号
 
 MCU 作为主机与传感器通讯前需要发送 7 位的从机设备地址，**设备地址的惯用套路是固定高位，并通过引脚电平确定低位。**查阅寄存器手册得知，117 号寄存器 `WHO AM I` 决定着设备地址的高 6 位，上电复位值为 `110100`，最低 1 位则由外部引脚 `AD0` 决定（即一块电路板最多只能有两个 MPU6050）。查看模块或开发板电路图确定芯片 AD0 的电平（一般为低）最终得到 7 位的 I2C 从机设备地址为 `1101 000（0xD0）`，在 `mpu6050.h` 文件中宏定义为 `DEV_ADDR` 。
 
-![图6 WHO AM I 寄存器](http://odaps2f9v.bkt.clouddn.com/17-10-19/95135836.jpg)
+![图6 WHO AM I 寄存器](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/95135836.jpg)
 
 *注：文章侧重讲解传感器使用，I2C 函数具体实现见文末示例代码。但在进行下面的实验之前，请确保你的 I2C 通讯是正常的、发送器件地址能得到应答。*
 
@@ -393,7 +393,7 @@ int main()
 
 ##### 实验效果：
 
-![图7 基本数据串口打印](http://odaps2f9v.bkt.clouddn.com/17-10-20/36805603.jpg)
+![图7 基本数据串口打印](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/36805603.jpg)
 
 #### 单位换算
 
@@ -406,7 +406,7 @@ int main()
     printf("ACCEL_Z: %lf\t", MPU6050_Get_Data(ACCEL_ZOUT_H) / 16384.0);
 ```
 
-![图8 数据单位换算](http://odaps2f9v.bkt.clouddn.com/17-10-21/14056577.jpg)
+![图8 数据单位换算](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/14056577.jpg)
 
 #### 零偏校准
 
@@ -463,7 +463,7 @@ void MPU6050_Display(void)
 
 只考虑 X 轴和 Z 轴（此时Y 轴垂直于屏幕），将重力加速度作在 X 轴上分解，传感器 X 坐标正方向与重力加速度 `g` 的夹角为 `∠b`，如下图所示：
 
-![图9 重力分解](http://odaps2f9v.bkt.clouddn.com/17-10-21/29092047.jpg)
+![图9 重力分解](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/29092047.jpg)
 
 从图中可以看到，重力加速度 `g`（绿色箭头）分解为 X 轴上的 `gx`（黑色箭头）和 Z 轴上的 `gz`（紫色箭头）， `g` 与 `gx` 的夹角 `∠b` 的余弦值 `cos(∠b) = gx / g`，对 `gx / g` 求反余弦即可得到 `∠b` 的值，即 `∠b = arccos(gx / g)`，这便是求倾角的原理。
 
@@ -541,7 +541,7 @@ int main()
 
 ##### 实验效果：
 
-![图10 倾角测量数据打印](http://odaps2f9v.bkt.clouddn.com/17-10-22/69512820.jpg)
+![图10 倾角测量数据打印](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/69512820.jpg)
 
 ---
 
@@ -549,7 +549,7 @@ int main()
 
 智能手机和平板刚兴起那会儿，最吸引我的就是「重力感应」的功能 —— 通过倾斜手机，实现屏幕自动旋转、重力感应游戏，例如控制屏幕上的一个小球「走迷宫」的游戏：
 
-![图11 重力感应小球游戏](http://odaps2f9v.bkt.clouddn.com/17-10-22/96075858.jpg)
+![图11 重力感应小球游戏](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/96075858.jpg)
 
 是否能利用开发板上的四个 LED 实现类似的功能呢？通过倾斜开发板控制单个 LED 的流动方向、速度，不也实现了「小球滚动」的效果么？想想就有点小激动，废话不多说，理一下思路马上开干！
 
@@ -597,13 +597,13 @@ void LED_flow(uint16_t direction)
 
 #### 开发板倾角分析
 
-![图12 开发板坐标](http://odaps2f9v.bkt.clouddn.com/17-10-23/59088628.jpg)
+![图12 开发板坐标](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/59088628.jpg)
 
 开发板四个 LED 沿着 X 轴方向横向排列，让开发板绕 Y 轴旋转，同时读取 Z 轴 和 X 轴与重力倾角。**Z 轴倾角表示倾斜程度，倾角越大倾斜越厉害。X 轴倾角表示倾斜方向，小于 90°时向左倾，大于 90°时向右倾。**
 
 不同倾斜情况时 X 轴、Z 轴对应夹角示意图如下：
 
-![图13 开发板倾斜示意图](http://odaps2f9v.bkt.clouddn.com/17-10-23/1847671.jpg)
+![图13 开发板倾斜示意图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/1847671.jpg)
 
 通过测量 `∠a` 和 `∠b` 两个夹角分别控制流水灯的速度和流向，留意图中第 2 和第 3 个开发板中 `∠a` 的大小都是 30°，而 `∠b` 一个小于 90°一个大于 90°，所以两个开发板上流水灯的速度相同、方向相反。在上一个测量倾角程序的基础上，根据 X 、Z 轴倾角调用流水灯函数，便可实现「重力感应流水灯」。
 

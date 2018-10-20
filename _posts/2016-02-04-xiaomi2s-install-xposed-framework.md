@@ -43,7 +43,7 @@ tag:
 
 我手机系统版本**安卓5.0.2**，MIUI 7.0.4.0稳定版
 
-![手机系统版本](http://odaps2f9v.bkt.clouddn.com/16-10-2/26480955.jpg)
+![手机系统版本](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/26480955.jpg)
 
 #### 刷机有风险，请先备份手机重要数据（建议先用小米本地备份，再把MIUI\backup文件夹复制到电脑比较保险，配合小米账号云端的桌面布局及APP备份可完美还原）
 
@@ -62,15 +62,15 @@ tag:
 
 下载好工具包的TWRP Recovery，文件夹中的**recovery.img**便是我们要刷入的recovery，将它复制到Mi2/2S_recovery一键刷入工具”目录中替换原来自带的recovery.img。关机，按**电源+音量下**键进入手机的fastboot模式，把手机用数据线连接电脑，在电脑打开recovery.bat批处理，按提示操作即可，刷入成功后会有提示。
 
-![刷入工具](http://odaps2f9v.bkt.clouddn.com/16-10-2/81368165.jpg)
+![刷入工具](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/81368165.jpg)
 
-![进入fastboot](http://odaps2f9v.bkt.clouddn.com/16-10-2/85720759.jpg)
+![进入fastboot](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/85720759.jpg)
 
-![刷入成功](http://odaps2f9v.bkt.clouddn.com/16-10-2/45948015.jpg)
+![刷入成功](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/45948015.jpg)
 
 刷好后手机会自动重启，重启后再进入recovery就能看到美美的界面了~~~
 
-![recovery](http://odaps2f9v.bkt.clouddn.com/16-10-2/14281528.jpg)
+![recovery](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/14281528.jpg)
 
 **PS：一定要等到重启进入桌面后再关机进新的recovery，否则有可能导致recovery刷入失败**
 
@@ -91,11 +91,11 @@ tag:
 
 如果手机没有root，会提示刷入SuperSu软件（实际上许多教程都推荐使用SuperSu来管理root权限）
 
-![SuperSu](http://odaps2f9v.bkt.clouddn.com/16-10-3/83851245.jpg)
+![SuperSu](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/83851245.jpg)
 
 重启手机，打开Xposed Installer，如果显示“**Xposed framework version 78 (MIUI edition by SolarWarez / 20151124) is active.**”的话，恭喜你成功安装了强大的Xposed框架！
 
-![成功安装](http://odaps2f9v.bkt.clouddn.com/16-10-3/92889572.jpg)
+![成功安装](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/92889572.jpg)
 
 #### 3、安装Xposed应用模块
 

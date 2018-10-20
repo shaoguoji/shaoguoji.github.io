@@ -117,11 +117,11 @@ HC-05有两种工作模式，官方称为命令响应工作模式和自动连接
 
 设置完成后把模块重新上电进入正常工作模式，USB串口与电脑连接，在电脑打开sscom(或“串口助手”)，设置波特率等信息与模块参数一致，打开串口。手机下载“蓝牙串口”APP，配对连接后发送字符串，会在电脑sscom看到接收到的相应字符串，**如果把蓝牙模块与单片机的串口连接，那单片机就能接收到手机发送的数据，并进行相应的处理，这也正是手机蓝牙遥控的核心原理**：
 
-![蓝牙串口APP](http://odaps2f9v.bkt.clouddn.com/img/usage-of-bluetooth-model%E8%93%9D%E7%89%99%E4%B8%B2%E5%8F%A3APP.jpg)
+![蓝牙串口APP](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/usage-of-bluetooth-model%E8%93%9D%E7%89%99%E4%B8%B2%E5%8F%A3APP.jpg)
 
-![手机发送字符串](http://odaps2f9v.bkt.clouddn.com/img/usage-of-bluetooth-model%E6%89%8B%E6%9C%BA%E5%8F%91%E9%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2.jpg)
+![手机发送字符串](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/usage-of-bluetooth-model%E6%89%8B%E6%9C%BA%E5%8F%91%E9%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2.jpg)
 
-![sscom收到字符](http://odaps2f9v.bkt.clouddn.com/img/usage-of-bluetooth-modelsscom%E6%94%B6%E5%88%B0%E5%AD%97%E7%AC%A6.png)
+![sscom收到字符](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/usage-of-bluetooth-modelsscom%E6%94%B6%E5%88%B0%E5%AD%97%E7%AC%A6.png)
 
 <br/>
 

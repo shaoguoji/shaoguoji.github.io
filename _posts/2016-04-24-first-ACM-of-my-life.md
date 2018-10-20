@@ -12,11 +12,11 @@ tag:
 
 坑爹的申通老是那么早走，下午回来又没拿到新手机。用读卡器把今天用按键机拍的几张照片拉了出来，也是仅有的几张。
 
-![pic](http://odaps2f9v.bkt.clouddn.com/16-9-20/81333708.jpg)
+![pic](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/81333708.jpg)
 
-![pic2](http://odaps2f9v.bkt.clouddn.com/16-9-20/98100880.jpg)
+![pic2](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/98100880.jpg)
 
-![pic3](http://odaps2f9v.bkt.clouddn.com/16-9-20/51991604.jpg)
+![pic3](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/51991604.jpg)
 
 <br/>
 

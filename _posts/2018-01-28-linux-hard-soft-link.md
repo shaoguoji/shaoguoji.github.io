@@ -31,7 +31,7 @@ tag:
 
 再把思路捋一捋：文件由文件名和文件数据构成，文件数据又可分为元数据和用户数据。在访问文件时分三步走：用户给出文件名，操作系统先用文件名找到元数据，再通过元数据顺藤摸瓜找到文件真实数据，如下图所示：
 
-![图1 访问文件三部曲](http://odaps2f9v.bkt.clouddn.com/18-1-29/77900037.jpg)
+![图1 访问文件三部曲](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/77900037.jpg)
 
 #### 元数据
 
@@ -45,7 +45,7 @@ tag:
 
 在命令行 `ls` 查看文件时可使用 `-i` 参数显示文件 inode 号，不同文件有不同的 inode 号：
 
-![图2 显示文件 inode 号](http://odaps2f9v.bkt.clouddn.com/18-1-30/48280187.jpg)
+![图2 显示文件 inode 号](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/48280187.jpg)
 
 #### 文件名与 inode
 
@@ -53,7 +53,7 @@ tag:
 
 前面提到过，在 Linux 中文件名和文件数据（inode 节点）是分开存储与管理的，并通过特殊的方式建立联系，这种特殊的方式叫做目录项（directory entry 或 dentry）。目录文件（Linux 一切皆文件，目录也不例外）通过若干目录项记录着该目录下所有文件的信息。**每个目录项由两部分组成：所包含文件的文件名，以及该文件名对应的 inode 号。**目录项建立文件名与 inode 对应关系，从而实现「文件名 --> inode --> 数据块」的访问流程：
 
-![图3 文件名与 inode](http://odaps2f9v.bkt.clouddn.com/18-1-29/2778079.jpg)
+![图3 文件名与 inode](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/2778079.jpg)
 
 ---
 
@@ -61,17 +61,17 @@ tag:
 
 所谓硬链接，就是上图第一个箭头，即**文件名到 inode 的链接（目录项）**。创建文件时。系统将会分配数据块、创建 inode、添加 dentry 条目到所属目录文件，「文件三件套」一样不少。显然，**Linux 下所有文件默认都会有一个硬链接，用来生成文件名（文件至少要有一个硬链接才能访问其内容）：**
 
-![图4 所有文件默认1个硬链接](http://odaps2f9v.bkt.clouddn.com/18-1-30/17949369.jpg)
+![图4 所有文件默认1个硬链接](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/17949369.jpg)
 
 #### 硬链接的创建
 
 使用 `ln` 或 `ln -P` 命令创建一个硬链接，格式 `ln [-P] 源文件 目标文件`。下面为 `hello.c` 文件创建一个硬链接 `hello-hd.c`：
 
-![图5 ln 命令创建硬链接](http://odaps2f9v.bkt.clouddn.com/18-1-30/51267528.jpg)
+![图5 ln 命令创建硬链接](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/51267528.jpg)
 
 可以看到两个文件的文件的类型、大小一致，重点在于 inode 号是相同的 —— 说明 **`hello.c` 和 `hello-hd.c` 其实是同一个文件**，这两个文件名共用一块磁盘空间，系统无法区分两者的差别。列表第三列是文件链接数（引用数），创建链接后两个文件的链接数变为 2，表示可以通过 2 个名字都访问到同一个 inode 下相同的数据块。**当我们手动创建硬链接时，相当于额外添加了一个目录项指向已存在的 inode（下图黄箭头），但文件内容只有一份**：
 
-![图6 添加额外目录项](http://odaps2f9v.bkt.clouddn.com/18-1-30/85018393.jpg)
+![图6 添加额外目录项](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/85018393.jpg)
 
 创建硬链接等价于给文件取别名，例子中给 `hello.c` 起了一个别名叫 `hello-hd.c`，这意味着可以用不同的文件名访问同样的内容，就像同一个人有不同的绰号，虽然我被人喊过「邵国际」、「国际」、「邵哥」、「国哥」、「国际哥」，但是我只有一副躯体。
 
@@ -97,17 +97,17 @@ tag:
 
 如果说硬链接是「文件名到文件数据」，那么软连接就是「文件数据到文件名」，具体一点，是「一个文件数据到另一个文件名」，即存在两个不同的文件参与其中。**软链接有着自己的 inode 和数据块（见下图），文件的内容保存了目标文件的路径文件名，原理同 Windows 下的快捷方式**：
 
-![图7 软链接示意图](http://odaps2f9v.bkt.clouddn.com/18-1-31/30198626.jpg)
+![图7 软链接示意图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/30198626.jpg)
 
 #### 软链接的创建
 
 使用 `ln -s` 命令创建一个软链接，格式 `ln -s 源文件 目标文件`。下面为 `hello.c` 文件创建一个软链接 `hello-sym.c`：
 
-![图8 ln 命令创建软链接](http://odaps2f9v.bkt.clouddn.com/18-1-30/22490650.jpg)
+![图8 ln 命令创建软链接](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/22490650.jpg)
 
 `hello.c` 和 `hello-sym.c` 两个文件的类型、大小一目了然，inode 号不同说明这是两个不同的文件，系统能区分出两者的差异。其中 `hello-sym.c` 显示的文件类型为 `l` 前缀，是 Linux 中的链接文件，行末处显示软链接实际指向 `hello.c`。或许你还有一个疑惑：链接文件的大小为什么是 7 呢？哈哈前面走神了吧，因为文件名 `hello.c` 作为文件内容一共 7 个字符吖！
 
-![图9 创建软链接示意图](http://odaps2f9v.bkt.clouddn.com/18-1-31/85394048.jpg)
+![图9 创建软链接示意图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/85394048.jpg)
 
 创建软链接并不会增加文件的链接数（上图命令行中所有文件链接数均为 1），软链接并不会直接访问 inode，仅仅指向目标数据的文件名。至于从目标文件名到目标数据的工作，还是硬链接那一套。
 

@@ -56,11 +56,11 @@ del %~n1.exe
 
 将Complier.bat随便找个地方保存（我是放在SharpDevelop的安装目录下），打开SharpDevelop，在菜单栏的**工具 -> 选项 -> 工具 -> 扩展工具**，按下图设置。
 
-![set-sharpdevelop](http://odaps2f9v.bkt.clouddn.com/16-9-20/1411283.jpg)
+![set-sharpdevelop](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/1411283.jpg)
 
 <br/>
 
-![choose bat file](http://odaps2f9v.bkt.clouddn.com/16-9-20/35224563.jpg)
+![choose bat file](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/35224563.jpg)
 
 <br/>
 
@@ -74,11 +74,11 @@ del %~n1.exe
 
 点击菜单栏的工具菜单，就可以看到我们添加的工具啦，点击后即可使用，由于我们之前已经把它移到了最上面，所以使用快捷键”**Alt+T+Enter**"就可以调用了，是不是很方便呢？
 
-![use](http://odaps2f9v.bkt.clouddn.com/16-9-20/28025291.jpg)
+![use](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/28025291.jpg)
 
 <br/>
 
-![reslut](http://odaps2f9v.bkt.clouddn.com/16-9-20/17450109.jpg)
+![reslut](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/17450109.jpg)
 
 <br/>
 

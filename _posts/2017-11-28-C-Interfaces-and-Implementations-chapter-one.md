@@ -19,7 +19,7 @@ tag:
 
 ### 关于本书
 
-![图1 书籍封面](http://odaps2f9v.bkt.clouddn.com/17-11-29/94639556.jpg)
+![图1 书籍封面](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/94639556.jpg)
 
 [《C 语言接口与实现》（豆瓣评分 9.1）](https://book.douban.com/subject/6801697/)，乍听书名个人一种莫名其妙的感觉，实际作者就是想告诉人们，C 语言虽然古老又低级，但并不是只能用来写操作系统、驱动等底层程序。相反，只要驾驭熟练，还是可以写出像 C++ 等面向对象语言般的稍微大型点的程序。
 

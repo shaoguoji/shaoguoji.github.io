@@ -52,15 +52,15 @@ OK废话不多说，开工！
 
 创建好账号后先去验证一下邮箱，接着进到你的主页（如下图），
 
-![github主页](http://odaps2f9v.bkt.clouddn.com/16-9-16/17828822.jpg)
+![github主页](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/17828822.jpg)
 
 点击“+New repository”新建一个仓库（所谓“仓库”就是放代码的地方啦）
 
-![new](http://odaps2f9v.bkt.clouddn.com/16-9-16/90566620.jpg)
+![new](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/90566620.jpg)
 
 注意仓库命名格式是**username.github.io**，其中的username是注册github时的用户名，只有这样命名github才能识别为github page（一个用户只能拥有一个github page）。再点下面的"Create repository"完成新建仓库。
 
-![new Create](http://odaps2f9v.bkt.clouddn.com/16-9-16/6631739.jpg)
+![new Create](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/6631739.jpg)
 
 ---
 
@@ -72,25 +72,25 @@ OK废话不多说，开工！
 
 打开github for windows并登陆github账号，输入github账号和邮箱配置一下（不然无法commit代码），点下面“Skip”完成设置。
 
-![Log in](http://odaps2f9v.bkt.clouddn.com/16-9-16/1671089.jpg)
+![Log in](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/1671089.jpg)
 
-![Configure](http://odaps2f9v.bkt.clouddn.com/16-9-16/38902830.jpg)
+![Configure](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/38902830.jpg)
 
 接着在左上角找到一个“+”，点Clone，选择刚建好的“username.github.io”仓库，再点下面的“Clone username.github.io”，选择存放路径，把仓库下载同步到本地。
 
-![clone](http://odaps2f9v.bkt.clouddn.com/16-9-16/91916253.jpg)
+![clone](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/91916253.jpg)
 
-![save](http://odaps2f9v.bkt.clouddn.com/16-9-16/71798795.jpg)
+![save](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/71798795.jpg)
 
 本地打开刚刚设置的保存仓库的文件夹（即“Clone username.github.io”目录），往里面随便扔个html文件，并**命名为index.html**（文件名要为index，否则显示不出来）。回到github for windows界面，会发现有“Uncommitted changes”，点击“show”按钮显示细节
 
-![Uncommitted change](http://odaps2f9v.bkt.clouddn.com/16-9-16/23480271.jpg)
+![Uncommitted change](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/23480271.jpg)
 
 输入summary(摘要)后点“Commit to master”提交代码，最后**点右上角中间的“Push/Sync”**同步代码到github。
 
-![commit](http://odaps2f9v.bkt.clouddn.com/16-9-16/17199396.jpg)
+![commit](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/17199396.jpg)
 
-![push](http://odaps2f9v.bkt.clouddn.com/16-9-16/93743950.jpg)
+![push](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/93743950.jpg)
 
 >如果你想潇洒一点，打开github for windows自带的Git Shell(其实就是powershell)，cd进入到仓库的”username.github.io“目录，然后依次输入以下三条命令同样可实现提交并同步代码（事实上我更喜欢这样做）。
 
@@ -103,11 +103,11 @@ OK废话不多说，开工！
 
 再回到仓库网页setting，刷新一下即可看到github page已经自动生成了，域名为“http://username.github.io",如果刚刚有放index.html的话就可以显示其内容了。
 
-![github code](http://odaps2f9v.bkt.clouddn.com/16-9-16/14272084.jpg)
+![github code](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/14272084.jpg)
 
-![github setting](http://odaps2f9v.bkt.clouddn.com/16-9-16/38085155.jpg)
+![github setting](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/38085155.jpg)
 
-![side](http://odaps2f9v.bkt.clouddn.com/16-9-16/16375060.jpg)
+![side](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/16375060.jpg)
 
 这样你已经有了自己的网站了，如果仅仅是想把一个html网页发布的话，看到这里已经够了，但对于博客来说，好戏才刚刚开始。
 
@@ -121,11 +121,11 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 我是用Git Shell命令行下gem命令来安装，需先安装[ruby](http://rubyinstaller.org/downloads)，注意安装时要选择**“Add Ruby executables to your PATH”**
 
-![ruby](http://odaps2f9v.bkt.clouddn.com/16-9-16/88461043.jpg)
+![ruby](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/88461043.jpg)
 
 安装完成后，打开Git Shell，输入`gem install jekyll`命令安装jekyll。
 
-![install jekyll](http://odaps2f9v.bkt.clouddn.com/16-9-16/691858.jpg)
+![install jekyll](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/691858.jpg)
 
 失败了？很正常，由于网络环境原因，访问国外服务器十分坑爹，不过我们可以使用某宝的ruby gems镜像http://ruby.taobao.org/（我也被吓到了，某宝居然还有这功能~）
 
@@ -139,11 +139,11 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 再次运行”gem install jekyll“安装命令即可。
 
-![installed](http://odaps2f9v.bkt.clouddn.com/16-9-16/4316801.jpg)
+![installed](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/4316801.jpg)
 
 安装好jekyll后，可以输入”jekyll -h“命令测试一下。
 
-![test jekyll](http://odaps2f9v.bkt.clouddn.com/16-9-16/55707611.jpg)
+![test jekyll](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/55707611.jpg)
 
 然后就可以用以下命令新建博客：
 
@@ -157,7 +157,7 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 ```~ $ jekyll serve```
 
-![jekyll](http://odaps2f9v.bkt.clouddn.com/16-9-16/29373777.jpg)
+![jekyll](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/29373777.jpg)
 
 打开浏览器，输入[http://localhost:4000](http://localhost:4000)就能在本地预览博客主页了。
 
@@ -181,7 +181,7 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 #### 问题1、改gems源时出现"SSL_connect returned=1 errno=0"
 
-![SSL connect erro](http://odaps2f9v.bkt.clouddn.com/16-9-19/41216050.jpg)
+![SSL connect erro](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/41216050.jpg)
 
 #### 解决方法：下载”cacert.pem“文件，添加环境变量指向。  
 详细步骤参考文章[ruby  SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: - leorowe的专栏
@@ -191,9 +191,9 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 #### 问题2、“jekyll new”新建的博客本地预览失败，github page样式乱七八糟
 
-![jekyll serve fail](http://odaps2f9v.bkt.clouddn.com/16-9-19/60313689.jpg)
+![jekyll serve fail](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/60313689.jpg)
 
-![github page fail](http://odaps2f9v.bkt.clouddn.com/16-9-20/29681347.jpg)
+![github page fail](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/29681347.jpg)
 
 #### 解决方法：换其他的jekyll模板
 

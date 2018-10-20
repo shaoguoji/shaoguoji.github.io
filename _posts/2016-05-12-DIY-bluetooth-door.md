@@ -54,7 +54,7 @@ tag:
 
 ## 三、材料准备
 
-![prepare](http://odaps2f9v.bkt.clouddn.com/16-9-20/53761495.jpg)
+![prepare](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/53761495.jpg)
 
 | 元件                                   | 数量          | 单价（参考）  |
 |--------------------------------------- | ------------- | ------------- |
@@ -100,17 +100,17 @@ tag:
 
 把下载器先插上电脑，装好驱动后在系统的“设备管理器”中就能看到串口设备，记住所用的COM口:
 
-![设备管理器](http://odaps2f9v.bkt.clouddn.com/16-9-20/66664230.jpg)
+![设备管理器](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/66664230.jpg)
 
 然后把单片机和下载器按图示连接（**注意电源别接反！× 3**）：
 
-![单片机连接下载器](http://odaps2f9v.bkt.clouddn.com/16-9-20/61406612.jpg)
+![单片机连接下载器](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/61406612.jpg)
 
 *图片来源：杜洋工作室*
 
 打开STC-ISP软件，按图示步骤操作，记得选择刚刚的COM口。点击下载后给单片机重新上电（把电源断开再连接）,等待几秒，程序下载完成。
 
-![烧写程序](http://odaps2f9v.bkt.clouddn.com/16-9-20/26539854.jpg)
+![烧写程序](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/26539854.jpg)
 
 <br/>
 
@@ -126,7 +126,7 @@ tag:
 
 然后根据下面洞洞板布线图进行焊接，如果你有更好的布线方案就更好咯……
 
-![洞洞板布线图](http://odaps2f9v.bkt.clouddn.com/16-9-20/80249796.jpg)
+![洞洞板布线图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/80249796.jpg)
 
 **元件解释**
 
@@ -141,37 +141,37 @@ tag:
 
 **注意上图是正面元件图，在反面锡接过线时需自行脑补走线图。**焊接过程要细心耐心，注意防止短路。焊接完成后会像这样：
 
-![洞洞板焊接完成图正面](http://odaps2f9v.bkt.clouddn.com/16-9-20/48818354.jpg)
+![洞洞板焊接完成图正面](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/48818354.jpg)
 
-![洞洞板焊接完成图背面](http://odaps2f9v.bkt.clouddn.com/16-9-20/60489844.jpg)
+![洞洞板焊接完成图背面](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/60489844.jpg)
 
 很遗憾的是这里用了四根跳线，因为跳线越少电路越稳定，越美观。所以我们要尽量防止跳线的使用，就算跳也要跳的漂亮一点（请原谅我布线技术有限）。**另外注意元件之间的位置摆放、确保所有器件都能放得下。**
 
 确保正确焊接完成后把元件插上，蓝牙模块需用钳子把排针掰成与模块垂直并修剪排针长度再插，上电看看蓝牙模块指示灯是否正常闪烁。 把板子放进外壳试一下，刚刚好。
 
-![插上元件](http://odaps2f9v.bkt.clouddn.com/16-9-20/1912885.jpg)
+![插上元件](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/1912885.jpg)
 
-![板子放进外壳](http://odaps2f9v.bkt.clouddn.com/16-9-20/84416051.jpg)
+![板子放进外壳](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/84416051.jpg)
 
 ### 2、备用电池的焊接、外壳开孔
 
 要实现时钟芯片断电走时，需外加备用电池，这里选用带焊脚的CR2032纽扣电池。把一根母对母杜邦线中间剪短，与电池引脚焊接，再插到刚刚预留的时钟芯片备用电源排针上即可（**注意正负**）。由于要排针（备用电源的除外）外插杜邦线，所以先把排针向外弯曲，然后对排针、USB口在外壳上对应的位置进行开孔，**注意开孔位置的准确性**。
 
-![备用电池](http://odaps2f9v.bkt.clouddn.com/16-9-20/28164570.jpg)
+![备用电池](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/28164570.jpg)
 
-![外壳开孔](http://odaps2f9v.bkt.clouddn.com/16-9-20/55854292.jpg)
+![外壳开孔](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/55854292.jpg)
 
 为了插线方便，可用纸胶带在开孔处标明USB、舵机、指示灯及门锁状态开关的引脚定义：
 
-![USB](http://odaps2f9v.bkt.clouddn.com/16-9-20/32402570.jpg)
+![USB](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/32402570.jpg)
 
-![舵机](http://odaps2f9v.bkt.clouddn.com/16-9-20/72283419.jpg)
+![舵机](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/72283419.jpg)
 
-![指示灯及门锁状态开关](http://odaps2f9v.bkt.clouddn.com/16-9-20/14705980.jpg)
+![指示灯及门锁状态开关](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/14705980.jpg)
 
 最后再把电路板和备用电池装进外壳,排针、USB接口对准外壳开孔，如果能顺利把盖子合上，那么电路板及外壳这一部分就算是制作完成了。
 
-![所有元件装进外壳](http://odaps2f9v.bkt.clouddn.com/16-9-20/69094011.jpg)
+![所有元件装进外壳](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/69094011.jpg)
 
 <br/>
 
@@ -205,52 +205,52 @@ APP使用说明详见：[“蓝牙门锁”APP发布-- 蓝牙门锁开发笔记]
 
 用螺丝刀趁舍管不在的时候将门锁拆下来，打开后盖，你将看到门锁内部机械结构全貌：
 
-![拆门锁](http://odaps2f9v.bkt.clouddn.com/16-9-20/79660826.jpg)
+![拆门锁](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/79660826.jpg)
 
 ### 2、舵机安装
 
 最烦人的时候来了。要实现电动开门就必须使用舵机，这是因为舵机的旋转角度可通过PWM波的占空比精确控制，能让舵机提供动力、“拉开”门锁（比其他各种电磁铁、电机靠谱多了有木有啊！）。红色框框部分就是舵机的安装位置，有一个不太人性化的地方：**粘死舵机后，反锁的旋钮（就是卡住不让开门那个东东）就用不了**了，所以我干脆把它拆了……还有，**舵机只能控制锁舌，而不能反锁，这也是个小缺陷。**
 
-![舵机安装位置](http://odaps2f9v.bkt.clouddn.com/16-9-20/81425694.jpg)
+![舵机安装位置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/81425694.jpg)
 
 舵机下面需用橡皮擦、硬纸板或厚塑料片随便什么你能想到的东西垫高一下下，并把舵机一旁的螺丝固定孔剪掉，用透明胶固定一下导线，再放入舵机，导线可从旁边的孔穿出：
 
-![剪掉螺丝固定孔](http://odaps2f9v.bkt.clouddn.com/16-9-20/87828940.jpg)
+![剪掉螺丝固定孔](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/87828940.jpg)
 
-![放置舵机](http://odaps2f9v.bkt.clouddn.com/16-9-20/63947137.jpg)
+![放置舵机](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/63947137.jpg)
 
 #### 舵机传动轴的修剪
 
 把随舵机配套的传动轴的“只有一边”的那种拿出来，用剪刀修剪传动轴的长度，一次不要剪太多，剪一点再装上舵机放到门锁上量一下。只要保证不会因为舵机位置太高合不上门锁后盖，也不会因为传动轴太低而碰到门锁外壳影响舵机转动就行。
 
-![修剪传动轴](http://odaps2f9v.bkt.clouddn.com/16-9-20/53889124.jpg)
+![修剪传动轴](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/53889124.jpg)
 
-![效果](http://odaps2f9v.bkt.clouddn.com/16-9-20/60027852.jpg)
+![效果](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/60027852.jpg)
 
 #### 舵机传动曲轴的制作
 
 由于航模舵机只有一根传动轴，与我们开锁方向不一致，为实现“转动变推拉”的传动方向改变，我们要手动增加一根传动曲轴，而这个传动曲轴的材料选择也是十分麻烦、我是用反锁旋钮拆下的弹簧硬铁丝剪一小段，弯成U字形，插入传动轴的两个孔中，再用钳子缠绕而成。憋说话，看图：
 
-![硬铁丝](http://odaps2f9v.bkt.clouddn.com/16-9-20/31797401.jpg)
+![硬铁丝](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/31797401.jpg)
 
-![缠绕成传动曲轴](http://odaps2f9v.bkt.clouddn.com/16-9-20/67513776.jpg)
+![缠绕成传动曲轴](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/67513776.jpg)
 
 #### 传动轴位置的调整
 
 再把舵机的三根线接到电路板上，上电。发送指令让舵机产生“开锁”和“松锁”的转动，不断调整传动轴与齿轮的角度，确保“松锁”状态下传动轴与舵机的“长”垂直，“开锁”状态下传动轴与舵机的“长”平行（可能转不了那么大角度，差不多就行）。貌似很难理解，来个图吧：
 
-![舵机位置示意图](http://odaps2f9v.bkt.clouddn.com/16-9-20/18659009.jpg)
+![舵机位置示意图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/18659009.jpg)
 
 
 #### 舵机位置的调整
 
 把弄好传动曲轴的舵机放到门锁上，比对位置，红色圈圈的地方就是舵机传动曲轴与门锁接触传动的位置，把门锁稍微拉开一点，就能把传动曲轴放入：
 
-![舵机传动曲轴位置](http://odaps2f9v.bkt.clouddn.com/16-9-20/45500957.jpg)
+![舵机传动曲轴位置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/45500957.jpg)
 
 把舵机连接电路发送开锁及松锁命令，**注意舵机运动时用手大力按住固定舵机**，保证舵机的转动能有效对门锁进行控制。不断移动舵机调整前后左右位置，增加或减少铺垫材料调整上下位置，必要时可把传动轴拆出来调整角度再装回去。总之就是让舵机的力量充分发挥，达到能把门锁拉开和复位的较稳定状态，**实在难以调整的话，可根据具体门锁结构修改单片机程序调整舵机转动幅度**。
 
-![舵机位置调整](http://odaps2f9v.bkt.clouddn.com/16-9-20/17919862.jpg)
+![舵机位置调整](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/17919862.jpg)
 
 #### 传动轴的最终固定
 
@@ -260,15 +260,15 @@ APP使用说明详见：[“蓝牙门锁”APP发布-- 蓝牙门锁开发笔记]
 
 当你觉得舵机的位置非常完美的时候，就可以用热熔胶进行舵机的最终固定了。规则只有一个：**粘紧就好**。没错，就是那么简单粗暴！！！上图：
 
-![舵机的固定](http://odaps2f9v.bkt.clouddn.com/16-9-20/54783971.jpg)
+![舵机的固定](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/54783971.jpg)
 
 注意别粘到左边的反锁装置（红色框），不然反锁功能又没了……
 
-![注意反锁装置](http://odaps2f9v.bkt.clouddn.com/16-9-20/60448654.jpg)
+![注意反锁装置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/60448654.jpg)
 
 等待热熔胶硬了之后再把门锁后盖盖上、螺丝扭上。如果舵机与后盖之间有空隙就塞点什么弄紧点。如果舵机位置太高后盖盖不上，那就用力点吧……（之前都说了注意舵机位置不要太高的……）**最后再输出信号开锁松锁试一下是否正常**……
 
-![盖上后盖](http://odaps2f9v.bkt.clouddn.com/16-9-20/90625165.jpg)
+![盖上后盖](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/90625165.jpg)
 
 如果门锁能正常开关，那么恭喜你，最难的门锁改装部分已经完成，你离成功也不远了……
 
@@ -284,11 +284,11 @@ APP使用说明详见：[“蓝牙门锁”APP发布-- 蓝牙门锁开发笔记]
 
 那么其实LED指示灯的安装也很简单，门外固定一个LED，在LED正负极焊上两根长长的导线，然后从内侧门缝由外而内穿过，导线末端焊上母头杜邦线即可。你也可以像我一样加个“灯亮请推门”之类的提示语：
 
-![门外LED](http://odaps2f9v.bkt.clouddn.com/16-9-20/1026222.jpg)  
+![门外LED](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/1026222.jpg)  
 
-![门内走线](http://odaps2f9v.bkt.clouddn.com/16-9-20/41452859.jpg)
+![门内走线](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/41452859.jpg)
 
-![杜邦线母头](http://odaps2f9v.bkt.clouddn.com/16-9-20/2445530.jpg)
+![杜邦线母头](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/2445530.jpg)
 
 ### 2、门锁状态开关的制作与安装
 
@@ -298,25 +298,25 @@ APP使用说明详见：[“蓝牙门锁”APP发布-- 蓝牙门锁开发笔记]
 
 在门侧边上用两枚订书钉作为开关触点。直接用掰开的订书机在木门侧边订两枚订书钉(暴力一点应该能钉进去)，**开孔间隔5mm,距门内侧边沿10mm**，位置像这样：
 
-![订书钉位置](http://odaps2f9v.bkt.clouddn.com/16-9-20/53161484.jpg)
+![订书钉位置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/53161484.jpg)
 
 然后用烙铁在订书钉另一头弯折处焊公对母头杜邦线（我这里焊了双公头的面包板线再用双母头杜邦线作延长），不影响门的正常关闭、不会掉就行：
 
-![触点杜邦线](http://odaps2f9v.bkt.clouddn.com/16-9-20/2899747.jpg)
+![触点杜邦线](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/2899747.jpg)
 
 #### 开关触片的制作
 
 从垃圾桶捡来一个易拉罐（有时捡垃圾比捡钱还爽），用剪刀把罐体展开成平面，剪下大约12*55mm的条状铝片，亮面朝外对折两次：
 
-![易拉罐剪裁](http://odaps2f9v.bkt.clouddn.com/16-9-20/53742065.jpg)
+![易拉罐剪裁](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/53742065.jpg)
 
-![铝片对折](http://odaps2f9v.bkt.clouddn.com/16-9-20/45963217.jpg)
+![铝片对折](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/45963217.jpg)
 
 把门关上，在触点对应的门框位置做标记，把折起来的铝条用胶带固定两端在门框上：
 
-![门框触片](http://odaps2f9v.bkt.clouddn.com/16-9-20/52413653.jpg)
+![门框触片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/52413653.jpg)
 
-![关门](http://odaps2f9v.bkt.clouddn.com/16-9-20/55275320.jpg)
+![关门](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/55275320.jpg)
 
 #### 接触面打磨
 
@@ -326,9 +326,9 @@ APP使用说明详见：[“蓝牙门锁”APP发布-- 蓝牙门锁开发笔记]
 
 把改造好的门锁装回门上，记得把舵机线引出。用螺丝把外壳电路固定在门上，插接好舵机线、LED线、门锁状态开关线，插上USB电源线供电，打开APP，万事俱备，芝麻开门！
 
-![安装门锁](http://odaps2f9v.bkt.clouddn.com/16-9-20/62605357.jpg)
+![安装门锁](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/62605357.jpg)
 
-![安装电路](http://odaps2f9v.bkt.clouddn.com/16-9-20/35802350.jpg)
+![安装电路](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/35802350.jpg)
 
 <br/>
 

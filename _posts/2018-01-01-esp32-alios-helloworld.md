@@ -17,7 +17,7 @@ tag:
 
 ### AliOS Things
 
-![图1 AliOS Things](http://odaps2f9v.bkt.clouddn.com/18-1-1/40637909.jpg)
+![图1 AliOS Things](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/40637909.jpg)
 
 > AliOS Things 是一款由阿里巴巴开发的轻量级物联网操作系统。具备极致性能，极简开发、云端一体、丰富组件（包括实时操作系统内核，连接协议库、文件系统、libc接口、FOTA、Mesh、语音识别）、安全防护等关键能力，并支持终端设备连接到阿里云IoT云服务平台。可广泛应用在智能家居，智慧城市，工业等领域，降低物联网终端开发门槛，使万物互联更容易，终端设备上云更简单。
 
@@ -31,7 +31,7 @@ tag:
 
 ### ESP32 
 
-![图2 Espressif ESP32](http://odaps2f9v.bkt.clouddn.com/18-1-1/33324134.jpg)
+![图2 Espressif ESP32](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/33324134.jpg)
 
 物联网的大潮下，MCU 迎来一个新的发展机遇。继 ESP8266 之后，乐鑫在 2015 年底又推出了更强大的 ESP32 系列 WiFi 芯片，从参数描述可以看出：
 
@@ -41,7 +41,7 @@ tag:
 
 #### ESP32 DevKitC 开发板
 
-![图3 ESP32 DevKitC 开发板](http://odaps2f9v.bkt.clouddn.com/18-1-2/79192501.jpg)
+![图3 ESP32 DevKitC 开发板](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/79192501.jpg)
 
 ESP32-DevKitC 是搭载了乐鑫最新的 ESP-WROOM-32 模组的 MINI 开发板，能够轻松地插接到面包板，板子包含了用户所需的最小系统，只需连上 USB 线，即可进行开发。此外还具有 USB-UART 转换器 ，复位和下载模式按钮，LDO 稳压器 和微型 USB 连接器 。每个 GPIO 都可供开发者使用。
 
@@ -79,7 +79,7 @@ ESP32-DevKitC 是搭载了乐鑫最新的 ESP-WROOM-32 模组的 MINI 开发板�
 
 项目 Wiki 已经有详细软件安装说明文档，按照步骤把 VS Code 和 alios-studio 扩展装好即可：[AliOS Things Studio · alibaba/AliOS-Things Wiki](https://github.com/alibaba/AliOS-Things/wiki/AliOS-Things-Studio)
 
-![图4 安装 VS Code 与 alios-studio](http://odaps2f9v.bkt.clouddn.com/18-1-2/56288242.jpg)
+![图4 安装 VS Code 与 alios-studio](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/56288242.jpg)
 
 ---
 
@@ -103,7 +103,7 @@ ESP32-DevKitC 是搭载了乐鑫最新的 ESP-WROOM-32 模组的 MINI 开发板�
 
 打开装好 aos-studio 扩展的 VS Code，点击右下角边状态栏上的 Create Project 新建工程按钮，首次使用会弹出配置 SDK Path 的窗口，把刚才下载的 SDK 目录 `D:\AliOS-Things-master` 和 ToolChain 目录 `D:\msys32\opt\xtensa-esp32-elf\bin` 复制到两个 path 文本框中， SDK Version 会自动识别。
 
-![图5 添加 SDK path 与 Toolchain path](http://odaps2f9v.bkt.clouddn.com/18-1-2/83573576.jpg)
+![图5 添加 SDK path 与 Toolchain path](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/83573576.jpg)
 
 #### 20180110 更新：V1.2.0 版本 SDK 设置工具链方式
 
@@ -134,7 +134,7 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 
 **修改完毕后重启 VS Code，按 Ctrl+Shift+P 快捷键调出命令模式，输入 alios-studio: set SDK 继续配置，可正常添加 Toolchain path。**
 
-![图6 成功添加 Toolchain path](http://odaps2f9v.bkt.clouddn.com/18-1-2/17069465.jpg)
+![图6 成功添加 Toolchain path](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/17069465.jpg)
 
 ---
 
@@ -142,11 +142,11 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 
 继续点击新建工程按钮，这回我们终于看到了待选工程模板，勾选 helloworld 工程，滚到下面填写工程保存目录（**不能带中文**），目标板卡选 esp32devkitc，最后点 Submit 按钮确认提交。
 
-![图7 新建工程](http://odaps2f9v.bkt.clouddn.com/18-1-2/27413940.jpg)
+![图7 新建工程](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/27413940.jpg)
 
 新建工程需要把 sdk 赋值到工程文件夹，比较耗时，请耐心等待。完成后 VS Code 会新打开一个文件夹视图窗口，表示一个 alios-studio 工程。在左侧的目录中打开 `helloword.c` 文件，其中 `application_start` 函数是应用程序的入口。**helloworld 程序的运行现象是在串口以 5 s 的间隔打印调试字符串。**
 
-![图8 工程代码](http://odaps2f9v.bkt.clouddn.com/18-1-2/7029919.jpg)
+![图8 工程代码](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/7029919.jpg)
 
 新建工程视频演示：[AliOS Things Tutorial: 1 Hello World 应用](http://v.youku.com/v_show/id_XMzI2MTYyNDAwOA)
 
@@ -156,7 +156,7 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 
 点击窗口下方状态栏上的 Build 按钮开始编译、构建项目，期间会输出相应信息。**如果 SDK 和工具链路径配置 ok 的话项目是可以成功编译的。**经过 67.57 s 的漫长等待，终于 Build 完了……
 
-![图9 构建项目](http://odaps2f9v.bkt.clouddn.com/18-1-2/95932236.jpg)
+![图9 构建项目](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/95932236.jpg)
 
 编译生成的文件在工程的 out 目录下，`out\helloworld@esp32devkitc\binary\helloworld@esp32devkitc.bin` 是要烧到板子上的固件。
 
@@ -192,7 +192,7 @@ if (options.toolChain && !fsPlus.existsSync(path.join(dir, `arm-none-eabi-gcc${p
 
 ESPFlashDownloadTool 工具可在 [Tools - 乐鑫 Flash 下载工具](http://espressif.com/zh-hans/support/download/other-tools)下载，打开软件后选择 ESP32 DownloadTool，设置不同固件及对应地址、晶振频率、SPI 模式、Flash大小，波特率（决定烧写速度），如下图所示：
 
-![图10 使用 ESPFlashDownloadTool 工具烧录](http://odaps2f9v.bkt.clouddn.com/18-1-2/13291389.jpg)
+![图10 使用 ESPFlashDownloadTool 工具烧录](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/13291389.jpg)
 
 将 ESP32 DevKitC 开发板用 Micro-USB 线与电脑连接，安装[串口驱动](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)，在烧写软件中选择对应 COM 号，点击 Start 按钮开始下载。
 
@@ -226,7 +226,7 @@ esptool.py 在 `D:\AliOS-Things-master\platform\mcu\esp32\esptool_py\esptool` �
 esptool.py --port COM30 --baud 921600 write_flash 0x1000 D:\AliOS-Things-master\platform\mcu\esp32\bsp\bootloader.bin 0x8000 D:\AliOS-Things-master\platform\mcu\esp32\bsp\custom_partitions.bin 0x10000 E:\CodeBase\ESP32\AliOS-Things\hello\out\helloworld@esp32devkitc\binary\helloworld@esp32devkitc.bin
 ```
 
-![图11 esptool 烧写固件](http://odaps2f9v.bkt.clouddn.com/18-1-2/18579232.jpg)
+![图11 esptool 烧写固件](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/18579232.jpg)
 
 #### 脚本实现
 
@@ -238,7 +238,7 @@ for /f "delims=" %%t in ('dir /A:-D /S /B out\*@esp32devkitc.bin') do set binPat
 esptool.py --port COM30 --baud 921600 write_flash 0x1000 D:\AliOS-Things-master\platform\mcu\esp32\bsp\bootloader.bin 0x8000 D:\AliOS-Things-master\platform\mcu\esp32\bsp\custom_partitions.bin 0x10000 %binPath%
 ```
 
-![图12 VS Code 脚本下载](http://odaps2f9v.bkt.clouddn.com/18-1-2/19319700.jpg)
+![图12 VS Code 脚本下载](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/19319700.jpg)
 
 *固件 `bootloader.bin` 和 `custom_partitions.bin` 从 SDK 目录获取，用户 bin 通过子目录下搜索 "@esp32devkitc.bin" 文件后缀得到。*
 
@@ -248,7 +248,7 @@ esptool.py --port COM30 --baud 921600 write_flash 0x1000 D:\AliOS-Things-master\
 
 点击 VS Code 下方的 Connect Device 按钮（选好 COM 号，波特率 115200），通过 alios-studio 自带串口工具连接开发板（或使用其他串口工具），**如果收到 ESP32 每隔 5 s 发过来的调试信息，说明 helloworld 运行成功！**
 
-![图13 运行效果](http://odaps2f9v.bkt.clouddn.com/18-1-2/45756837.jpg)
+![图13 运行效果](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/45756837.jpg)
 
 *提示：如果板子不断重启打印错误信息，请检查固件及烧写地址的正确性。*
 

@@ -24,7 +24,7 @@ tag:
 
 <br/>
 
-![一键配网电路](http://odaps2f9v.bkt.clouddn.com/17-3-11/10934514-file_1489166914623_2969.jpg)
+![一键配网电路](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/10934514-file_1489166914623_2969.jpg)
 
 ### 预备知识
 
@@ -107,7 +107,7 @@ tag:
 
 为简单起见，硬件电路使用面包板搭接，电路仅有少量的元器件，包括单片机、ESP8266模块、电容、晶振、按键、LED。
 
-![电路连接图](http://odaps2f9v.bkt.clouddn.com/17-3-11/10000953-file_1489164371921_e816.png)
+![电路连接图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/10000953-file_1489164371921_e816.png)
 
 LED 起到指示作用，晶振能保证串口波特率的精确。需要注意的一点是，**由于使用外部中断处理按键，引脚的电位改变是直接由硬件处理，故无法用软件进行按键去抖，所以只能用并联电容的方法去抖**（更多关于按键去抖知识请看文章[浅谈如何按键消抖](http://www.eeworld.com.cn/mcu/2012/0806/article_9776.html)）。
 
@@ -162,7 +162,7 @@ void UART_init (void){
 
 使用单片机的串口1，设置为工作方式1，波特率由定时器1溢出率决定。配置定时器为模式2——8位自动重装模式，并设置所需波特率对于的初值（详细信息请查阅[STC12C5A60S2数据手册](http://www.doyoung.net/DOC/STC12C5A60S2.pdf)）。波特率与初值的关系可查看下表：
 
-![单片机常用波特率初值表](http://odaps2f9v.bkt.clouddn.com/17-3-10/86973906-file_1489116592716_925f.jpg)
+![单片机常用波特率初值表](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/86973906-file_1489116592716_925f.jpg)
 
 #### 关于中断优先级
 
@@ -180,7 +180,7 @@ void UART_init (void){
 
 也就是说各个中断默认都是同级的，但只有等级高的中断才能打断等级低的中断，因此如果不手动修改中断优先级的话是不能实现中断嵌套的（即在中断服务程序中再被中断）。根据数据手册寄存器定义，用 `IPH |= 0x10;` 和 `PS = 1;` 两条语句把串口1中断设置为最高优先级。
 
-![数据手册关于中断优先级](http://odaps2f9v.bkt.clouddn.com/17-3-10/24926947-file_1489136090967_aea3.png)
+![数据手册关于中断优先级](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/24926947-file_1489136090967_aea3.png)
 
 #### UART串口字符、字符串发送函数
 
@@ -331,7 +331,7 @@ void main (void){
 
 先不接WiFi模块，把写好的程序下载到单片机中，保持与电脑的串口连接，连好按键和LED，打开sscom，设置波特率为9600,后打开串口。这时按下按键，会先收到单片机发来的 `+++` ，然后打印开启智能配置的指令 `AT+CWSTARTSMART\r\n` ，指示灯亮起，由外部中断源码我们知道，此时程序在等待配网成功的 `smartconfig connected wifi` 字符串，我们可以手动发送这条字符串模拟WiFi模块的返回，让程序立即往下执行、打印其余指令。是的，此时你就是一个WiFi模块，在与单片机进行交互！
 
-![模拟WiFi模块返回](http://odaps2f9v.bkt.clouddn.com/17-3-10/27847518-file_1489137247621_169e4.png)
+![模拟WiFi模块返回](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/27847518-file_1489137247621_169e4.png)
 
 ### 软硬联调、见证奇迹
 
@@ -340,11 +340,11 @@ void main (void){
 * 发送 `AT+CWMODE=1\r\n` 指令配置模块为sta模式
 * 发送 `AT+UART=9600,8,1,0,0` 配置模块波特率为9600（与单片机匹配）
 
-![sscom设置常用参数](http://odaps2f9v.bkt.clouddn.com/17-3-11/28498093-file_1489164352896_14c0.png)
+![sscom设置常用参数](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/28498093-file_1489164352896_14c0.png)
 
 把面包板电路连接完整，打开“网络调试助手”配置TCP服务器（可参考文章[ESP8266串口WiFi模块的基本使用]({% post_url 2017-01-15-ESP8266-usage %})），确保单片机程序中TCP指令的服务器地址与“网络调试助手”中的本机地址相同。上电，按下按键指示灯亮起后在手机输入WiFi密码（手机和电脑连接同一WiFi），配网成功后指示灯熄灭。在“网络调试助手”客户端列表中可看到模块连接到TCP服务器，并打印出了上线信息“Connected successfully”。拔掉模块电源重新上电，仍然会自动连接服务器并进入透传，这就是微信一键配网的所有流程。
 
-![服务器收到连接](http://odaps2f9v.bkt.clouddn.com/17-3-11/71901224-file_1489163728810_bb91.png)
+![服务器收到连接](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/71901224-file_1489163728810_bb91.png)
 
 当然实际使用中服务器IP不应该写死，可通过串口设置才好，而且仅仅实现透传好像也没什么卵用，但本文只是配网，其他功能不做深入。
 

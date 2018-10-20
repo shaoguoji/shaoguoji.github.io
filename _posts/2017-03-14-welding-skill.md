@@ -10,7 +10,7 @@ tag:
     - 硬件
 ---
 
-![板子](http://odaps2f9v.bkt.clouddn.com/17-3-25/36127354-file_1490415861247_6b4f.jpg)
+![板子](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/36127354-file_1490415861247_6b4f.jpg)
 
 ### 内容简介
 
@@ -36,7 +36,7 @@ tag:
 
 一个可调温的焊台似乎是必不可少的，不然怎么知道烫到你的烙铁是多少度的呢哈哈~~~有了焊台，刀头烙铁也成了标配（反正我用尖头烙铁焊贴片很蛋疼），再加上焊锡、海绵、助焊剂，焊接大家族算是齐人了。
 
-![焊台](http://odaps2f9v.bkt.clouddn.com/17-3-22/34902681-file_1490174592400_4d35.jpg)
+![焊台](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/34902681-file_1490174592400_4d35.jpg)
 
 关于烙铁的使用要注意几点：
 
@@ -79,7 +79,7 @@ tag:
 
 #### QFP封装
 
-![QFP封装](http://odaps2f9v.bkt.clouddn.com/17-3-22/11162348-file_1490174733615_1add.jpg)
+![QFP封装](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/11162348-file_1490174733615_1add.jpg)
 
 SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加锡往外刮两下就完事，问题不大。这里重点讲下引脚密集的QFP封装的焊接。先固定芯片，步骤如下：
 
@@ -89,9 +89,9 @@ SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加�
 * 烙铁加锡固定的一边的边缘几个引脚，查看四边对齐情况，没对准还有挽救机会——用烙铁重新调整芯片位置
 * 烙铁加锡固定对边的几个引脚
 
-![对齐引脚](http://odaps2f9v.bkt.clouddn.com/17-3-22/23092392-file_1490175550216_18515.jpg)
+![对齐引脚](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/23092392-file_1490175550216_18515.jpg)
 
-![固定芯片](http://odaps2f9v.bkt.clouddn.com/17-3-22/98095134-file_1490175630948_e8.jpg)
+![固定芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/98095134-file_1490175630948_e8.jpg)
 
 这样一来芯片就被固定好了，接下来就开始焊了（很多元件都是“先固定，再焊接”的套路），焊的时候也需留个心眼：
 
@@ -103,23 +103,23 @@ SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加�
 6. 如法炮制剩下的三边
 7. 四边都焊好后检查引脚是否黏连、短路，必要时补焊。
 
-![蘸助焊剂](http://odaps2f9v.bkt.clouddn.com/17-3-22/70146837-file_1490176096998_15091.jpg)
+![蘸助焊剂](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/70146837-file_1490176096998_15091.jpg)
 
-![涂助焊剂](http://odaps2f9v.bkt.clouddn.com/17-3-22/45272077-file_1490176097656_138e7.jpg)
+![涂助焊剂](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/45272077-file_1490176097656_138e7.jpg)
 
-![加锡](http://odaps2f9v.bkt.clouddn.com/17-3-22/19161667-file_1490176097986_cfdb.jpg)
+![加锡](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/19161667-file_1490176097986_cfdb.jpg)
 
-![拖焊](http://odaps2f9v.bkt.clouddn.com/17-3-22/42810473-file_1490176098337_ab20.jpg)
+![拖焊](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/42810473-file_1490176098337_ab20.jpg)
 
-![余锡](http://odaps2f9v.bkt.clouddn.com/17-3-22/71210082-file_1490176098690_1a53.jpg)
+![余锡](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/71210082-file_1490176098690_1a53.jpg)
 
-![除去多余焊锡](http://odaps2f9v.bkt.clouddn.com/17-3-22/56953133-file_1490176099035_df47.jpg)
+![除去多余焊锡](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/56953133-file_1490176099035_df47.jpg)
 
-![焊好一边](http://odaps2f9v.bkt.clouddn.com/17-3-22/42479811-file_1490176099389_9edd.jpg)
+![焊好一边](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/42479811-file_1490176099389_9edd.jpg)
 
-![焊好四边](http://odaps2f9v.bkt.clouddn.com/17-3-22/69591083-file_1490176099723_12d92.jpg)
+![焊好四边](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/69591083-file_1490176099723_12d92.jpg)
 
-![焊好三个芯片](http://odaps2f9v.bkt.clouddn.com/17-3-22/34876156-file_1490176100145_75e0.jpg)
+![焊好三个芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/34876156-file_1490176100145_75e0.jpg)
 
 总之焊芯片只要记住两点：**1、焊的时候先多加锡，引脚连起来也无所谓，焊好后再慢慢分开。2、多加助焊剂**，助焊剂能让焊锡流动性更好，而不是像一坨粘粘的shi一样。
 
@@ -127,9 +127,9 @@ SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加�
 
 #### QFN封装
 
-![ QFN 封装芯片](http://odaps2f9v.bkt.clouddn.com/17-3-22/72556083-file_1490176986794_f5f8.png)
+![ QFN 封装芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/72556083-file_1490176986794_f5f8.png)
 
-![4 脚贴片晶振](http://odaps2f9v.bkt.clouddn.com/17-3-22/76683028-file_1490177234685_1008f.jpg)
+![4 脚贴片晶振](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/76683028-file_1490177234685_1008f.jpg)
 
 对于QFN这种没有引脚外露的芯片（如ESP8266），或者接触点在底面的 4 脚贴片晶振。用烙铁直接焊较困难，且不可靠。正确的方法应该是用热风枪吹（第一次拿热风枪的我好激动啊~(～￣▽￣)～），那要怎么吹呢？
 
@@ -142,23 +142,23 @@ SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加�
 7. 关掉风枪，检查芯片连接情况，小心 PCB 烫
 8. 必要时用烙铁补焊四周
 
-![QFN芯片](http://odaps2f9v.bkt.clouddn.com/17-3-22/89452125-file_1490177407398_163ff.jpg)
+![QFN芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/89452125-file_1490177407398_163ff.jpg)
 
-![焊盘加锡](http://odaps2f9v.bkt.clouddn.com/17-3-22/36052140-file_1490177493721_cfa1.jpg)
+![焊盘加锡](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/36052140-file_1490177493721_cfa1.jpg)
 
-![芯片抹助焊剂](http://odaps2f9v.bkt.clouddn.com/17-3-22/25584344-file_1490177543482_a198.jpg)
+![芯片抹助焊剂](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/25584344-file_1490177543482_a198.jpg)
 
-![放置芯片](http://odaps2f9v.bkt.clouddn.com/17-3-22/83355050-file_1490177600956_bed.jpg)
+![放置芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/83355050-file_1490177600956_bed.jpg)
 
-![热风枪](http://odaps2f9v.bkt.clouddn.com/17-3-22/72859496-file_1490177707208_3ee3.jpg)
+![热风枪](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/72859496-file_1490177707208_3ee3.jpg)
 
-![吹芯片](http://odaps2f9v.bkt.clouddn.com/17-3-22/39251423-file_1490177707578_15b9b.jpg)
+![吹芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/39251423-file_1490177707578_15b9b.jpg)
 
-![风枪芯片距离](http://odaps2f9v.bkt.clouddn.com/17-3-22/650677-file_1490177707954_dbea.jpg)
+![风枪芯片距离](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/650677-file_1490177707954_dbea.jpg)
 
-![烙铁补焊](http://odaps2f9v.bkt.clouddn.com/17-3-22/48699595-file_1490177708841_e87a.jpg)
+![烙铁补焊](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/48699595-file_1490177708841_e87a.jpg)
 
-![焊好的 芯片](http://odaps2f9v.bkt.clouddn.com/17-3-22/30750030-file_1490177709202_c0cd.jpg)
+![焊好的 芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/30750030-file_1490177709202_c0cd.jpg)
 
 注意事项：
 
@@ -185,17 +185,17 @@ SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加�
 5. 顺着元件方向移除烙铁
 6. 并排的元件从左往右逐个焊接
 
-![焊盘加锡](http://odaps2f9v.bkt.clouddn.com/17-3-22/26938436-file_1490177946846_e2f1.jpg)
+![焊盘加锡](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/26938436-file_1490177946846_e2f1.jpg)
 
-![烙铁粘元件](http://odaps2f9v.bkt.clouddn.com/17-3-22/82287233-file_1490178076064_16fcd.jpg)
+![烙铁粘元件](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/82287233-file_1490178076064_16fcd.jpg)
 
-![粘起元件](http://odaps2f9v.bkt.clouddn.com/17-3-22/9639846-file_1490178076285_132c8.jpg)
+![粘起元件](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/9639846-file_1490178076285_132c8.jpg)
 
-![移动元件](http://odaps2f9v.bkt.clouddn.com/17-3-22/11733463-file_1490178274271_169e4.jpg)
+![移动元件](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/11733463-file_1490178274271_169e4.jpg)
 
-![放置元件](http://odaps2f9v.bkt.clouddn.com/17-3-22/31987878-file_1490178274662_10ab9.jpg)
+![放置元件](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/31987878-file_1490178274662_10ab9.jpg)
 
-![移除烙铁](http://odaps2f9v.bkt.clouddn.com/17-3-22/45325094-file_1490178275086_e695.jpg)
+![移除烙铁](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/45325094-file_1490178275086_e695.jpg)
 
 其中用烙铁去“粘”元件是关键的一步，技巧是慢慢用烙铁靠近元件侧边，轻轻地接触。要注意的是烙铁头有锡才有粘性，但锡不能过多，否则液体的表面张力会让元件难以控制。如何让烙铁头覆上薄锡呢？先加锡，再沿着烙铁方向抖几下即可（想象一下扔飞镖的手部动作），实际焊接中也是很少用海绵的，多余的锡都是直接抖掉，所以这个“抖”的动作很重要（海绵会把锡擦得太干净反而不好，有脏东西时才用，直接抖掉就能很自然地留下一层薄锡）。
 
@@ -215,17 +215,17 @@ SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加�
 
 像 USB、SD 卡、SIM 卡等插座，都要*先焊引脚，再焊固定脚*，因为先固定插座的话位置不准就调不了了，注意别焊歪。对于有固定孔的插座，像 Micro-USB ，在焊好引脚后要把板子翻过来，在固定孔反面加锡， 让焊锡一直流到元件一面固定。原因在于某些 Micro-USB 座不完全封闭，**在元件旁焊接固定时很容易把锡弄到插孔里堵住，这样插头就插不进去了**（一句话，有洞的脚在背面焊）。
 
-![焊USB座引脚](http://odaps2f9v.bkt.clouddn.com/17-3-22/58930214-file_1490178500931_15755.jpg)
+![焊USB座引脚](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/58930214-file_1490178500931_15755.jpg)
 
-![焊USB座固定脚](http://odaps2f9v.bkt.clouddn.com/17-3-22/59310902-file_1490178500627_11669.jpg)
+![焊USB座固定脚](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/59310902-file_1490178500627_11669.jpg)
 
-![焊好的USB座](http://odaps2f9v.bkt.clouddn.com/17-3-22/66546237-file_1490178500380_12127.jpg)
+![焊好的USB座](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/66546237-file_1490178500380_12127.jpg)
 
 还有一种更恶心的排线插座叫“ FPC 插座”，引脚非常密，而且粘锡很严重，需要用大量松香才能搞定，一般的那种黏糊糊的助焊剂也不太行，反正我焊坏了不少。
 
-![FPC座](http://odaps2f9v.bkt.clouddn.com/17-3-22/16014751-file_1490178647713_9a27.jpg)
+![FPC座](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/16014751-file_1490178647713_9a27.jpg)
 
-![焊接FPC座](http://odaps2f9v.bkt.clouddn.com/17-3-22/12623826-file_1490178650935_c994.jpg)
+![焊接FPC座](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/12623826-file_1490178650935_c994.jpg)
 
 最后要说的一点是，由于插座类元件需要经常被插拔，所以一定要焊牢，**焊固定脚的时候可把烙铁温度稍调高，焊久一点**，一些大的元件（或与焊盘接触面大）也要延长加热时间和提高温度，确保焊稳焊牢。
 
@@ -246,7 +246,7 @@ SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加�
 8. 通电测试
 9. 洗板水 + 无尘布清洗 PCB 
 
-![红笔标元件值](http://odaps2f9v.bkt.clouddn.com/17-3-26/92372911-file_1490458721626_150de.jpg)
+![红笔标元件值](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/92372911-file_1490458721626_150de.jpg)
 
 **PS：对于电路比较复杂的 PCB ，应该先焊接电源电路，测试各点电压值正常后再焊接数字电路部分，要以模块为单位，边焊边测，及时排除问题，保证电路的正确连接。**
 

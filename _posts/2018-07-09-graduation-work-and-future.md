@@ -12,7 +12,7 @@ tag:
 
 刚好在星球看到张哥布置的「2018上半年复盘作业」，仔细一想也差不多该写年度总结了。干脆就趁这个机会总结一下去年 9 月到今年 6 月的所做所想，也算给自己一个冷静思考的机会。
 
-![失去梦想的咸鱼](http://odaps2f9v.bkt.clouddn.com/18-7-19/96525750.jpg)
+![失去梦想的咸鱼](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/96525750.jpg)
 
 ### 一条咸鱼的诞生
 

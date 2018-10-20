@@ -97,7 +97,7 @@ else
 
 #### 由于扩展配置问题而无法提供您请求的页面。如果该页面是脚本,请添加处理程序。
 
-![第一个坑](http://odaps2f9v.bkt.clouddn.com/16-9-20/26096167.jpg)
+![第一个坑](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/26096167.jpg)
 
 划词搜索引擎搜一下，找到解决方法：
 
@@ -113,11 +113,11 @@ else
 
 之前在实验室接触过不少aspx页面，自然想到用VS建一个项目什么的，但居然还有那么多建立选项，一时也搞不懂之间的区别。
 
-![新建ASP.NET项目](http://odaps2f9v.bkt.clouddn.com/16-9-20/34350924.jpg)
+![新建ASP.NET项目](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/34350924.jpg)
 
-![新建ASP.NET项目2](http://odaps2f9v.bkt.clouddn.com/16-9-20/36758737.jpg)
+![新建ASP.NET项目2](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/36758737.jpg)
 
-![新建ASP.NET网站](http://odaps2f9v.bkt.clouddn.com/16-9-20/35406102.jpg)
+![新建ASP.NET网站](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/35406102.jpg)
 
 刚刚发现有一篇文章有谈到项目与网站的区别：[VS“新建网站”与“新建Asp.Net Web 应用程序”的区别 - LisenYang的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/lisenyang/article/details/45500023)
 
@@ -135,15 +135,15 @@ else
 
 用的是VS自带的“发布”功能，我电脑的VS2015的发布选项又与教程老版本的VS不同，反正总的意思就是选一个目录输出项目：
 
-![VS2015发布菜单](http://odaps2f9v.bkt.clouddn.com/16-9-20/84759743.jpg)
+![VS2015发布菜单](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/84759743.jpg)
 
-![VS2015发布步骤2](http://odaps2f9v.bkt.clouddn.com/16-9-20/14690168.jpg)
+![VS2015发布步骤2](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/14690168.jpg)
 
-![VS2015发布步骤3](http://odaps2f9v.bkt.clouddn.com/16-9-20/31258952.jpg)
+![VS2015发布步骤3](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/31258952.jpg)
 
-![VS2015发布步骤4](http://odaps2f9v.bkt.clouddn.com/16-9-20/57813280.jpg)
+![VS2015发布步骤4](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/57813280.jpg)
 
-![VS2015发布步骤5](http://odaps2f9v.bkt.clouddn.com/16-9-20/54080766.jpg)
+![VS2015发布步骤5](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/54080766.jpg)
 
 *更多发布方法详见文章[将Asp.Net网站发布到IIS的四种方法及注意事项 - Mishchael - 博客园](http://www.cnblogs.com/mishchael/archive/2010/12/05/1897131.html)* 
 
@@ -159,7 +159,7 @@ else
 
 #### 无法识别的属性“targetFramework”。请注意属性名称区分大小写
 
-![错误图](http://odaps2f9v.bkt.clouddn.com/16-9-20/95054951.jpg)
+![错误图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/95054951.jpg)
 
 .NET版本不对应导致的问题，解决方法：[无法识别的属性“targetFramework”。请注意属性名称区分大小写。错误解决办法 - muchlin的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/muchlin/article/details/6800863)
 
@@ -171,7 +171,7 @@ else
 
 #### 处理程序“PageHandlerFactory-Integrated”在其模块列表中有一个错误模块“ManagedPipelineHandler”
 
-![错误图](http://odaps2f9v.bkt.clouddn.com/16-9-20/43690179.jpg)
+![错误图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/43690179.jpg)
 
 .Net Framework 4.0框架尚未在IIS中注册的问题，解决方法：[asp.net发布到IIS中出现错误：处理程序“PageHandlerFactory-Integrated”在其模块列表中有一个错误模块“ManagedPipelineHandler” - 马兆娟  廊坊师范学院信息技术提高班第八期 - 博客频道 - CSDN.NET](http://blog.csdn.net/mazhaojuan/article/details/7660657)
 
@@ -183,7 +183,7 @@ else
 
 #### 刚发现的，网站二级目录问题
 
-![二级目录报错](http://odaps2f9v.bkt.clouddn.com/16-9-20/94126596.jpg)
+![二级目录报错](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/94126596.jpg)
 
 怎么说呢……就是网站项目（单个页面文件不存在这样的问题）必须放在网站文件夹根目录，否则报错打不开，比如上面的默认目录wwwroot，把VS的项目（包括几个文件和几个文件夹）直接放在wwwroot，就可以通过“http://localhost/WebForm2.aspx”访问，而新建一个文件夹“abc”再放项目（二级目录下），就不能用“http://localhost/abc/WebForm2.aspx”访问了，神奇。
 
@@ -233,40 +233,40 @@ IIS管理中有“默认文档”的设置，有什么用呢，简单来说就�
 
 1) 点击Windows云服务器左下角【开始(Start)】，选择【服务器管理器(Server Manager)】，打开服务器管理界面，如下图所示：
 
-![开始start](http://odaps2f9v.bkt.clouddn.com/16-9-20/53546426.jpg)
+![开始start](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/53546426.jpg)
 
 2) 选择【添加角色和功能】，在弹出的添加角色和功能向导弹出框”开始之前“中点击【下一步】按钮，在”安装类型“中选择【基于角色或基于功能的安装】，点击【下一步】按钮。
 
 
-![添加角色和功能](http://odaps2f9v.bkt.clouddn.com/16-9-20/36320425.jpg)
+![添加角色和功能](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/36320425.jpg)
 
-![开始之前](http://odaps2f9v.bkt.clouddn.com/16-9-20/93719987.jpg)
+![开始之前](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/93719987.jpg)
 
-![安装类型](http://odaps2f9v.bkt.clouddn.com/16-9-20/25161941.jpg)
+![安装类型](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/25161941.jpg)
 
 3) 窗口左侧选择”服务器角色“选项卡，勾选【Web服务器（IIS）】，在弹出框中点击【添加功能】按钮后点击【下一步】按钮。
 
-![服务器角色](http://odaps2f9v.bkt.clouddn.com/16-9-20/6596839.jpg)
+![服务器角色](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/6596839.jpg)
 
-![添加角色和功能向导](http://odaps2f9v.bkt.clouddn.com/16-9-20/2197045.jpg)
+![添加角色和功能向导](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/2197045.jpg)
 
 4) 在”功能“选项卡中点击【下一步】按钮后，在”Web服务器角色（IIS）“选项卡也点击【下一步】。
 
-![功能](http://odaps2f9v.bkt.clouddn.com/16-9-20/10395390.jpg)
+![功能](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/10395390.jpg)
 
-![Web服务器角色](http://odaps2f9v.bkt.clouddn.com/16-9-20/18979655.jpg)
+![Web服务器角色](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/18979655.jpg)
 
 5) 在”角色服务“选项卡中勾选【CGI】选项，点击下一步。
 
-![角色服务](http://odaps2f9v.bkt.clouddn.com/16-9-20/97784911.jpg)
+![角色服务](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/97784911.jpg)
 
 6) 确认安装并等待安装完成。
 
-![确认](http://odaps2f9v.bkt.clouddn.com/16-9-20/45291482.jpg)
+![确认](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/45291482.jpg)
 
 7) 安装完成后在云服务器的浏览器中访问localhost验证是否安装成功，出现以下界面即为成功安装。
 
-![验证安装](http://odaps2f9v.bkt.clouddn.com/16-9-20/18851877.jpg)
+![验证安装](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/18851877.jpg)
 
 <br/>
 

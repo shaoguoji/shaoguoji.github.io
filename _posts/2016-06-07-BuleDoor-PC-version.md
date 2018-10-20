@@ -62,15 +62,15 @@ tag:
 
 ### 程序执行效果
 
-![程序主界面](http://odaps2f9v.bkt.clouddn.com/16-9-20/82245579.jpg)
+![程序主界面](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/82245579.jpg)
 
-![任务栏图标1](http://odaps2f9v.bkt.clouddn.com/16-9-20/82245579.jpg)
+![任务栏图标1](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/82245579.jpg)
 
-![任务栏图标2](http://odaps2f9v.bkt.clouddn.com/16-9-20/69872943.jpg)
+![任务栏图标2](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/69872943.jpg)
 
-![任务栏图标3](http://odaps2f9v.bkt.clouddn.com/16-9-20/61906231.jpg)
+![任务栏图标3](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/61906231.jpg)
 
-![任务栏图标4](http://odaps2f9v.bkt.clouddn.com/16-9-20/6353658.jpg)
+![任务栏图标4](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/6353658.jpg)
 
 <br/>
 

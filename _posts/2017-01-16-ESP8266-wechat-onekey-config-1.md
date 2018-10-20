@@ -27,7 +27,7 @@ tag:
 
 “溯源电子秤”是我这个学期在实验室负责的物联网项目，其中的“微信配网”部分花的时间虽然不多，但也是首次接触微信接口开发，值得留念。
 
-![溯源电子秤](http://odaps2f9v.bkt.clouddn.com/17-2-1/19145054-file_1485882521670_78b3.jpg)
+![溯源电子秤](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/19145054-file_1485882521670_78b3.jpg)
 
 ### 预备知识
 
@@ -78,7 +78,7 @@ WiFi模块解决了硬件“上网难”的问题，而智能配置(Smart Config
 
 在玩[ESP8266](http://espressif.com/zh-hans/products/hardware/esp-wroom-02/overview)WiFi模块时，被其强大的AT指令折服，但AT指令也不是万能的，比如配置WiFi模块连接路由器时就略显繁琐。使用地点固定还好，但要是要更改连接的路由器，就要把模块插上串口用电脑“串口助手”重新发一次SSID和密码的AT指令来配置，自己玩还好，实际产品肯定不能这样，那应该是怎样的呢？在某宝随便找了一款WiFi音箱，商品详情页中就有WiFi配置的介绍，如下图：
 
-![某WiFi音箱的WiFi配置](http://odaps2f9v.bkt.clouddn.com/17-1-16/78421912-file_1484549737810_6030.png)
+![某WiFi音箱的WiFi配置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/78421912-file_1484549737810_6030.png)
 
 重点我用红框圈了起来，可以看到，现在市场上主流的智能硬件都是通过**“按一个按键”、然后“手机输入WiFi密码”**的方式来连WiFi的，这种一键配网方法称为“智能配置”，而我们这次就要自己动手实现这么一个实用而又高大上的功能！
 
@@ -92,11 +92,11 @@ WiFi模块解决了硬件“上网难”的问题，而智能配置(Smart Config
 
 智能配置说白了就是：你有一个智能硬件（WiFi模块）需要连WiFi，但又没有显示屏和输入界面，这时就要**借助手机把要连接的WiFi名和密码“发送”给智能硬件**。说是发送，但硬件现在没有联网，处在与外界隔离“单机模式”，那要怎么把WiFi信息传给这个“信息孤岛”呢？就要**通过一些特殊的协议利用无线网卡“广播和抓包”的方式实现**，像[乐鑫的ESP-Touch协议](http://espressif.com/zh-hans/products/software/esp-touch/overview)和[微信的Airkiss技术](http://iot.weixin.qq.com/wiki/new/index.html?page=4-1-1)，具体原理就(wo)不(ye)展(bu)开(tai)了(dong)，有兴趣的可以自己摸索……
 
-![ESP-Touch](http://odaps2f9v.bkt.clouddn.com/17-1-16/50360512-file_1484551264720_13662.png)
+![ESP-Touch](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/50360512-file_1484551264720_13662.png)
 
 智能配置的方案各式各样，每个WiFi模块厂家、平台都有自己的协议和SDK。而这次我们使用自带Airkiss协议的ESP8266串口WiFi模块（硬件）和手机微信公众号网页JSSDK（软件）实现“微信配网”，大大简化了我们的开发。
 
-![Airkiss](http://odaps2f9v.bkt.clouddn.com/17-1-16/94464245-file_1484551419328_17046.png)
+![Airkiss](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/94464245-file_1484551419328_17046.png)
 
 ---
 
@@ -106,7 +106,7 @@ WiFi模块解决了硬件“上网难”的问题，而智能配置(Smart Config
 
 在开始之前需要把思路理一下：ESP8266模块自带支持Airkiss协议的智能配置模式，但需要AT指令来操作。想到可把AT指令写在单片机内，通过外部中断相应按键按下，利用串口与WiFi模块进行交互，使WiFi模块进入智能配置模式、完成配网并恢复原来状态，原理图如下。
 
-![微信配网原理图](http://odaps2f9v.bkt.clouddn.com/17-2-3/39841097-file_1486051783049_3b15.png)
+![微信配网原理图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/39841097-file_1486051783049_3b15.png)
 
 > 更好的方法是SOC方案——响应按键部分直接在ESP8266芯片上开发，省去一块单片机，但难度稍大。我们这里用最笨却最简单的串口方案。
 

@@ -103,7 +103,7 @@ Atom 接口就像一个黑盒，你把创建原子所需的字节序列传进去
 
 Atom 接口通过原子表存储和管理原子，**接口中的四个函数是基于原子表的增加和查找操作，因此原子表的表示是整章书的核心**。那原子表到底是个什么玩意儿？其实就是一个哈希表，长这样：
 
-![图1 哈希表](http://odaps2f9v.bkt.clouddn.com/17-12-8/89661907.jpg)
+![图1 哈希表](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/89661907.jpg)
 
 > 对于原子表来说，选择哈希表作为数据结构是显然的。这里的哈希表是一个指针数组，每个指针指向一个链表，链表中的每个表项保存了一个原子：
 
@@ -118,7 +118,7 @@ Atom 接口通过原子表存储和管理原子，**接口中的四个函数是�
 
 **哈希表是一个数组，元素是一个指向原子结构体的指针（元素也称为「哈希桶」），同时数组的每一项也作为一个单链表的头结点**，在发生冲突时把新数据往链表插入即可（拉链法）。单个原子由两部分组成，atom 结构体和紧接其后的字节序列（上图中灰色部分），atom 结构体示意图如下：
 
-![图2 单个原子结构](http://odaps2f9v.bkt.clouddn.com/17-12-8/10353465.jpg)
+![图2 单个原子结构](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/10353465.jpg)
 
 结构体中的 link 字段指向链表中下一个表项， len 字段保存了字节序列的长度，而 str 指向序列本身（即 str 的地址加一）。在内存布局中表现为字节序列挨着结构体存放，使得每个链表项的大小都刚好足够容纳其字节序列，巧妙利用指针在内存实现变长序列的存储。
 
@@ -310,7 +310,7 @@ int main()
 
 `buckets` 容量为 2048 时运行结果如下图：
 
-![图3 数组长度 2048 运行结果](http://odaps2f9v.bkt.clouddn.com/17-12-14/46085145.jpg)
+![图3 数组长度 2048 运行结果](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/46085145.jpg)
 
 从结果可以看出，一共创建 10057 个原子，`Atom_new` 总执行时间 1.7 s 左右（时间加倍后）。理想情况下哈希码应该均匀分布，每个链表应该有 4.91 个表项，即所有链表长度都在 4 和 5 这两行。但实际只有几百个。其余数目成递减趋势分布在更长的链表上，甚至还有 84 个链表是空的，最长的链表长度也到了 17。
 
@@ -318,7 +318,7 @@ int main()
 
 `buckets` 容量为 2039 时运行结果如下图：
 
-![图4 数组长度 2039 运行结果](http://odaps2f9v.bkt.clouddn.com/17-12-15/97414182.jpg)
+![图4 数组长度 2039 运行结果](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/97414182.jpg)
 
 将哈希表容量改为素数后，发现链表长度在平均长度上（4 和 5）的分布更为集中，而且空表只有 15 个，最长链表也不过 14。虽然速度比 2048 容量时稍慢了 0.2 s， 但换来了哈希表更均匀的分布，在 Linux 下运行结果相同，结果应该和机器关系不大。综上所述，使用素数是有改进的。
 
@@ -328,7 +328,7 @@ int main()
 
 「一坨链表」壮观景象：
 
-![图5 一坨链表](http://odaps2f9v.bkt.clouddn.com/17-12-15/78121365.jpg)
+![图5 一坨链表](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/78121365.jpg)
 
 因此如果**使用按位与运算来计算下标索引，哈希表长度老老实实用 2 的幂吧**，不然位运算省出的这丁点儿时间都用来遍历链表了，得不偿失。
 
@@ -340,19 +340,19 @@ int main()
 
 **查表法**
 
-![图6 查表法](http://odaps2f9v.bkt.clouddn.com/17-12-18/13708210.jpg)
+![图6 查表法](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/13708210.jpg)
 
 **BKDHash 算法**
 
-![图7 BKDHash 算法](http://odaps2f9v.bkt.clouddn.com/17-12-18/22882735.jpg)
+![图7 BKDHash 算法](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/22882735.jpg)
 
 **APHash 算法**
 
-![图8 APHash 算法](http://odaps2f9v.bkt.clouddn.com/17-12-18/62910190.jpg)
+![图8 APHash 算法](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/62910190.jpg)
 
 **DJBHash 算法**
 
-![图9 APHash 算法](http://odaps2f9v.bkt.clouddn.com/17-12-18/91082674.jpg)
+![图9 APHash 算法](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/91082674.jpg)
 
 | 算法         | Atom_new 执行时间 | 链表平均长度 | 链表最大长度 | 空表数  |
 |--------------|-------------------|--------------|--------------|---------|
@@ -417,9 +417,9 @@ struct atom {
 
 对运行时间测量，发现改进十分有限，再通过 Linux 下的 `pmap -X pid` 命令查看内存分布，可以看到堆（heap）内存分配由 284K 减少到 276 K：
 
-![图10 更改前](http://odaps2f9v.bkt.clouddn.com/17-12-24/13491017.jpg)
+![图10 更改前](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/13491017.jpg)
 
-![图11 更改后](http://odaps2f9v.bkt.clouddn.com/17-12-24/66409308.jpg)
+![图11 更改后](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/66409308.jpg)
 
 因为每个表项节省了一个字节（由于存在内存对齐，结构体所占大小不变），10000 个原子节省了 10K 左右，基本能对上。虽然节省空间，而引入了未定义操作，程序存在安全隐患。除非是对效率和空间十分看重的场合（如嵌入式系统），否则不值得冒这个险。
 

@@ -24,101 +24,101 @@ APP项目github地址：[https://github.com/shaoguoji/BlueDoorLock](https://gith
 
 额，直接来一波PPT截图睡觉去……
 
-![幻灯片1](http://odaps2f9v.bkt.clouddn.com/16-9-20/52231289.jpg)
+![幻灯片1](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/52231289.jpg)
 
-![幻灯片2](http://odaps2f9v.bkt.clouddn.com/16-9-20/2456763.jpg)
+![幻灯片2](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/2456763.jpg)
 
-![幻灯片3](http://odaps2f9v.bkt.clouddn.com/16-9-20/79176042.jpg)
+![幻灯片3](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/79176042.jpg)
 
-![幻灯片4](http://odaps2f9v.bkt.clouddn.com/16-9-20/57631189.jpg)
+![幻灯片4](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/57631189.jpg)
 
-![幻灯片5](http://odaps2f9v.bkt.clouddn.com/16-9-20/31993572.jpg)
+![幻灯片5](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/31993572.jpg)
 
-![幻灯片6](http://odaps2f9v.bkt.clouddn.com/16-9-20/4943793.jpg)
+![幻灯片6](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/4943793.jpg)
 
-![幻灯片7](http://odaps2f9v.bkt.clouddn.com/16-9-20/98427216.jpg)
+![幻灯片7](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/98427216.jpg)
 
-![幻灯片8](http://odaps2f9v.bkt.clouddn.com/16-9-20/44054931.jpg)
+![幻灯片8](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/44054931.jpg)
 
-![幻灯片9](http://odaps2f9v.bkt.clouddn.com/16-9-20/50441786.jpg)
+![幻灯片9](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/50441786.jpg)
 
-![幻灯片10](http://odaps2f9v.bkt.clouddn.com/16-9-20/10865809.jpg)
+![幻灯片10](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/10865809.jpg)
 
-![幻灯片11](http://odaps2f9v.bkt.clouddn.com/16-9-20/25807020.jpg)
+![幻灯片11](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/25807020.jpg)
 
-![幻灯片12](http://odaps2f9v.bkt.clouddn.com/16-9-20/29173137.jpg)
+![幻灯片12](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/29173137.jpg)
 
-![幻灯片13](http://odaps2f9v.bkt.clouddn.com/16-9-20/8192145.jpg)
+![幻灯片13](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/8192145.jpg)
 
-![幻灯片14](http://odaps2f9v.bkt.clouddn.com/16-9-20/5518871.jpg)
+![幻灯片14](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/5518871.jpg)
 
-![幻灯片15](http://odaps2f9v.bkt.clouddn.com/16-9-20/24025114.jpg)
+![幻灯片15](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/24025114.jpg)
 
-![幻灯片16](http://odaps2f9v.bkt.clouddn.com/16-9-20/28218169.jpg)
+![幻灯片16](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/28218169.jpg)
 
-![幻灯片17](http://odaps2f9v.bkt.clouddn.com/16-9-20/82890736.jpg)
+![幻灯片17](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/82890736.jpg)
 
-![幻灯片18](http://odaps2f9v.bkt.clouddn.com/16-9-20/16153587.jpg)
+![幻灯片18](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/16153587.jpg)
 
-![幻灯片19](http://odaps2f9v.bkt.clouddn.com/16-9-20/43984876.jpg)
+![幻灯片19](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/43984876.jpg)
 
-![幻灯片20](http://odaps2f9v.bkt.clouddn.com/16-9-20/15890470.jpg)
+![幻灯片20](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/15890470.jpg)
 
-![幻灯片21](http://odaps2f9v.bkt.clouddn.com/16-9-20/86077186.jpg)
+![幻灯片21](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/86077186.jpg)
 
-![幻灯片22](http://odaps2f9v.bkt.clouddn.com/16-9-20/52784419.jpg)
+![幻灯片22](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/52784419.jpg)
 
-![幻灯片23](http://odaps2f9v.bkt.clouddn.com/16-9-20/87601553.jpg)
+![幻灯片23](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/87601553.jpg)
 
-![幻灯片24](http://odaps2f9v.bkt.clouddn.com/16-9-20/284701.jpg)
+![幻灯片24](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/284701.jpg)
 
-![幻灯片25](http://odaps2f9v.bkt.clouddn.com/16-9-20/86806664.jpg)
+![幻灯片25](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/86806664.jpg)
 
-![幻灯片26](http://odaps2f9v.bkt.clouddn.com/16-9-20/33354313.jpg)
+![幻灯片26](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/33354313.jpg)
 
-![幻灯片27](http://odaps2f9v.bkt.clouddn.com/16-9-20/94831662.jpg)
+![幻灯片27](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/94831662.jpg)
 
-![幻灯片28](http://odaps2f9v.bkt.clouddn.com/16-9-20/52881889.jpg)
+![幻灯片28](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/52881889.jpg)
 
-![幻灯片29](http://odaps2f9v.bkt.clouddn.com/16-9-20/47811823.jpg)
+![幻灯片29](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/47811823.jpg)
 
-![幻灯片30](http://odaps2f9v.bkt.clouddn.com/16-9-20/71976384.jpg)
+![幻灯片30](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/71976384.jpg)
 
-![幻灯片31](http://odaps2f9v.bkt.clouddn.com/16-9-20/12429138.jpg)
+![幻灯片31](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/12429138.jpg)
 
-![幻灯片32](http://odaps2f9v.bkt.clouddn.com/16-9-20/83801174.jpg)
+![幻灯片32](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/83801174.jpg)
 
-![幻灯片33](http://odaps2f9v.bkt.clouddn.com/16-9-20/21713776.jpg)
+![幻灯片33](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/21713776.jpg)
 
-![幻灯片34](http://odaps2f9v.bkt.clouddn.com/16-9-20/65623172.jpg)
+![幻灯片34](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/65623172.jpg)
 
-![幻灯片35](http://odaps2f9v.bkt.clouddn.com/16-9-20/58946958.jpg)
+![幻灯片35](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/58946958.jpg)
 
-![幻灯片36](http://odaps2f9v.bkt.clouddn.com/16-9-20/98770772.jpg)
+![幻灯片36](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/98770772.jpg)
 
-![幻灯片37](http://odaps2f9v.bkt.clouddn.com/16-9-20/32672305.jpg)
+![幻灯片37](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/32672305.jpg)
 
-![幻灯片38](http://odaps2f9v.bkt.clouddn.com/16-9-20/9050525.jpg)
+![幻灯片38](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/9050525.jpg)
 
-![幻灯片39](http://odaps2f9v.bkt.clouddn.com/16-9-20/21382378.jpg)
+![幻灯片39](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/21382378.jpg)
 
-![幻灯片40](http://odaps2f9v.bkt.clouddn.com/16-9-20/77508740.jpg)
+![幻灯片40](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/77508740.jpg)
 
-![幻灯片41](http://odaps2f9v.bkt.clouddn.com/16-9-20/34627754.jpg)
+![幻灯片41](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/34627754.jpg)
 
-![幻灯片42](http://odaps2f9v.bkt.clouddn.com/16-9-20/28223667.jpg)
+![幻灯片42](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/28223667.jpg)
 
-![幻灯片43](http://odaps2f9v.bkt.clouddn.com/16-9-20/84871529.jpg)
+![幻灯片43](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/84871529.jpg)
 
-![幻灯片44](http://odaps2f9v.bkt.clouddn.com/16-9-20/41949516.jpg)
+![幻灯片44](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/41949516.jpg)
 
-![幻灯片45](http://odaps2f9v.bkt.clouddn.com/16-9-20/99968176.jpg)
+![幻灯片45](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/99968176.jpg)
 
-![幻灯片46](http://odaps2f9v.bkt.clouddn.com/16-9-20/76103056.jpg)
+![幻灯片46](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/76103056.jpg)
 
-![幻灯片47](http://odaps2f9v.bkt.clouddn.com/16-9-20/13117515.jpg)
+![幻灯片47](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/13117515.jpg)
 
-![幻灯片48](http://odaps2f9v.bkt.clouddn.com/16-9-20/20091409.jpg)
+![幻灯片48](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/20091409.jpg)
 
-![幻灯片49](http://odaps2f9v.bkt.clouddn.com/16-9-20/28361053.jpg)
+![幻灯片49](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/28361053.jpg)
 

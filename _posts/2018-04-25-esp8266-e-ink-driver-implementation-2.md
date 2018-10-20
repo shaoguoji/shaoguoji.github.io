@@ -353,7 +353,7 @@ void EPD_WaitUntilIdle(EPD* epd) {
 
 在虚拟机 lubuntu 中进入 `ESP8266_NONOS_SDK-2.1.0/e-paper` 目录，使用 `./gen_misc.sh` 命令开始编译。完了会报一些错误，但都是像找不到 `stm32f1xx_hal.h` 之类的头文件小问题，注释掉原来的无效代码基本能解决。编译通过后提示如下：
 
-![图1 编译通过](http://odaps2f9v.bkt.clouddn.com/18-4-25/11037653.jpg)
+![图1 编译通过](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/11037653.jpg)
 
  ---
 
@@ -506,9 +506,9 @@ void ICACHE_FLASH_ATTR time_tick(void)
 
 打开烧写工具 ESPFlashDownloadTool，按照下图配置进行烧写，复位后程序开始运行，显示效果与 STM32 程序一致，ESP8266 驱动墨水屏成功！。
 
-![图2 下载配置](http://odaps2f9v.bkt.clouddn.com/18-4-25/17991768.jpg)
+![图2 下载配置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/17991768.jpg)
 
-![图3 显示效果](http://odaps2f9v.bkt.clouddn.com/18-4-25/24200537.jpg)
+![图3 显示效果](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/24200537.jpg)
 
 > 参考资料
 > 

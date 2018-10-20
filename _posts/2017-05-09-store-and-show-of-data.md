@@ -69,7 +69,7 @@ a = -1
 
 他想不通为什么一个无符号数会打印出负号来。我乍一听，心中呵呵一笑，这不是在逗我么，**无符号数怎么可能会有负号**，开玩笑呢这……
 
-![你TM在逗我](http://odaps2f9v.bkt.clouddn.com/17-5-18/60735607-file_1495037867892_5d81.jpg)
+![你TM在逗我](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/60735607-file_1495037867892_5d81.jpg)
 
 但命令行上确实白底黑字打印着 `a = -1` ，是的，我被这串字符狠狠地打脸了。不！科！学！啊！说好的无符号数呢？
 

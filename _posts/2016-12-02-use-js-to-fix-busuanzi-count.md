@@ -13,11 +13,11 @@ tag:
 
 #### 哈！我的博客多了访客计数功能，就像这样：
 
-![主页计数](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/46031795.jpg)
+![主页计数](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/46031795.jpg)
 
 #### 或者这样：
 
-![文章页计数](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/48140665.jpg)
+![文章页计数](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/48140665.jpg)
 
 ---
 
@@ -25,7 +25,7 @@ tag:
 
 ### 关于“不蒜子”
 
-![“不蒜子”首页](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/61907455.jpg)
+![“不蒜子”首页](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/61907455.jpg)
 
 简单来说，“不蒜子”是提供静态页面计数功能的一个第三方服务（欲了解详情可拜访其[主页](http://service.ibruce.info/)和[文档](http://ibruce.info/2015/04/04/busuanzi/)），用户只需要在静态的html页面中插入**一行脚本**和**一行标签**，即可实现计数功能，官方说明如下（**带下划线加粗字是重点，要考！**）:
 
@@ -58,13 +58,13 @@ tag:
 
 太好了，于是兴奋地点击主页右上角的“登录”按钮……
 
-![未开发注册](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/97073688.jpg)
+![未开发注册](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/97073688.jpg)
 
-![坑爹呢](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/9566094.jpg)
+![坑爹呢](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/9566094.jpg)
 
 纳尼，暂不开放注册？？？好吧，看看文档下面的评论，应该有网友遇到同样问题，果不出我所料……
 
-![文档评论](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/86879053.jpg)
+![文档评论](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/86879053.jpg)
 
 原来是已经被作者搁置了一年多的功能，求人不如求己，直接上不行，但其实我们可以**“曲线救国”**来实现这个“初始化首次数据”的功能。
  
@@ -93,15 +93,15 @@ tag:
 
 
 
-![插入两行代码](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/76602649.jpg)
+![插入两行代码](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/76602649.jpg)
 
-![计数值显示](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/75420620.jpg)
+![计数值显示](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/75420620.jpg)
 
 就可以看到计数值了，不过等一下，为什么刚运行在本地服务器的网页会有这么多访问量？上面说过，“不蒜子”是通过页面url（或者主机名神马的）来标识一个计数值，而像localhost、index.html这样的名字早已经被像我们一样的广大程序猿在测试时用烂了，自然就累计了好多次……
 
 不用担心，部署服务器后就显示正常了：
 
-![服务器显示正常](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/11346245.jpg)
+![服务器显示正常](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/11346245.jpg)
 
 #### 2、增加CSS实现加载完毕自动显示
 
@@ -138,13 +138,13 @@ tag:
     </script> 
 ```
 
-![加入JS代码](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/70053675.jpg)
+![加入JS代码](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/70053675.jpg)
 
 #### 3、运行测试
 
 部署网站到服务器，打开页面查看计数值。测试结果如下，计数值加上了设定的初始值：
 
-![修正后的结果](http://odaps2f9v.bkt.clouddn.com/public/16-12-2/48267677.jpg)
+![修正后的结果](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/48267677.jpg)
 
 #### 4、代码解释
 
