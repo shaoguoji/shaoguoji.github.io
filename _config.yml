@@ -92,7 +92,7 @@ ba_track_id: aa77dd1af62bf0b3cb69ac8ee616f047
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "偶尔去跑跑步<br/>有时候也会看看自己喜欢的书..."
-sidebar-avatar: http://odaps2f9v.bkt.clouddn.com/18-7-21/28786140.jpg  # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/28786140.jpg  # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # old pic http://odaps2f9v.bkt.clouddn.com/17-5-3/12821055-file_1493778388447_fcab.jpg
 # old-old pic http://odaps2f9v.bkt.clouddn.com/17-2-18/70710645-file_1487416001693_3e6.png
