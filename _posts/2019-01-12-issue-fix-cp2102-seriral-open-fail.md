@@ -1,6 +1,6 @@
 ---
 layout:          post
-title:           【踩坑记录】cp2102 “Error: Could not open COMXX! Original error: 设备的最大波特率为 1280000”
+title:           【踩坑记录】 cp2102 「设备的最大波特率为 1280000」 错误
 subtitle:        Realtek 烧录工具 Image_Tool 打开串口失败问题记录
 date:            2019-01-10 15:39:39 +0800
 author:          Shao Guoji
