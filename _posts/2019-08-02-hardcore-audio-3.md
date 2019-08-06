@@ -9,7 +9,7 @@ catalog:         true
 tag:
     - 学习笔记
     - 嵌入式
-    - 软件
+    - 数字音频
 ---
 
 ### 音频淡入淡出概述
@@ -161,7 +161,10 @@ while (cur_sample_pos < stop_sample_pos)
 
 随着移位二进制权值的递增，音量变化会越来越大，运行效果听起来便是：前面一大段时间音量增大幅度都很小，最后一小段音量急剧上升，听音乐还是有点突兀，但用于短促提示音可消除 pop 声并快速进入音频内容，当然了，将第一种算法的淡入时间改短也能达到相同效果。
 
-
+> 参考资料
+> 
+> [如何实现音频淡入淡出效果 - SmartWan的专栏 - CSDN博客](https://blog.csdn.net/wxtsmart/article/details/3051418)
+> [【C语言】PCM音频数据处理---音量增大或减小 - zz460833359的博客 - CSDN博客](https://blog.csdn.net/zz460833359/article/details/84982212)
 
 
 
