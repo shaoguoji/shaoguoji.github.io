@@ -166,7 +166,7 @@ while (cur_sample_pos < stop_sample_pos)
 *硬核音频系列文章列表：*
 
 * [硬核音频系列（一）—— 音频信息的表示：基础概念扫盲，PCM 编码方式]({% post_url 2019-08-05-hardcore-audio-1 %})
-* [硬核音频系列（二）—— 音频文件编解码格式：手写 adpcm 解码器]({% post_url 2019-08-04-hardcore-audio-2 %})
+* [硬核音频系列（二）—— 音频文件编解码格式：手写 adpcm 解码器]()
 * [硬核音频系列（三）—— 线性淡入淡出：算法思路、实现与优化方法描述]({% post_url 2019-08-02-hardcore-audio-3 %})
 
 
