@@ -4,13 +4,15 @@ title:           硬核音频系列（三）—— 线性淡入淡出
 subtitle:        算法思路、实现与优化方法描述
 date:            2019-08-02 15:12:29 +0800
 author:          Shao Guoji
-header-img:      
+header-img:      img/post-bg-hardcore-audio.jpg
 catalog:         true
 tag:
     - 学习笔记
     - 嵌入式
     - 数字音频
 ---
+
+硬核音频系列第三篇，聊聊淡入淡出怎么搞。
 
 ### 音频淡入淡出概述
 

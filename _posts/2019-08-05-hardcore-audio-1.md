@@ -4,7 +4,7 @@ title:           硬核音频系列（一）—— 音频信息的表示
 subtitle:        基础概念扫盲，PCM 编码方式
 date:            2019-08-05 14:29:29 +0800
 author:          Shao Guoji
-header-img:      
+header-img:      img/post-bg-hardcore-audio.jpg
 catalog:         true
 tag:
     - 学习笔记
