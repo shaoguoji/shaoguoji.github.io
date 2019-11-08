@@ -108,7 +108,7 @@ LwIP 下可以接多种以太网网卡，AT Socket 下可以接多种 AT 通讯�
 int socket (int family, int type, int protocol);
 ```
 
-RT-Thread 的 DFS（虚拟文件系统）组件实现了标准 BSD Socket 接口，以统一管理文件 fd 和 socket，配置宏定义 `SAL_USING_POSIX`（4.0.x 版本之前为 `RT_USING_DFS_NET`）启用 Posix API 后，用户调用 `socket()` 函数，将会进到 `components/net/sal_socket/socket/net_sockets.c` 中的定义，完成 fd 的统一管理，通过 `sal_socket()' 根据不同协议族类型调用具体协议栈接口。
+RT-Thread 的 DFS（虚拟文件系统）组件实现了标准 BSD Socket 接口，以统一管理文件 fd 和 socket，配置宏定义 `SAL_USING_POSIX`（4.0.x 版本之前为 `RT_USING_DFS_NET`）启用 Posix API 后，用户调用 `socket()` 函数，将会进到 `components/net/sal_socket/socket/net_sockets.c` 中的定义，完成 fd 的统一管理，通过 `sal_socket()` 根据不同协议族类型调用具体协议栈接口。
 
 举个栗子，以 LwIP 为例，假设应用程序 WebClient 中调用了 `socket()` 连接网络服务器，协议栈的实际调用路径为：
 
