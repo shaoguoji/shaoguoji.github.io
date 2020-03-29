@@ -124,7 +124,7 @@ webclient_connect() -> socket() -> sal_socket() -> inet_socket() -> lwip_socket(
 
 那如果不使用 SAL 的标准 BSD Socket 接口实现呢，应用层的 `socket()` 该怎么走？别担心，正所谓条条大路通罗马，RTT 中也是「个个 Socket 通网卡」（挺押韵啊）。
 
-为了厘清各组件之间的关系，要分多钟情况讨论，还是以 LwIP 协议栈和 WebClient 应用为例，分析 `socket()` 的调用路径：
+为了厘清各组件之间的关系，要分多种情况讨论，还是以 LwIP 协议栈和 WebClient 应用为例，分析 `socket()` 的调用路径：
 
 **第一条路：只开启协议栈（#define RT_USING_LWIP）**
 

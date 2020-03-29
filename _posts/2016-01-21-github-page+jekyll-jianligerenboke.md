@@ -203,7 +203,7 @@ jekyll(中文名：杰克尔，读音：把”Michael Jackson“中间两个音�
 
 #### 问题3、“jekyll serve”报错“cannot load such file -- jekyll-paginate”
 
-这是之前换模板时遇到的的一个问题，也贴一下吧。
+这是之前换模板时遇到的一个问题，也贴一下吧。
 
 #### 解决方法：执行“gem uninstall --all”和 “gem install github-pages”
 

@@ -70,7 +70,7 @@ PCM 格式数据表示声音波形在某一时刻的真实值，能够被声卡�
 
 ### 实现 ADPCM 解码器
 
-学习知识的一个好方法是动手实践，通过实际代码能加深对技术的理解，接下来将会介绍如何编写一个车 ADPCM 解码器 —— 将 ADPCM 数据还原为 PCM 格式，但在开始之前，要先选定一个 ADPCM 标准作为依据。是的，ADPCM 下面还分了好几类，有 YAMAHA 、Microsoft、IMA 等标准，不同的处理流程也会有细分的规范。下面选择 Microsoft 格式（MS ADPCM）作为我们实现解码器的标准，并参考 FFmpeg 的代码，开启「照抄模式」。
+学习知识的一个好方法是动手实践，通过实际代码能加深对技术的理解，接下来将会介绍如何编写一个 ADPCM 解码器 —— 将 ADPCM 数据还原为 PCM 格式，但在开始之前，要先选定一个 ADPCM 标准作为依据。是的，ADPCM 下面还分了好几类，有 YAMAHA 、Microsoft、IMA 等标准，不同的处理流程也会有细分的规范。下面选择 Microsoft 格式（MS ADPCM）作为我们实现解码器的标准，并参考 FFmpeg 的代码，开启「照抄模式」。
 
 #### Microsoft ADPCM 标准
 
@@ -403,7 +403,7 @@ int main()
         decode_byte = adpcm_decode_block((int16_t*)write_buffer, (uint8_t*)read_buffer, &b_info);
         sound_device_write(dev, 0, write_buffer, decode_byte); // 解码后的 PCM 数据写入声卡设备播放
     }
-    // 关闭文件、是放资源
+    // 关闭文件、释放资源
     ...
 }
 ```

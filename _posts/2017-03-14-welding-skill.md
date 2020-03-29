@@ -158,7 +158,7 @@ SOP封装的芯片和引脚间距都较大的QFP，基本上直接用刀头加�
 
 ![烙铁补焊](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/48699595-file_1490177708841_e87a.jpg)
 
-![焊好的 芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/30750030-file_1490177709202_c0cd.jpg)
+![焊好的芯片](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/30750030-file_1490177709202_c0cd.jpg)
 
 注意事项：
 

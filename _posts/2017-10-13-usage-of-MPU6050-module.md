@@ -461,7 +461,7 @@ void MPU6050_Display(void)
 
 #### 测量原理 —— 三角函数的妙用  
 
-只考虑 X 轴和 Z 轴（此时Y 轴垂直于屏幕），将重力加速度作在 X 轴上分解，传感器 X 坐标正方向与重力加速度 `g` 的夹角为 `∠b`，如下图所示：
+只考虑 X 轴和 Z 轴（此时Y 轴垂直于屏幕），将重力加速度在 X 轴上分解，传感器 X 坐标正方向与重力加速度 `g` 的夹角为 `∠b`，如下图所示：
 
 ![图9 重力分解](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/29092047.jpg)
 
