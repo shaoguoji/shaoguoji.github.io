@@ -130,5 +130,5 @@ ci-bot 内置了码云 SDK，能通过 API 获取仓库信息、模拟用户行�
 > * [Jenkins 插件 - 码云 Gitee.com](https://gitee.com/help/articles/4193#article-header6)
 > * [什么是CLA？ - 知乎](https://zhuanlan.zhihu.com/p/68251730)
 > * [ci-bot: This repository is used to address the code of openEuler ci bot.](https://gitee.com/openeuler/ci-bot)
-> * [Github CLA 签署机器人|谢先斌的博客](https://www.xiexianbin.cn/git/github/2017-08-09-github-cla/index.html)
+> * [Github CLA 签署机器人 - 谢先斌的博客](https://www.xiexianbin.cn/git/github/2017-08-09-github-cla/index.html)
 > * [签署CLA](https://openeuler.org/zh/cla.html)
