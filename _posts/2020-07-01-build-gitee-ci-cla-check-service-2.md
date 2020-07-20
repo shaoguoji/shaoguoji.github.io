@@ -48,7 +48,7 @@ tag:
 
 下面这篇文章很有参考价值：
 
-Jenkins dood 搭建教程：[The simple way to run Docker-in-Docker for CI | Releaseworks Academy](https://tutorials.releaseworksacademy.com/learn/the-simple-way-to-run-docker-in-docker-for-ci)
+Jenkins dood 搭建教程：[The simple way to run Docker-in-Docker for CI - Releaseworks Academy](https://tutorials.releaseworksacademy.com/learn/the-simple-way-to-run-docker-in-docker-for-ci)
 
 在上面链接教程的基础上，加上数据持久化（创建、挂载数据卷）,root 权限等参数，运行 Docker 容器。
 
@@ -133,7 +133,10 @@ sed -i 's/https:\/\/updates.jenkins.io\/update-center.json/https:\/\/mirrors.tun
 
 ```
 sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsinghua.edu.cn\/jenkins/g' \
-/var/jenkins_home/updates/default.json && \
+/var/jenkins_home/updates/default.json
+```
+
+```
 sed -i 's/http:\/\/www.google.com/https:\/\/www.baidu.com/g' \
 /var/jenkins_home/updates/default.json
 ```
@@ -159,13 +162,13 @@ Password: yourpassword
 
 ![实例配置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E5%AE%9E%E4%BE%8B%E9%85%8D%E7%BD%AE.png)
 
-进入主界面：
+进入主界面
 
 ![进入主界面](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E8%BF%9B%E5%85%A5%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
 
 #### Gitee 插件安装
 
-1. 在线安装
+- 方式一：在线安装
      - 前往 Manage Jenkins -> Manage Plugins -> Available
      - 右侧 Filter 输入： Gitee
      - 下方可选列表中勾选 Gitee（如列表中不存在 Gitee，则点击 Check now 更新插件列表）
@@ -173,7 +176,7 @@ Password: yourpassword
 
 ![在线安装](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85.png)
 
-2. 手动安装（在线安装失败时备选）
+- 方式二：手动安装（在线安装失败时备选）
      - 从 [release](https://gitee.com/oschina/Gitee-Jenkins-Plugin/releases) 列表中进入最新发行版，下载对应的 XXX.hpi 文件
      - 前往 Manage Jenkins -> Manage Plugins -> Advanced
      - Upload Plugin File 中选择刚才下载的 XXX.hpi 点击 Upload
@@ -181,11 +184,11 @@ Password: yourpassword
 
 ![手动安装](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85.png)
 
-3. 勾选安装完成后重启 Jenkins
+- 勾选安装完成后重启 Jenkins
 
 ![勾选安装完成后重启 Jenkins](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E5%8B%BE%E9%80%89%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E9%87%8D%E5%90%AF%20Jenkins.png)
 
-4. 使用管理员账号重新登录，完成安装
+- 使用管理员账号重新登录，完成安装
 
 ![使用管理员账号重新登录](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E8%B4%A6%E5%8F%B7%E9%87%8D%E6%96%B0%E7%99%BB%E5%BD%95.png)
 
@@ -193,20 +196,20 @@ Password: yourpassword
 
 **添加码云链接配置**
 
- - 前往 Jenkins -> Manage Jenkins -> Configure System -> Gitee Configuration -> Gitee connections
- - 在 Connection name 中输入 Gitee 或者你想要的名字
- - Gitee host URL 中输入码云完整 URL地址： https://gitee.com （码云私有化客户输入部署的域名）
- - Credentials 中如还未配置码云 APIV5 私人令牌，点击 Add - > Jenkins
- - Domain 选择 Global credentials
- - Kind 选择 Gitee API Token
- - Scope 选择你需要的范围
- - Gitee API Token 输入你的码云私人令牌，获取地址：https://gitee.com/profile/personal_access_tokens
- - ID, Descripiton 中输入你想要的 ID 和描述即可。
- - Credentials 选择配置好的 Gitee APIV5 Token
- - 点击 Advanced ，可配置是否忽略 SSL 错误（适您的Jenkins环境是否支持），并可设置链接测超时时间（适您的网络环境而定）
- - 点击 Test Connection 测试链接是否成功，如失败请检查以上 3，5，6 步骤。
+ - 前往 `Jenkins -> Manage Jenkins -> Configure System -> Gitee Configuration -> Gitee connections`
+ - 在 `Connection name` 中输入 Gitee 或者你想要的名字
+ - `Gitee host URL` 中输入码云完整 URL地址： [https://gitee.com](https://gitee.com) （码云私有化客户输入部署的域名）
+ - `Credentials` 中如还未配置码云 APIV5 私人令牌，点击 `Add - > Jenkins`
+ - `Domain` 选择 `Global credentials`
+ - `Kind` 选择 `Gitee API Token`
+ - `Scope` 选择你需要的范围
+ - `Gitee API Token` 输入你的码云私人令牌，获取地址：https://gitee.com/profile/personal_access_tokens
+ - `ID`, `Descripiton` 中输入你想要的 ID 和描述即可。
+ - `Credentials` 选择配置好的 Gitee APIV5 Token
+ - 点击 `Advanced` ，可配置是否忽略 SSL 错误（适您的 Jenkins 环境是否支持），并可设置链接测超时时间（适您的网络环境而定）
+ - 点击 `Test Connection` 测试链接是否成功，如失败请检查以上 3，5，6 步骤。
 
-*注：如果 Token 添加失败，可在 `系统管理 -> 凭据配置 -> Manage Credentials -> Stores scoped to Jenkins -> 全局凭据 (unrestricted) -> 添加凭据` 菜单添加全局凭据。*
+*注：如果 Token 添加失败，可在 `系统管理 -> 凭据配置 -> Manage Credentials -> Stores scoped to Jenkins -> 全局凭据 (unrestricted) -> 添加凭据` 菜单处添加全局凭据。*
 
 ![添加 Gitee Token](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E6%B7%BB%E5%8A%A0%20Gitee%20Token.png
 )
@@ -224,13 +227,13 @@ Password: yourpassword
 
 #### 任务配置
 
-1. General 配置
+- **General 配置**
 
 Gitee 链接选择前面添加的名称
 
 ![General 配置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/General%20%E9%85%8D%E7%BD%AE.png)
 
-2. 构建触发器配置
+- **构建触发器配置**
 
     - 勾选 `Gitee webhook 触发构建`，并复制旁边提示的 URL `https://jenkins.rt-thread.org/gitee-project/rt-thread`，用于配置码云 Webhook
     - 构建策略选择 `新建 Pull Requests`、`更新 Pull Requests(Source Branch updated)`
@@ -240,14 +243,14 @@ Gitee 链接选择前面添加的名称
 
 ![构建触发器配置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E6%9E%84%E5%BB%BA%E8%A7%A6%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.png)
 
-3. 流水线配置
+- **流水线配置**
 
     - `定义`处下拉选择 `Pipeline script from SCM`，`SCM` 处下拉选择 `Git`
     - 输入你的仓库地址，例如 git@your.gitee.server:gitee_group/gitee_project.git
     - 点击 Advanced 按钮, Name 字段中输入 origin， Refspec 字段输入 `+refs/heads/*:refs/remotes/origin/* +refs/pull/*/MERGE:refs/pull/*/MERGE`
     - Branch Specifier 选项输入 `pull/${giteePullRequestIid}/MERGE`
 
-4. 保存设置
+- **保存设置**
 
 ![流水线配置](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%85%8D%E7%BD%AE.png)
 
@@ -258,7 +261,7 @@ Gitee 链接选择前面添加的名称
 打开待配置的码云项目页面，进入 管理 -> WebHooks
 
 1. 添加 WebHook， URL 填写 触发器配置处所复制 URL
-2. 密码填写：触发器配置中点击生成的 WebHook密码并填入
+2. 密码填写：触发器配置中点击生成的 WebHook 密码并填入
 3. 勾选  Push、Pull Request、评论事件
 
 ![配置 WebHook](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E9%85%8D%E7%BD%AE%20WebHook.png)
@@ -267,13 +270,13 @@ Gitee 链接选择前面添加的名称
 
 **WebHook 请求测试**
 
-在管理 -> WebHooks 中，点击测试按钮，此时 Gitee 会发起一次 WebHook 请求，码云端收到 200 返回表示测试成功。
+在`仓库主页 -> 管理 -> WebHooks` 中，点击测试按钮，此时 Gitee 会发起一次 WebHook 请求，码云端收到 200 返回表示测试成功。
 
 ![测试 WebHook 请求](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E6%B5%8B%E8%AF%95%20WebHook%20%E8%AF%B7%E6%B1%82.png)
 
 #### Jenkinsfile 编译脚本测试
 
-新建 `Jenkinsfile` 文件
+在仓库根目录新建 `Jenkinsfile` 文件，写入以下测试脚本：
 
 ```java
 pipeline {
@@ -292,7 +295,7 @@ pipeline {
 }
 ```
 
-在 git 中 add、commit 并 push 到码云仓库，发起 PR 触发编译。完成后查看 `console log`，可看到 `Jenkinsfile` 中的脚本命令被执行，测试成功。
+使用 git add、commit 并 push 到码云仓库（或者在网页端直接操作），发起 PR 触发编译。完成后查看 `console log`，可看到 `Jenkinsfile` 中的脚本命令被执行，测试成功。
 
 ![提交 PR 触发构建](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/%E6%8F%90%E4%BA%A4%20PR%20%E8%A7%A6%E5%8F%91%E6%9E%84%E5%BB%BA.png)
 
@@ -302,7 +305,7 @@ pipeline {
 
 **使用 Docker 运行流水线**
 
-使用 `ubuntu_ci:latest` 指定 Docker 镜像（前提：镜像存在。并配置好 dood 环境），创建临时容器执行构建任务，完成后自动删除容器。
+使用 `ubuntu_ci:latest` 指定 Docker 镜像（前提是镜像存在，并配置好 dood 环境），创建临时容器执行构建任务，完成后自动删除容器。
 
 ```java
 pipeline {
@@ -331,7 +334,7 @@ pipeline {
 
 *说明：使用 `env.RUN_DISPLAY_URL` 或 `env.BUILD_URL` 变量，均可获取构建详细日志页面， `env.RUN_DISPLAY_URL` 为 Blue Ocean 方式显示（需要安装 blue ocean 插件），`env.BUILD_URL` 为原始 log 页面。*
 
-由于要对外展示构建详细日志页面，需在`系统管理 -> 全局安全配置 -> 授权策略 ->  匿名用户具有可读权限 ->` 中允许匿名用户访问。
+由于要对外展示构建详细日志页面，需设置`系统管理 -> 全局安全配置 -> 授权策略 ->  匿名用户具有可读权限 -> 中允许匿名用户访问`。
 
 ```java
 pipeline {
@@ -374,12 +377,15 @@ Results available at: \
 }
 ```
 
+至此，一个支持码云的 Jenkins CI 构建环境搭建配置完毕。
+
+下一篇搭 CLA。
 
 > 参考资料
 > 
 > * [Installing Jenkins](https://www.jenkins.io/doc/book/installing/)
 > * [The simple way to run Docker-in-Docker for CI | Releaseworks Academy](https://tutorials.releaseworksacademy.com/learn/the-simple-way-to-run-docker-in-docker-for-ci)
 > * [Jenkins 插件 - 码云 Gitee.com](https://gitee.com/help/articles/4193#article-header6)
-> *[Jenkins换源，加速插件下载，解决下载慢，下载失败的问题_JikeStardy的博客-CSDN博客_jenkinds国内源更新插件慢](https://blog.csdn.net/JikeStardy/article/details/105606150)
+> * [Jenkins换源，加速插件下载，解决下载慢，下载失败的问题_JikeStardy的博客-CSDN博客_jenkinds国内源更新插件慢](https://blog.csdn.net/JikeStardy/article/details/105606150)
 > * [Running multiple steps](https://www.jenkins.io/doc/pipeline/tour/running-multiple-steps/)
 > * 书籍《Jenkins 2.x 实践指南》
