@@ -14,7 +14,7 @@ tag:
 
 和编码不同，在生产力工具上付出努力当然是值得的。
 
-这几周基于 Jenkins 及 openEuler/ci-bot 搭建了 RT-Thread 码云 CI 和 CLA 服务，为社区接受 bsp 代码贡献做准备。由于这方面现有的资料有限，没太多前人经验参考，摸爬滚打后决定写下点什么。
+这几周基于 Jenkins 及 openEuler/ci-bot 搭建了 RT-Thread 码云 CI 和 CLA 服务，为 RT-Thread 社区接受 bsp 代码贡献做准备。由于这方面现有的资料有限，没太多前人经验参考，摸爬滚打后决定写下点什么。
 
 ### 概述 & 文章目录
 
@@ -40,19 +40,19 @@ tag:
 
 #### CI & 自动构建
 
-持续集成（Continuous integration，简称 CI），是互联网软件的一种开发模式，指不断把小更新自动化地构建、测试、集成到主干。在嵌入式软件开发中，公司内部 Gitlab 上很早就开始使用 CI，对提交的 C 代码和 Markdown 文档进行编译构建、输出产物（`.bin`、`.a`、`.pdf` 等）,偶尔还会通过 Python 脚本完成简单的打包发布工作。
+持续集成（Continuous integration，简称 CI），是互联网软件的一种开发模式，指不断把小的更新自动化地构建、测试、集成到主干。在嵌入式软件开发中，公司内部 Gitlab 上很早就开始使用 CI，对提交的 C 代码和 Markdown 文档进行编译构建、输出产物（`.bin`、`.a`、`.pdf` 等）,偶尔还会通过 Python 脚本完成简单的打包发布工作。
 
 与互联网软件不同，嵌入式软件的 CI 主要完成自动编译检查工作，并及时将结果反馈回提交者，以便开发人员在合并代码前发现错误，至少确保代码能顺利编译通过。
 
 例如 RT-Thread Github 仓库中的每一个 PR 都会触发 CI 构建，所有 PR 的构建信息在 Travis CI 页面中展示：[Pull Requests - RT-Thread/rt-thread - Travis CI](https://travis-ci.org/github/RT-Thread/rt-thread/pull_requests)。
 
-项目维护着与贡献者，针对 CI 构建结果进行下一步工作。换作码云仓库也是如此，只不过没有了 Travis CI，需要自己搭建 CI 平台，并完成与码云之间的状态同步。
+项目维护者与贡献者，针对 CI 构建结果进行下一步工作。换作码云仓库也是如此，只不过没有了 Travis CI，需要自己搭建 CI 平台，并完成与码云之间的状态同步。
 
 **CI 平台的搭建，说白了就是准备执行编译用的机器，能接收构建命令，分配管理任务。**
 
 #### Jenkins & 码云插件
 
-Jenkins 似乎成了 CI/CD 的最佳实践，安装好 Jenkins 的服务器，能够添加 Git 仓库，并接受推送或 PR 请求，执行一系列自定义命令，完成编译构建打包等操作，并把结果产物输出。
+Jenkins 似乎成了 CI/CD 的最佳实践，安装好 Jenkins 的服务器，能够添加 Git 仓库，监听推送或 PR 请求，执行一系列自定义命令，完成编译构建打包等操作，并把结果产物输出。
 
 同时 Jenkins 还配备清晰的 Web 界面，使用和管理极为方便，各项目构建情况一目了然，用起来效果像这样：[Dashboard [Jenkins]](https://jenkins.osmocom.org/jenkins/)。
 
@@ -64,7 +64,7 @@ Jenkins 一大特色是支持插件的使用，通过安装不同的插件组合
 
 码云 Jenkins 插件基于 WebHook 工作。所谓「某某 Hook」，是在不影响原业务逻辑的前提上，给中间流程挂上额外的「钩子」，获取其中的数据，并触发用户自定义的操作，程序正常运行的同时被「插了一手」。
 
-码云 Webhook 支持代码推送、PR、评论等动作触发，配置好构建触发器和仓库 WebHook 后，推送代码到码云时，由配置的 WebHook 触发 Jenkins 任务构建，并将构建状态反馈回码云平台。
+码云 WebHook 支持代码推送、PR、评论等动作触发，配置好构建触发器和仓库 WebHook 后，推送代码到码云时，由配置的 WebHook 触发 Jenkins 任务构建，并将构建状态反馈回码云平台。
 
 ### CLA 签署服务
 
@@ -89,7 +89,7 @@ CLA 简单来说，就是贡献者对自己代码的授权书，保障开源组�
 5. 贡献者填写信息并提交签署请求，开源组织接收并核验身份完成签署
 6. 重新检查签署情况，PR 页面提示签署成功
 
-无论是自己搭建服务，或是由第三方签署平台完成 CLA 签署，都应包含上述步骤。一般后者已经完成绝大部分的工作，往往只需要用户进行签署即可。而在码云需要自行搭建，考虑更多技术细节。
+无论是自己搭建服务，或是由第三方签署平台完成 CLA 签署，都应包含上述步骤。一般后者已经完成绝大部分的工作，往往只需要用户进行签署即可。而码云需要自行搭建，考虑更多技术细节。
 
 更具体点说，想要从头搭建 CLA 签署服务，需要具备以下条件：
 
@@ -102,15 +102,15 @@ CLA 简单来说，就是贡献者对自己代码的授权书，保障开源组�
 
 #### ci-bot 服务端程序
 
-贡献者提交 PR 后，在页面下方由官方机器人账号自动回复，协助作者完成 CLA 签署类似电商智能客服，实际效果如下图：
+贡献者提交 PR 后，在页面下方由官方机器人账号自动回复，协助作者完成 CLA 签署，类似电商智能客服，实际效果如下图：
 
-![图1 ci-bot](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/20200704165033.png)
+![图1 PR自动回复](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/20200704165033.png)
 
 签署 CLA 剩下的工作都由后端程序处理，值得庆幸的是，OpenEuler 同时也开源了所用的 CLA 签署机器人 ci-bot，使用 Go 开发，各项配置整理清晰，稍作修改便能使用，项目地址如下：
 
 [ci-bot: This repository is used to address the code of openEuler ci bot.](https://gitee.com/openeuler/ci-bot)
 
-![](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/20200707100820.png)
+![图2 ci-bot框图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/20200707100820.png)
 
 *ci-bot 原项目功能众多，而我们只需要使用其中的 CLA 签署检查功能*
 
