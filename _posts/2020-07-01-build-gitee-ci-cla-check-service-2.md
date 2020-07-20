@@ -4,7 +4,7 @@ title:           搭建码云 CI 和 CLA 签署服务（二）
 subtitle:        Jenkins 安装配置与部署
 date:            2020-07-01 14:19:29 +0800
 author:          Shao Guoji
-header-img:      
+header-img:      img/post-bg-gitee-cicla-2.jpg
 catalog:         true
 tag:
     - Web
