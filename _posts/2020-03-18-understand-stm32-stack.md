@@ -210,6 +210,7 @@ msh >
 > * [对于stack size的疑惑 - RT-Thread一般讨论 - RT-Thread开发者社区 - Powered by Discuz!](https://www.rt-thread.org/qa/thread-423854-1-1.html)
 > * [Cortex-M3 权威指南](http://www.szcdxkmcu.com/PIC/PIC/CM3%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97CnR2.pdf)
 > * [浅谈STM32堆栈与uCOS堆栈,其实是两码事!~_嵌入式_qq_23922117的博客-CSDN博客](https://blog.csdn.net/qq_23922117/article/details/79400051)
+> * [STM32启动过程启动文件分析-单片机-电子工程世界网](http://news.eeworld.com.cn/mcu/article_2016052726601.html)
 
 
 
