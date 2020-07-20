@@ -384,7 +384,7 @@ Results available at: \
 > 参考资料
 > 
 > * [Installing Jenkins](https://www.jenkins.io/doc/book/installing/)
-> * [The simple way to run Docker-in-Docker for CI | Releaseworks Academy](https://tutorials.releaseworksacademy.com/learn/the-simple-way-to-run-docker-in-docker-for-ci)
+> * [The simple way to run Docker-in-Docker for CI - Releaseworks Academy](https://tutorials.releaseworksacademy.com/learn/the-simple-way-to-run-docker-in-docker-for-ci)
 > * [Jenkins 插件 - 码云 Gitee.com](https://gitee.com/help/articles/4193#article-header6)
 > * [Jenkins换源，加速插件下载，解决下载慢，下载失败的问题_JikeStardy的博客-CSDN博客_jenkinds国内源更新插件慢](https://blog.csdn.net/JikeStardy/article/details/105606150)
 > * [Running multiple steps](https://www.jenkins.io/doc/pipeline/tour/running-multiple-steps/)
