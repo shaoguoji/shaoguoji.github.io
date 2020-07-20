@@ -34,7 +34,7 @@ tag:
 
 #### dood 安装部署（推荐）
 
-为了能够对每次构建隔离，保持系统环境一致，更好的方式是在新的容器中执行构建，便引出在 docker 中使用 docker 的问题。
+为了能够对每次构建隔离，保持系统环境一致，更好的方式是在新的容器中执行构建，这涉及到「在 docker 中使用 docker」的两种方式 —— dind 和 dood。
 
 ##### dind vs dood
 
@@ -42,15 +42,15 @@ tag:
 > 
 > dood(Docker outside of Docker)：通过加载宿主 Docker socket 程序的方式达成重用宿主镜像的目的。
 
-官方镜像使用 dind 套娃的方式（基于 `docker:dind` 镜像），说到底还只是在同一个容器里面跑，不便于安装编译环境，也不利于针对不同项目制作独立镜像，下面重点介绍 dood 方式搭建 Jenkins。
+官方镜像使用 dind 套娃的方式（基于 `docker:dind` 镜像），说到底还只是在同一个容器里面跑，不便于安装编译环境，也不利于针对不同项目制作独立镜像。而 dood 能够共享宿主机 Docker 资源，便于使用和管理，因此下文会详细介绍 dood 方式搭建 Jenkins 构建环境。
 
-其中一种方法，就是先挂载 `docker.sock` 文件运行 `jenkins:lts` 镜像，把容器 Docker 和宿主机 Docker 程序关联（映射为同一个程序），然后在容器安装 Docker，这时两个 Docker 便能互相访问。
+其中实现 dood 的一种方法，就是先挂载 `docker.sock` 文件运行 `jenkins:lts` 镜像，把容器 Docker 和宿主机 Docker 程序关联（映射为同一个程序），然后在容器安装 Docker，这时两个 Docker 便能互相访问。
 
 下面这篇文章很有参考价值：
 
 Jenkins dood 搭建教程：[The simple way to run Docker-in-Docker for CI - Releaseworks Academy](https://tutorials.releaseworksacademy.com/learn/the-simple-way-to-run-docker-in-docker-for-ci)
 
-在上面链接教程的基础上，加上数据持久化（创建、挂载数据卷）,root 权限等参数，运行 Docker 容器。
+在上面链接教程的基础上，加上数据持久化（创建、挂载数据卷）、root 权限等命令参数，运行 Docker 容器，完整步骤如下：
 
 **1. 创建数据卷：**
 
@@ -70,7 +70,7 @@ docker run -d --restart always \
 jenkins/jenkins:lts
 ```
 
-*若宿主机 `8080` 端口被占用，可映射到其他空闲端口号，如上述的 `8085`。*
+*说明：若宿主机 `8080` 端口被占用，可映射到其他空闲端口号，如上述的 `8085`。`/var/jenkins_home` 目录保存 Jenkins 的所有配置信息，需要使用 Docker volume 做持久化。*
 
 **3. 进入容器：**
 
@@ -131,12 +131,12 @@ sed -i 's/https:\/\/updates.jenkins.io\/update-center.json/https:\/\/mirrors.tun
 /var/jenkins_home/hudson.model.UpdateCenter.xml 
 ```
 
-```
+```bash
 sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsinghua.edu.cn\/jenkins/g' \
 /var/jenkins_home/updates/default.json
 ```
 
-```
+```bash
 sed -i 's/http:\/\/www.google.com/https:\/\/www.baidu.com/g' \
 /var/jenkins_home/updates/default.json
 ```
@@ -332,9 +332,9 @@ pipeline {
 
 在 `post` 阶段调用 Gitee 评论接口反馈构建结果，成功或者失败，并给出 job 详情页面链接。
 
-*说明：使用 `env.RUN_DISPLAY_URL` 或 `env.BUILD_URL` 变量，均可获取构建详细日志页面， `env.RUN_DISPLAY_URL` 为 Blue Ocean 方式显示（需要安装 blue ocean 插件），`env.BUILD_URL` 为原始 log 页面。*
+![构建结果返回](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/20200720155010.png)
 
-由于要对外展示构建详细日志页面，需设置`系统管理 -> 全局安全配置 -> 授权策略 ->  匿名用户具有可读权限 -> 中允许匿名用户访问`。
+Jenkinsfile 增加以下代码：
 
 ```java
 pipeline {
@@ -376,6 +376,10 @@ Results available at: \
     }
 }
 ```
+
+*说明：使用 `env.RUN_DISPLAY_URL` 或 `env.BUILD_URL` 变量，均可获取构建详细日志页面， `env.RUN_DISPLAY_URL` 为 Blue Ocean 方式显示（需要安装 blue ocean 插件），`env.BUILD_URL` 为原始 log 页面。*
+
+由于要对外展示构建详细日志页面，需设置`系统管理 -> 全局安全配置 -> 授权策略 ->  匿名用户具有可读权限 -> 中允许匿名用户访问`。
 
 至此，一个支持码云的 Jenkins CI 构建环境搭建配置完毕。
 
