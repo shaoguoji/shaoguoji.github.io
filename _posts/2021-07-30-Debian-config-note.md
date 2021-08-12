@@ -1,4 +1,4 @@
----
+s---
 layout:          post
 title:           日用 Debian 配置笔记
 subtitle:        Linux 作为日常使用
@@ -58,7 +58,7 @@ tag:
 
 输入命令安装自动登录软件包
 
-```sudo apt -y install lightdm-autologin-greeter```
+`sudo apt -y install lightdm-autologin-greeter`
 
 修改配置文件，设置自动登录账号，配置文件路径： `/etc/lightdm/lightdm.conf.d/lightdm-autologin-greeter.conf`，初始内容如下：
 
@@ -87,7 +87,40 @@ autologin-user=AUTOLOGIN-USER-NOT-CONFIGURED
 
 ### 屏幕旋转
 
+*以顺时针旋转 90 度为例（横竖屏转换）。*
+
+#### 桌面环境显示旋转
+
 `xrandr -o left/right`
+
+#### tty 终端旋转
+
+修改 `/etc/default/grub` 配置：
+
+```
+GRUB_CMDLINE_LINUX="fbcon=rotate:1"
+```
+
+#### 触摸屏坐标旋转
+
+```
+sudo apt install xserver-xorg-input-evdev
+
+sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
+```
+
+新的 input 子系统采用 `libinput` 模块，将 `Driver` 它改回 `evdev`，增加触摸屏相关属性，完成输入坐标变换：
+
+```
+Section "InputClass"
+        Identifier "libinput touchscreen catchall"
+        MatchIsTouchscreen "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "evdev"
+    Option "SwapAxes" "true"
+    Option "InvertY" "true"
+EndSection
+```
 
 ### 换源 USTC
 
@@ -149,7 +182,9 @@ cpu 型号：`cat /proc/cpuinfo`
 
 `showkey`
 
-### 启动时运行命令（计划任务）
+### 启动时运行命令
+
+#### crontab 计划任务
 
 `sudo crontab -e`
 
@@ -184,7 +219,39 @@ cpu 型号：`cat /proc/cpuinfo`
 @reboot sleep 60 && /home/shaoguoji/bin/frp/frpc -c /home/shaoguoji/bin/frp/frpc.ini &
 ```
 
+####桌面环境自启动
+
+*以自动旋转屏幕为例。*
+
+新建 `rotate.desktop` 文件，其中的 `Exec` 字段为要执行的命令或脚本：
+
+```
+[Desktop Entry]
+Type=Application
+Name=xrandr_rotate
+Exec=xrandr -o right
+NoDisplay=true
+X-GNOME-AutoRestart=true
+```
+
+保存文件，放置于目录 `~/.config/autostart/` 下，重启生效。
+
+
 ### 常用工具安装
+
+#### 中文输入法（小鹤双拼）
+
+系统默认使用 ibus 输入法，配置 fcitx 即可使用双拼。
+
+安装 fcitx table，然后安装 im-config 输入法管理工具，重启。
+
+```
+sudo apt-get install fcitx-table-all
+
+sudo apt-get install im-config
+```
+
+在桌面屏幕右下角应该会出现 fcitx 的图标，右键进入配置，增加 `shuangpin` 输入法（注意 `piyin` 只有全拼无双拼），修改设置为小鹤双拼。
 
 #### 终端快捷命令 pet
 
@@ -197,7 +264,7 @@ cpu 型号：`cat /proc/cpuinfo`
 
 #### tldr - 命令帮助
 
-`curl -o ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr`
+`sudo apt install tldr -y`
 
 #### Byobu - 终端扩展管理
 
