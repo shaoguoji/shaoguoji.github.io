@@ -219,7 +219,7 @@ cpu 型号：`cat /proc/cpuinfo`
 @reboot sleep 60 && /home/shaoguoji/bin/frp/frpc -c /home/shaoguoji/bin/frp/frpc.ini &
 ```
 
-####桌面环境自启动
+#### 桌面环境自启动
 
 *以自动旋转屏幕为例。*
 
