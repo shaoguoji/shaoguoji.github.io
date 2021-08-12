@@ -1,4 +1,4 @@
-s---
+---
 layout:          post
 title:           日用 Debian 配置笔记
 subtitle:        Linux 作为日常使用
