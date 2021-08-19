@@ -38,7 +38,9 @@ Flash 仍然被擦掉，而且前一秒烧写的数据，上电断电就没了�
 
 ![stm32 复位和电源控制模块特性](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/stm32-power.png)
 
-查看芯片数据手册，认识到 `POR` 和 `PDR` 的概念，即电源上升和下降到某个阈值，发生复位的条件。可以看到，在掉电复位（PDR)的参数表格中给出，PDR 阈值范围在 1.8~1.96V，上示波器看看断电电源波形：
+查看芯片数据手册，认识到 `POR` 和 `PDR` 的概念，即电源上升和下降到某个阈值，发生复位的条件。可以看到，在复位的参数表格中给出，POR/PDR 阈值范围在 1.8~2V，此时芯片复位。
+
+上示波器看看断电电源波形：
 
 ![断电波形1](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/board-powerdown-wave1.jpg)
 
@@ -46,12 +48,20 @@ Flash 仍然被擦掉，而且前一秒烧写的数据，上电断电就没了�
 
 好家伙，电源刚好在 PDR 阈值范围内出现剧烈抖动，导致芯片多次复位，整体波形呈现「在动荡中下降」，像极了人生。
 
+![断电波形3](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/board-powerdown-wave3.jpg)
+
+并且两次抖动的上升沿间隔都大于 T(RSTTEMPO) 复位持续时间，条件满足，芯片完全够时间复位运行，并执行擦除 Flash 代码。
+
+复位机制示意图如下：
+
+![上电复位和掉电复位的波形图](https://raw.githubusercontent.com/shaoguoji/blogpic/master/post-img/reset-condition.png)
+
 再翻看 Flash 的工作电压，最小在 2V 左右，假如电压在这之下芯片复位，操作数据极容易发生问题。
 
 此外，为了应付意外断电的情况，STM32 还提供了 PVD（可编程电压监测器），能够检测电源电压，若低于设定的检测值时触发中断，在完全停机前进行善后处理。只不过对于复位，PVD 似乎只能「袖手旁观」，无法改变复位电压阈值。
 
 ### 经验总结
 
-了解了上面所有的原理后，测量它板子在电源复位阈值的波形，好在都没有问题（图形笔直无抖动），这才松了一口气。
+了解了上面所有的原理后，测量其它板子在电源复位阈值的波形，好在都没有问题（图形笔直无抖动），这才松了一口气。
 
 我很庆幸自己遇到的问题，以往在开发板上，这是没有机会见识的，如果以后有能力自己设计硬件，在验证时肯定会特别留意一点：测量为 MCU 供电的电源在复位阈值范围的波形。
